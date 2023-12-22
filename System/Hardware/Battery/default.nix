@@ -1,4 +1,4 @@
-_: {
+{
   imports = [
     ./threshold.nix
   ];
