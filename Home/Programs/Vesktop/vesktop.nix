@@ -68,6 +68,7 @@ in {
                         settingsLocation = "aboveActivity";
                     };
                     SupportHelper.enabled = true;
+                    Translate.enabled = true;
                     AlwaysAnimate.enabled = false;
                     AlwaysTrust.enabled = false;
                     AnonymiseFileNames.enabled = false;
@@ -159,7 +160,7 @@ in {
                     NoProfileThemes.enabled = false;
                     NoReplyMention = {
                         enabled = true;
-                        userList = 1234567890123445;
+                        userList = "1234567890123445";
                         shouldPingListed = true;
                         inverseShiftReply = false;
                     };
