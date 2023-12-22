@@ -1,5 +1,5 @@
 {
   imports = [
-    ./opentablet.nix
+    ./otd.nix
   ];
 }
