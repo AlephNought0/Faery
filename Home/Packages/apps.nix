@@ -25,5 +25,6 @@
     qtcreator
     qpwgraph
     arrpc
+    r2modman
   ];
 }

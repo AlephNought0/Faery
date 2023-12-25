@@ -4,6 +4,5 @@
     ./Zerotier
     ./AuthenticationAgents
     ./Asusd
-    #./Arrpc
   ];
 }

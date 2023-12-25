@@ -6,7 +6,7 @@
   ...
 }: {
   home-manager.users.Aperius.home.packages = with pkgs; [
-    neofetch
+    hyfetch
     wget
     git
     curl

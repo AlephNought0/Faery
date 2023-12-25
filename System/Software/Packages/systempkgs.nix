@@ -13,9 +13,8 @@
     mono
     msbuild
     easyeffects
-    qt5.full
     cmake
     gnumake42
-    pulseaudio
+    qt6.full
   ];
 }
