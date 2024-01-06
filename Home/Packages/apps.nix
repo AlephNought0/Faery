@@ -26,5 +26,6 @@
     qpwgraph
     arrpc
     r2modman
+    webcord-vencord
   ];
 }

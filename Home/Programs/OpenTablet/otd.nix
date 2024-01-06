@@ -4,10 +4,7 @@
   pkgs,
   osConfig,
   ...
-}: with lib;
-let
-    cfg = config.programs.opentabletdriver;
-in {
+}: {
         home-manager.users.Aperius.home.packages = with pkgs; [
             opentabletdriver
         ];

@@ -5,12 +5,13 @@
   inputs,
   ...
 }: {
-  environment.systemPackages = with pkgs; [
-    inputs.xdg-desktop-portal-hyprland.packages."${pkgs.system}".xdg-desktop-portal-hyprland
-  ];
-
-  services.dbus.enable = true;
-  xdg.portal.enable = true;
-  xdg.portal.wlr.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-wlr
+      inputs.xdg-desktop-portal-hyprland.packages."${pkgs.system}".xdg-desktop-portal-hyprland
+    ];
+  };
 }

@@ -4,10 +4,7 @@
   pkgs,
   osConfig,
   ...
-}: with lib;
-let
-    cfg = config.programs.vesktop;
-in {
+}: {
         home-manager.users.Aperius.home.packages = with pkgs; [
             (vesktop.overrideAttrs (old: {
                 patches = (old.patches or []) ++ [./readonlyFix.patch];
@@ -116,7 +113,7 @@ in {
                         nitroFirst = true;
                     };
                     FavoriteEmojiFirst.enabled = false;
-                    FavoriteGifSearch.enabled = false;
+                    FavoriteGifSearch.enabled = true;
                     FixImagesQuality.enabled = false;
                     FixSpotifyEmbeds.enabled = false;
                     ForceOwnerCrown.enabled = true;

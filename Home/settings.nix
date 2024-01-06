@@ -4,7 +4,12 @@
   osConfig,
   ...
 }: {
-    home-manager = {
+    imports = [
+        ./Packages
+        ./Programs
+    ];
+
+   home-manager = {
        useGlobalPkgs = true;
        users.Aperius = {
          home.stateVersion = "24.05";
