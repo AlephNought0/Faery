@@ -16,5 +16,6 @@
     cmake
     gnumake42
     qt6.full
+    gparted
   ];
 }

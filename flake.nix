@@ -31,7 +31,6 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-
   in {
     nixosConfigurations = {
       Cirno = nixpkgs.lib.nixosSystem {

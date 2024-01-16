@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: {
-
   environment.variables.AMD_VULKAN_ICD = "RADV";
 
   # Vulkan and opengl stuff
@@ -13,15 +12,15 @@
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
-        mesa
-        amdvlk
-        libdrm
-        libva
-        blender-hip
-        vaapiVdpau
-        libvdpau-va-gl
-        rocmPackages.clr
-        rocmPackages.clr.icd
+      mesa
+      amdvlk
+      libdrm
+      libva
+      blender-hip
+      vaapiVdpau
+      libvdpau-va-gl
+      rocmPackages.clr
+      rocmPackages.clr.icd
     ];
 
     extraPackages32 = with pkgs; [
