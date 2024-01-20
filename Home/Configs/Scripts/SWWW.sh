@@ -16,9 +16,12 @@ while true; do
             if ! (($(date +%M) % 4)); then #Switch ever 4 minutes
                 img=$(ls -1  /home/Aperius/Faery/Home/Configs/Wallpapers/Day/* | shuf -n 1)
                 swww img $img
+                sleep 60
 
             elif (($(date +%M) == 00)); then
                 img=$(ls -1  /home/Aperius/Faery/Home/Configs/Wallpapers/Day/* | shuf -n 1)
+                swww img $img
+                sleep 60
             fi
     esac
 
@@ -28,10 +31,12 @@ while true; do
             if ! (($(date +%M) % 4)); then
                 img=$(ls -1  /home/Aperius/Faery/Home/Configs/Wallpapers/Afternoon/* | shuf -n 1)
                 swww img $img
+                sleep 60
 
             elif (($(date +%M) == 00)); then
                 img=$(ls -1  /home/Aperius/Faery/Home/Configs/Wallpapers/Afternoon/* | shuf -n 1)
                 swww img $img
+                sleep 60
 
             fi
     esac
@@ -42,13 +47,13 @@ while true; do
             if ! (($(date +%M) % 4)); then
                 img=$(ls -1  /home/Aperius/Faery/Home/Configs/Wallpapers/Night/* | shuf -n 1)
                 swww img $img
+                sleep 60
 
 
             elif (($(date +%M) == 00)); then
                 img=$(ls -1  /home/Aperius/Faery/Home/Configs/Wallpapers/Night/* | shuf -n 1)
                 swww img $img
+                sleep 60
             fi
     esac
-
-    sleep 60
 done
