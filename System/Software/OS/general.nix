@@ -12,4 +12,8 @@
   system.stateVersion = "24.05";
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 }
