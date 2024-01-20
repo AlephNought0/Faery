@@ -4,6 +4,7 @@
     ./Corectrl
     ./OpenTablet
     ./Vesktop
+    ./Element
     #./Neovim
   ];
 }

@@ -129,8 +129,8 @@
         invertScroll = true;
         nearestNeighbour = false;
         square = false;
-        zoom = 10;
-        size = 100;
+        zoom = 9;
+        size = 250;
         zoomSpeed = 0.5;
       };
       InvisibleChat.enabled = false;
