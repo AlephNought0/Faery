@@ -20,7 +20,7 @@
     qt6Packages.qt6ct
     jetbrains.clion
     jetbrains.rider
-    #pgadmin4
+    pgadmin4
     qtcreator
     qpwgraph
     arrpc
