@@ -25,5 +25,7 @@
     qpwgraph
     arrpc
     r2modman
+    protontricks
+    wineWowPackages.waylandFull
   ];
 }
