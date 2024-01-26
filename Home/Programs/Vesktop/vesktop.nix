@@ -246,8 +246,8 @@
       ViewRaw.enabled = false;
       VoiceMessages.enabled = true;
       WebContextMenus = {
-        enabled = true;
-        addBack = true;
+        enabled = false;
+        addBack = false;
       };
       WebKeybinds.enabled = true;
       WhoReacted.enabled = false;

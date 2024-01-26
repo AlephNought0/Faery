@@ -3,5 +3,6 @@
     ./Packages
     ./Programs
     ./settings.nix
+    ./Cache
   ];
 }
