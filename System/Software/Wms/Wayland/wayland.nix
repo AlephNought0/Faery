@@ -7,6 +7,4 @@
   environment.systemPackages = with pkgs; [
     xwaylandvideobridge
   ];
-
-  programs.xwayland.enable = true;
 }

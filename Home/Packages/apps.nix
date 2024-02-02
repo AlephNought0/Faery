@@ -14,7 +14,7 @@
     vscodium-fhs
     vlc
     libreoffice-qt
-    ciscoPacketTracer8
+    #ciscoPacketTracer8
     libsForQt5.kate
     libsForQt5.qt5ct
     qt6Packages.qt6ct
@@ -27,5 +27,6 @@
     r2modman
     protontricks
     wineWowPackages.waylandFull
+    gimp
   ];
 }
