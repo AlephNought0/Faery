@@ -17,5 +17,6 @@
     gnumake42
     qt6.full
     gparted
+    auto-epp
   ];
 }

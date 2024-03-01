@@ -10,6 +10,6 @@
     ./System
     ./Home
     inputs.nix-gaming.nixosModules.steamCompat
-    inputs.nix-gaming.nixosModules.pipewireLowLatency
+    #inputs.nix-gaming.nixosModules.pipewireLowLatency
   ];
 }

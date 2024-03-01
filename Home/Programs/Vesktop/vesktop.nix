@@ -15,7 +15,7 @@
     }))
   ];
 
-  home-manager.users.Aperius.xdg.configFile."VencordDesktop/VencordDesktop/settings.json".text = builtins.toJSON {
+  home-manager.users.Aperius.xdg.configFile."vesktop/settings.json".text = builtins.toJSON {
     minimizeToTray = false;
     discordBranch = "canary";
     firstLaunch = false;
@@ -33,7 +33,7 @@
     minimized = false;
   };
 
-  home-manager.users.Aperius.xdg.configFile."VencordDesktop/VencordDesktop/settings/settings.json".text = builtins.toJSON {
+  home-manager.users.Aperius.xdg.configFile."vesktop/settings/settings.json".text = builtins.toJSON {
     notifyAboutUpdates = false;
     autoUpdate = false;
     autoUpdateNotification = false;

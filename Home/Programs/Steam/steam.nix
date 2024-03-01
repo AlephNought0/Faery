@@ -9,7 +9,6 @@
   # Packages
   home-manager.users.Aperius.home.packages = with pkgs; [
     steam
-    mangohud
     gamescope
     inputs.nix-gaming.packages."${pkgs.system}".proton-ge
   ];

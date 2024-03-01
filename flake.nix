@@ -13,7 +13,10 @@
 
     wayland.url = "github:nix-community/nixpkgs-wayland";
 
-    hyprland.url = "github:hyprwm/hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs"; # MESA/OpenGL HW workaround
+    };
 
     xdg-desktop-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
 
