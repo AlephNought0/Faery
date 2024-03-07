@@ -17,6 +17,7 @@
     gnumake42
     qt6.full
     gparted
-    auto-epp
+    config.boot.kernelPackages.cpupower
+    jdk8
   ];
 }

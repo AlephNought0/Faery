@@ -9,23 +9,28 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    prismlauncher.url = "github:prismlauncher/prismlauncher";
-
-    wayland.url = "github:nix-community/nixpkgs-wayland";
-
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs"; # MESA/OpenGL HW workaround
     };
 
-    xdg-desktop-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
-
-    nix-gaming.url = "github:fufexan/nix-gaming";
-
     ags = {
       url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    prismlauncher.url = "github:prismlauncher/prismlauncher";
+
+    wayland.url = "github:nix-community/nixpkgs-wayland";
+
+    xdg-desktop-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
+
+    nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
   outputs = {

@@ -10,6 +10,6 @@
 
   services.zerotierone.enable = true;
   services.zerotierone.joinNetworks = [
-    "3efa5cb78a61e879"
+    "e3918db4835d47eb"
   ];
 }

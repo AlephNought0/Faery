@@ -8,6 +8,7 @@
 }: {
   home-manager.users.Aperius.home.packages = with pkgs; [
     inputs.prismlauncher.packages."${pkgs.system}".prismlauncher
+    inputs.quickshell.packages."${pkgs.system}".quickshell
     qbittorrent
     obs-studio
     krita
