@@ -5,6 +5,7 @@
     ./OpenTablet
     ./Vesktop
     ./Element
+    ./Qt
     #./Neovim
   ];
 }

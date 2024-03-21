@@ -29,5 +29,6 @@
     protontricks
     wineWowPackages.waylandFull
     gimp
+    libsForQt5.qtstyleplugin-kvantum
   ];
 }

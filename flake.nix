@@ -11,11 +11,11 @@
 
     hyprland = {
       url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs"; # MESA/OpenGL HW workaround
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ags = {
-      url = "github:Aylur/ags";
+    hyprcursor = {
+      url = "github:hyprwm/hyprcursor";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

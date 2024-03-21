@@ -8,11 +8,11 @@
   environment.systemPackages = with pkgs; [
     kitty
     rofi-wayland
-    inputs.wayland.packages."${pkgs.system}".swww
+    swww
     inputs.wayland.packages."${pkgs.system}".grim
     inputs.wayland.packages."${pkgs.system}".wl-clipboard
     inputs.wayland.packages."${pkgs.system}".slurp
     inputs.hyprland.packages."${pkgs.system}".hyprland
-    inputs.ags.packages."${pkgs.system}".default
+    inputs.hyprcursor.packages."${pkgs.system}".hyprcursor
   ];
 }
