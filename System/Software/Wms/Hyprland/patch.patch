@@ -1,0 +1,31 @@
+diff --git a/src/Compositor.cpp b/src/Compositor.cpp
+index 68db0091..60cc0aa4 100644
+--- a/src/Compositor.cpp
++++ b/src/Compositor.cpp
+@@ -681,7 +681,7 @@ CMonitor* CCompositor::getMonitorFromVector(const Vector2D& point) {
+ 
+         if (!pBestMon) { // ?????
+             Debug::log(WARN, "getMonitorFromVector no close mon???");
+-            return m_vMonitors.front().get();
++            return m_vMonitors.empty() ? nullptr : m_vMonitors.front().get();
+         }
+ 
+         return pBestMon;
+@@ -714,7 +714,10 @@ bool CCompositor::monitorExists(CMonitor* pMonitor) {
+ }
+ 
+ CWindow* CCompositor::vectorToWindowUnified(const Vector2D& pos, uint8_t properties, CWindow* pIgnoreWindow) {
+-    const auto  PMONITOR          = getMonitorFromVector(pos);
++    const auto PMONITOR = getMonitorFromVector(pos);
++    if (!PMONITOR)
++        return nullptr;
++
+     static auto PRESIZEONBORDER   = CConfigValue<Hyprlang::INT>("general:resize_on_border");
+     static auto PBORDERSIZE       = CConfigValue<Hyprlang::INT>("general:border_size");
+     static auto PBORDERGRABEXTEND = CConfigValue<Hyprlang::INT>("general:extend_border_grab_area");
+diff --git a/subprojects/wlroots b/subprojects/wlroots
+--- a/subprojects/wlroots
++++ b/subprojects/wlroots
+@@ -1 +1 @@
+-Subproject commit 50eae512d9cecbf0b3b1898bb1f0b40fa05fe19b
++Subproject commit 50eae512d9cecbf0b3b1898bb1f0b40fa05fe19b-dirty
