@@ -24,12 +24,12 @@
       theme=LayanDark
       '';
 
-    "Kvantum/LayanDark".source = "${pkgs.layan-kde}/share/Kvantum/LayanDark";
+    "Kvantum/LayanDark".source = "${pkgs.layan-kde}/share/Kvantum/Layan";
     };
 
     nixpkgs.overlays = [
-      (final: prev: {
-        layan-kde = prev.layan-kde.overrideAttrs(oldAttrs: {
+      (self: super: {
+        layan-kde = super.layan-kde.overrideAttrs {
           postFixup = ''
             echo "[%General]
                   x11drag=all
@@ -611,7 +611,7 @@
                   frame.top=10
               " > $out/share/Kvantum/Layan/LayanDark.kvconfig
           '';
-        });
+        };
       })
     ];
 }

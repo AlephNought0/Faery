@@ -30,5 +30,6 @@
     wineWowPackages.waylandFull
     gimp
     libsForQt5.qtstyleplugin-kvantum
+    tela-icon-theme
   ];
 }
