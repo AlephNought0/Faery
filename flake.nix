@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    xdg-desktop-portal-hyprland = {
+      url = "github:hyprwm/xdg-desktop-portal-hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hyprcursor = {
       url = "github:hyprwm/hyprcursor";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,8 +32,6 @@
     prismlauncher.url = "github:prismlauncher/prismlauncher";
 
     wayland.url = "github:nix-community/nixpkgs-wayland";
-
-    xdg-desktop-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
 
     nix-gaming.url = "github:fufexan/nix-gaming";
   };

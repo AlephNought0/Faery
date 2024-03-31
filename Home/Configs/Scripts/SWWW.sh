@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export SWWW_TRANSITION_FPS=165
-export SWWW_TRANSITION_STEP=1
+export SWWW_TRANSITION_STEP=90
 export SWWW_TRANSITION=wipe
 export SWWW_TRANSITION_ANGLE=30
 
