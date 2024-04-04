@@ -5,7 +5,7 @@ export SWWW_TRANSITION_STEP=90
 export SWWW_TRANSITION=wipe
 export SWWW_TRANSITION_ANGLE=30
 
-swww init
+swww-daemon --format xrgb
 
 sleep $((60 - $(date +%S)))
 
