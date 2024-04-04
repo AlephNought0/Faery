@@ -15,7 +15,7 @@
     easyeffects
     cmake
     gnumake42
-    qt6.full
+    #qt6.full
     gparted
     config.boot.kernelPackages.cpupower
     jdk8

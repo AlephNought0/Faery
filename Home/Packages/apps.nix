@@ -7,7 +7,7 @@
   ...
 }:  {
   home-manager.users.Aperius.home.packages = with pkgs; [
-    #inputs.prismlauncher.packages."${pkgs.system}".prismlauncher
+    inputs.prismlauncher.packages."${pkgs.system}".prismlauncher
     inputs.quickshell.packages."${pkgs.system}".quickshell
     qbittorrent
     obs-studio
@@ -15,7 +15,7 @@
     vscodium-fhs
     vlc
     libreoffice-qt
-    #ciscoPacketTracer8
+    ciscoPacketTracer8
     libsForQt5.kate
     libsForQt5.qt5ct
     qt6Packages.qt6ct

@@ -13,9 +13,9 @@
     };
 
     environment.sessionVariables = {
-      XDG_SESSION_TYPE = "wayland";
+      #XDG_SESSION_TYPE = "wayland";
       GDK_BACKEND = "wayland";
-      QT_QPA_PLATFORM = "wayland";
+      #QT_QPA_PLATFORM = "wayland";
     };
 
     home-manager.users.Aperius.xdg.configFile = {
