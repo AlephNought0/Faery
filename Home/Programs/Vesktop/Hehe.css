@@ -22,7 +22,6 @@ font-family: var(--Chat-Font-Used)!important;
 font-size: var(--Chat-Font-Size)!important;
 }
 
-
 :root {
 	--app-bg: rgba(0, 0, 0, 0);
 	--app-blur: 6px;
@@ -74,16 +73,16 @@ font-size: var(--Chat-Font-Size)!important;
   --font-display: "SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 
-.messageContent__21e69 > span {
-    color: rgb(255, 108, 233);
-}
-
 .messageContent__21e69 > a > span {
     color: cyan;
 }
 
 .note__7a4f4 textarea {
 	padding: 10px 10px;
+}
+
+.name__4eb92 {
+	font-size: 16px;
 }
 
 .homeIcon-r0w4ny {
