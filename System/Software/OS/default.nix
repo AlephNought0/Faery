@@ -6,6 +6,5 @@
     ./general.nix
     ./locale.nix
     ./users.nix
-    ./fonts.nix
   ];
 }

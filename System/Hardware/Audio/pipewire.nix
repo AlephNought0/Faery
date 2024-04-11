@@ -9,7 +9,6 @@
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    pulse.enable = true;
 
     lowLatency = {
       # enable this module
@@ -19,6 +18,6 @@
       rate = 48000;
     };
   };
-  # make pipewire realtime-capable
+
   security.rtkit.enable = true;
 }

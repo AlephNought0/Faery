@@ -6,7 +6,7 @@
 }: {
   hardware.cpu.amd.updateMicrocode = true;
 
-  powerManagement.cpuFreqGovernor = lib.mkDefault "ondemand";
+  powerManagement.cpuFreqGovernor = "performance";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
 }

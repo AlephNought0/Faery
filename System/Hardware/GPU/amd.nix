@@ -12,22 +12,23 @@
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
-      mesa
-      amdvlk
-      libdrm
-      libva
-      blender-hip
       vaapiVdpau
-      libvdpau-va-gl
       rocmPackages.clr
       rocmPackages.clr.icd
     ];
 
     extraPackages32 = with pkgs; [
-      driversi686Linux.mesa
-      driversi686Linux.amdvlk
       driversi686Linux.vaapiVdpau
-      driversi686Linux.libvdpau-va-gl
+      driversi686Linux.mesa
     ];
   };
+
+  environment.variables = {
+    "VDPAU_DRIVER" = "radeonsi";
+    "LIBVA_DRIVER_NAME" = "radeonsi";
+  };
+
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
 }
