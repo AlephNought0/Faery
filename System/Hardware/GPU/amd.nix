@@ -4,8 +4,6 @@
   pkgs,
   ...
 }: {
-  environment.variables.AMD_VULKAN_ICD = "RADV";
-
   # Vulkan and opengl stuff
   hardware.opengl = {
     enable = true;
@@ -24,8 +22,9 @@
   };
 
   environment.variables = {
-    "VDPAU_DRIVER" = "radeonsi";
-    "LIBVA_DRIVER_NAME" = "radeonsi";
+    VDPAU_DRIVER = "radeonsi";
+    LIBVA_DRIVER_NAME = "radeonsi";
+    AMD_VULKAN_ICD = "RADV";
   };
 
   systemd.tmpfiles.rules = [

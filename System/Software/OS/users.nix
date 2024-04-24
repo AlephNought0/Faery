@@ -9,7 +9,6 @@
     extraGroups = ["wheel" "wireshark" "corectrl"];
 
     packages = with pkgs; [
-      firefox
       tree
     ];
   };

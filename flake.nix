@@ -29,11 +29,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    prismlauncher.url = "github:prismlauncher/prismlauncher";
+    prismlauncher = {
+      url = "github:prismlauncher/prismlauncher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    wayland.url = "github:nix-community/nixpkgs-wayland";
-
-    nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

@@ -6,6 +6,7 @@
     ./Vesktop
     ./Element
     ./Qt
+    ./Firefox
     #./Neovim
   ];
 }

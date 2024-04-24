@@ -13,11 +13,15 @@
     mono
     msbuild
     easyeffects
-    cmake
     gnumake42
-    qt6.full
     gparted
     config.boot.kernelPackages.cpupower
     jdk8
+
+    cmake
+    ninja
+    just
+    qt6.full
+    kdePackages.qtdeclarative
   ];
 }

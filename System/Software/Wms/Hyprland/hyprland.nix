@@ -8,11 +8,16 @@
   environment.systemPackages = with pkgs; [
     kitty
     rofi-wayland
-    inputs.wayland.packages."${pkgs.system}".swww
-    inputs.wayland.packages."${pkgs.system}".grim
-    inputs.wayland.packages."${pkgs.system}".wl-clipboard
-    inputs.wayland.packages."${pkgs.system}".slurp
+    swww
+    grim
+    wl-clipboard
+    slurp
     inputs.hyprland.packages."${pkgs.system}".hyprland
     inputs.hyprcursor.packages."${pkgs.system}".hyprcursor
   ];
+
+  programs.hyprland = {
+    enable = true;
+    portalPackage = inputs.xdg-desktop-portal-hyprland.packages."${pkgs.system}".xdg-desktop-portal-hyprland;
+  };
 }

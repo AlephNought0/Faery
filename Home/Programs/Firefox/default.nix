@@ -1,5 +1,5 @@
 {
   imports = [
-    ./wayland.nix
+    ./firefox.nix
   ];
 }
