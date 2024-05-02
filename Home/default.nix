@@ -4,5 +4,6 @@
     ./Programs
     ./settings.nix
     ./Cache
+    ./Fonts
   ];
 }

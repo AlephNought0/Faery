@@ -21,7 +21,6 @@
     cmake
     ninja
     just
-    qt6.full
-    kdePackages.qtdeclarative
+    #qt6.full
   ];
 }
