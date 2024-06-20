@@ -33,5 +33,7 @@
     brave
     playerctl
     dnsmasq
+    keepassxc
+    spotube
   ];
 }

@@ -1,0 +1,52 @@
+diff --git a/src/main/index.ts b/src/main/index.ts
+index 2f8191c..a1e697b 100644
+--- a/src/main/index.ts
++++ b/src/main/index.ts
+@@ -33,13 +33,29 @@ function init() {
+     if (hardwareAcceleration === false) {
+         app.disableHardwareAcceleration();
+     } else {
+-        enabledFeatures.push("VaapiVideoDecodeLinuxGL", "VaapiVideoEncoder", "VaapiVideoDecoder");
++        enabledFeatures.push("VaapiVideoDecodeLinuxGL", "VaapiVideoEncoder", "VaapiVideoDecoder", "VulkanFromANGLE", "DefaultANGLEVulkan", "VaapiIgnoreDriverChecks", "PlatformHEVCDecoderSupport", "VaapiVP8Encoder", "VaapiVP9Encoder", "VaapiAV1Encoder");
+     }
+ 
+     if (disableSmoothScroll) {
+         app.commandLine.appendSwitch("disable-smooth-scrolling");
+     }
+ 
++    app.commandLine.appendSwitch("disable-renderer-backgrounding");
++    app.commandLine.appendSwitch("disable-background-timer-throttling");
++    app.commandLine.appendSwitch("disable-backgrounding-occluded-windows");
++    app.commandLine.appendSwitch("enable-zero-copy");
++    app.commandLine.appendSwitch("use-gl=angle");
++    app.commandLine.appendSwitch("use-vulkan");
++    app.commandLine.appendSwitch("enable-oop-rasterization");
++    app.commandLine.appendSwitch("enable-raw-draw");
++    app.commandLine.appendSwitch("enable-gpu-rasterization");
++    app.commandLine.appendSwitch("enable-gpu-compositing");
++    app.commandLine.appendSwitch("enable-native-gpu-memory-buffers");
++    app.commandLine.appendSwitch("enable-accelerated-2d-canvas");
++    app.commandLine.appendSwitch("enable-accelerated-video-decode");
++    app.commandLine.appendSwitch("enable-accelerated-mjpeg-decode");
++    app.commandLine.appendSwitch("disable-gpu-vsync");
++
+     // work around chrome 66 disabling autoplay by default
+     app.commandLine.appendSwitch("autoplay-policy", "no-user-gesture-required");
+     // WinRetrieveSuggestionsOnlyOnDemand: Work around electron 13 bug w/ async spellchecking on Windows.
+diff --git a/src/renderer/components/ScreenSharePicker.tsx b/src/renderer/components/ScreenSharePicker.tsx
+index 1c53b63..f6ea297 100644
+--- a/src/renderer/components/ScreenSharePicker.tsx
++++ b/src/renderer/components/ScreenSharePicker.tsx
+@@ -87,9 +87,9 @@ addPatch({
+         const width = Math.round(height * (16 / 9));
+ 
+         Object.assign(opts, {
+-            bitrateMin: 500000,
+-            bitrateMax: 8000000,
+-            bitrateTarget: 600000
++            bitrateMin: 8000000,
++            bitrateMax: 30000000,
++            bitrateTarget: 16000000
+         });
+         if (opts?.encode) {
+             Object.assign(opts.encode, {

@@ -8,7 +8,6 @@
 }: {
   # Packages
   home-manager.users.Aperius.home.packages = with pkgs; [
-    steam
     gamescope
     mangohud
   ];
