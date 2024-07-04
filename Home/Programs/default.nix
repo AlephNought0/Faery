@@ -8,5 +8,6 @@
     ./Qt
     ./Firefox
     #./Neovim
+    ./KDE
   ];
 }

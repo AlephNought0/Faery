@@ -14,9 +14,6 @@
     vscodium-fhs
     vlc
     libreoffice-qt
-    libsForQt5.kate
-    libsForQt5.qt5ct
-    qt6Packages.qt6ct
     #jetbrains.clion
     #jetbrains.rider
     qtcreator
@@ -26,11 +23,14 @@
     protontricks
     wineWowPackages.waylandFull
     gimp
-    libsForQt5.qtstyleplugin-kvantum
-    tela-icon-theme
     brave
     keepassxc
     spotube
     thunderbird
+
+    libsForQt5.qt5ct
+    qt6Packages.qt6ct
+    tela-icon-theme
+    libsForQt5.qtstyleplugin-kvantum
   ];
 }

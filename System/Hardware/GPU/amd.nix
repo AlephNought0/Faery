@@ -20,11 +20,9 @@
       rocmPackages.clr.icd
       rocmPackages.rocminfo
       rocmPackages.rocm-runtime
-
     ];
 
     extraPackages32 = with pkgs; [
-      driversi686Linux.mesa
       driversi686Linux.libvdpau-va-gl
     ];
   };

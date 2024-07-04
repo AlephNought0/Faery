@@ -1,5 +1,5 @@
 {
   imports = [
-    ./junk.nix
+    ./kde.nix
   ];
 }
