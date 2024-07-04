@@ -4,20 +4,28 @@
   pkgs,
   ...
 }: {
+
+  hardware.amdgpu.opencl.enable = true;
+
   # Vulkan and opengl stuff
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       vaapiVdpau
+      libvdpau-va-gl
+      libdrm
+      libva
       rocmPackages.clr
       rocmPackages.clr.icd
+      rocmPackages.rocminfo
+      rocmPackages.rocm-runtime
+
     ];
 
     extraPackages32 = with pkgs; [
-      driversi686Linux.vaapiVdpau
       driversi686Linux.mesa
+      driversi686Linux.libvdpau-va-gl
     ];
   };
 

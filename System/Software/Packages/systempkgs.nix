@@ -21,7 +21,5 @@
     cmake
     ninja
     just
-    kdePackages.qtwayland
-    qt6.full
   ];
 }

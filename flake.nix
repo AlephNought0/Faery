@@ -15,7 +15,7 @@
     };
 
     xdg-desktop-portal-hyprland = {
-      url = "github:hyprwm/xdg-desktop-portal-hyprland";
+      url = "github:hyprwm/xdg-desktop-portal-hyprland/91e48d6acd8a5a611d26f925e51559ab743bc438";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -36,6 +36,11 @@
 
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    firefox-nightly = {
+      url = "github:nix-community/flake-firefox-nightly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

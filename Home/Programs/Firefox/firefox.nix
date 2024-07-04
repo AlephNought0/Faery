@@ -2,10 +2,20 @@
   config,
   lib,
   pkgs,
+  inputs,
   osConfig,
   ...
 }: {
-  home-manager.users.Aperius.home.packages = with pkgs; [
-    firefox
-  ];
+  programs.firefox = {
+    enable = true;
+    package = inputs.firefox-nightly.packages."${pkgs.system}".firefox-nightly-bin;
+
+    preferences = {
+      "media.ffmpeg.vaapi.enabled" = true;
+      "media.ffvpx.enabled" = false;
+      "media.av1.enabled" = false;
+      "gfx.webrender.all" = true;
+      "widget.wayland.fractional-scale.enabled" = true;
+    };
+  };
 }

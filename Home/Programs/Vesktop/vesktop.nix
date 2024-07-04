@@ -2,9 +2,14 @@
   config,
   lib,
   pkgs,
+  inputs,
   osConfig,
   ...
-}: {
+}:
+let
+  electron-31 = (import inputs.nixpkgs-forked {}).electron_31-bin;
+
+in {
   home-manager.users.Aperius.home.packages = with pkgs; [
     (vesktop.overrideAttrs (old: {
       patches = (old.patches or []) ++ [./patchedvesktop.patch];

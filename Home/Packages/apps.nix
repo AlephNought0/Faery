@@ -3,7 +3,6 @@
   lib,
   pkgs,
   inputs,
-  osConfig,
   ...
 }:  {
   home-manager.users.Aperius.home.packages = with pkgs; [
@@ -20,7 +19,6 @@
     qt6Packages.qt6ct
     #jetbrains.clion
     #jetbrains.rider
-    pgadmin4
     qtcreator
     qpwgraph
     arrpc
@@ -31,9 +29,8 @@
     libsForQt5.qtstyleplugin-kvantum
     tela-icon-theme
     brave
-    playerctl
-    dnsmasq
     keepassxc
     spotube
+    thunderbird
   ];
 }
