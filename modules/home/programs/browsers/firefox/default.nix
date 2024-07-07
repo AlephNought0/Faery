@@ -6,7 +6,7 @@ let
 in
 {
     options.faery.programs.browsers.firefox = {
-        enable = mkEnableOption "Enable corectrl module.";
+        enable = mkEnableOption "firefox module.";
     };
 
     config = mkIf cfg.enable {

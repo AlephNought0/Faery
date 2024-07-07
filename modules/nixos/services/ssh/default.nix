@@ -6,7 +6,7 @@ let
 in
 {
     options.faery.system.services.ssh = {
-        enable = mkEnableOption "Enable ssh.";
+        enable = mkEnableOption "ssh.";
     };
 
     config = mkIf cfg.enable {

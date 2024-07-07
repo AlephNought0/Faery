@@ -6,7 +6,7 @@ let
 in
 {
     options.faery.programs.corectrl = {
-        enable = mkEnableOption "Enable corectrl module.";
+        enable = mkEnableOption "corectrl module.";
     };
 
     config = mkIf cfg.enable {

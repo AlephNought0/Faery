@@ -9,7 +9,7 @@ let
 in
 {
     options.faery.xdg = {
-        enable = mkEnableOption "Enable xdg module.";
+        enable = mkEnableOption "xdg module.";
         default_browser = mkOption {
             type = str;
             description = "Default browser.";

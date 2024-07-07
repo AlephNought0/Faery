@@ -6,7 +6,7 @@ let
 in
 {
     options.faery.system.services.pipewire = {
-        enable = mkEnableOption "Enable pipewire service."; #Forget about using PulseAudio lmfao
+        enable = mkEnableOption "pipewire service."; #Forget about using PulseAudio lmfao
     };
 
     config = mkIf cfg.enable {

@@ -6,7 +6,7 @@ let
 in
 {
     options.faery.system.hardware.battery = {
-        enable = mkEnableOption "Enable battery threshold service.";
+        enable = mkEnableOption "battery threshold service.";
     };
 
     config = mkIf cfg.enable {

@@ -7,7 +7,7 @@ let
 in
 {
     options.faery.programs.opentablet = {
-        enable = mkEnableOption "Enable opentablet module.";
+        enable = mkEnableOption "opentablet module.";
     };
 
     config = mkIf cfg.enable {

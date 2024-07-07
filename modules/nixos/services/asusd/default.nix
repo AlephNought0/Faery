@@ -6,7 +6,7 @@ let
 in
 {
     options.faery.system.services.asusd = {
-        enable = mkEnableOption "Enable asusd service.";
+        enable = mkEnableOption "asusd service.";
     };
 
     config = mkIf cfg.enable {

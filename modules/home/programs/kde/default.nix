@@ -8,7 +8,7 @@ let
 in
 {
     options.faery.programs.kdeWithoutPlasma = {
-        enable = mkEnableOption "Enable usage of KDE apps without Plasma environment.";
+        enable = mkEnableOption "usage of KDE apps without Plasma environment.";
 
         packages = mkOption {
             type = listOf package;

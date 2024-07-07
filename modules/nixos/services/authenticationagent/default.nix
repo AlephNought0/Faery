@@ -6,7 +6,7 @@ let
 in
 {
     options.faery.system.services.polkit = {
-        enable = mkEnableOption "Enable polkit service.";
+        enable = mkEnableOption "polkit service.";
     };
 
     config = mkIf cfg.enable {

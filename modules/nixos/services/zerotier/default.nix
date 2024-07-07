@@ -7,7 +7,7 @@ let
 in
 {
     options.faery.system.services.zerotier = {
-        enable = mkEnableOption "Enable zerotier service.";
+        enable = mkEnableOption "zerotier service.";
 
         networks = mkOption {
             type = listOf str;

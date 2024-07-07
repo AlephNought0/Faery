@@ -8,7 +8,7 @@ let
 in
 {
     options.faery.programs.vesktop = {
-        enable = mkEnableOption "Enable Vesktop module.";
+        enable = mkEnableOption "vesktop module.";
     };
 
     config = mkIf cfg.enable {

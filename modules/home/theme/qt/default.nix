@@ -8,7 +8,7 @@ let
 in
 {
     options.faery.theme.qt = {
-        enable = mkEnableOption "Enable qt module.";
+        enable = mkEnableOption "qt module.";
 
         platformTheme = mkOption {
             type = str;
