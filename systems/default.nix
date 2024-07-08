@@ -15,6 +15,7 @@ in
             ../modules
             inputs.home-manager.nixosModules.home-manager
             inputs.nix-gaming.nixosModules.pipewireLowLatency
+            inputs.chaotic.nixosModules.default
         ];
     };
 
@@ -29,6 +30,7 @@ in
             ../modules
             inputs.home-manager.nixosModules.home-manager
             inputs.nix-gaming.nixosModules.pipewireLowLatency
+            inputs.chaotic.nixosModules.default
         ];
     };
 }

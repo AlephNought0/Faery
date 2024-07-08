@@ -39,15 +39,12 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        firefox-nightly = {
-            url = "github:nix-community/flake-firefox-nightly";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
         swww = {
             url = "github:LGFae/swww";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     };
 
   outputs = {

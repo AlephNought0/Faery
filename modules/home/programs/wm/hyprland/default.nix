@@ -61,10 +61,10 @@ in
                     monitor = ",preferred,auto,${cfg.scaling}";
 
                     exec-once = [
-                        "~/Faery_rewrite/systems/cirno/userStuff/Scripts/SWWW.sh"
+                        "swww-daemon"
+                        "~/Faery/systems/cirno/userStuff/Scripts/SWWW.sh"
                         "brave"
                         "systemctl --user start opentabletdriver.service"
-                        "swww-daemon"
                     ];
 
                     misc = {

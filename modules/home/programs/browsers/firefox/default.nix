@@ -12,7 +12,7 @@ in
     config = mkIf cfg.enable {
         programs.firefox = {
             enable = true;
-            package = inputs.firefox-nightly.packages."${pkgs.system}".firefox-nightly-bin;
+            package = inputs.chaotic.packages."${pkgs.system}".firefox_nightly;
 
             preferences = {
                 "media.ffmpeg.vaapi.enabled" = true;
