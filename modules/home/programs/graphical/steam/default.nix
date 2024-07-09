@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 let
     inherit (lib) mkEnableOption mkIf;
     inherit (config.faery.system) username;
@@ -11,8 +11,11 @@ in
     };
 
     config = mkIf cfg.enable {
+        programs.gamescope = {
+            package = inputs.chaotic.packages."${pkgs.system}".gamescope_git;
+        };
+
         home-manager.users.${username}.home.packages = with pkgs; [
-            gamescope
             mangohud
         ];
 
@@ -27,7 +30,7 @@ in
             };
 
             extraCompatPackages = with pkgs; [
-                proton-ge-bin
+                inputs.chaotic.packages."${pkgs.system}".proton-ge-custom
             ];
         };
     };

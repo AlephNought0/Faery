@@ -63,7 +63,7 @@ in
                     exec-once = [
                         "swww-daemon"
                         "~/Faery/systems/cirno/userStuff/Scripts/SWWW.sh"
-                        "brave"
+                        "firefox-nightly"
                         "systemctl --user start opentabletdriver.service"
                     ];
 

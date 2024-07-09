@@ -40,7 +40,7 @@
 
         xdg = {
             enable = true;
-            default_browser = "brave-browser.desktop";
+            default_browser = "firefox-nightly.desktop";
             default_editor = "kate.desktop";
         };
 

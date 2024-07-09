@@ -15,12 +15,11 @@ in
     qtcreator
     r2modman
     gimp
-    brave
     keepassxc
     spotube
     thunderbird
     easyeffects
-    element
+    element-desktop
 
     git
     asusctl

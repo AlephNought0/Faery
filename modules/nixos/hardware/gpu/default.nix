@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 let
     inherit (lib) mkOption mkEnableOption mkMerge mkIf;
     inherit (lib.types) enum;
@@ -23,6 +23,10 @@ in
                 kernelModules = ["kvm-amd"];
             };
 
+            chaotic.mesa-git = {
+                enable = true;
+            };
+
             # Vulkan and opengl stuff
             hardware.graphics = {
                 enable = true;
@@ -31,7 +35,7 @@ in
                 extraPackages = with pkgs; [
                     vaapiVdpau
                     libvdpau-va-gl
-                    libdrm
+                    inputs.chaotic.packages."${pkgs.system}".libdrm_git
                     libva
                     rocmPackages.clr
                     rocmPackages.clr.icd
@@ -58,13 +62,20 @@ in
         (mkIf (cfg.type == "nvidia") {
             services.xserver.videoDrivers = ["nvidia"];
 
-            hardware.nvidia = {
-                modesetting.enable = true;
-                powerManagement.enable = false;
-                powerManagement.finegrained = false;
-                open = false;
-                nvidiaSettings = true;
-                package = config.boot.linuxKernel.packages.linux_zen.nvidia_x11_vulkan_beta;
+            hardware = {
+                nvidia = {
+                    modesetting.enable = true;
+                    powerManagement.enable = false;
+                    powerManagement.finegrained = false;
+                    open = false;
+                    nvidiaSettings = true;
+                    package = config.boot.linuxKernel.packages.linux_zen.nvidia_x11_vulkan_beta;
+                };
+
+                graphics = {
+                    enable = true;
+                    enable32Bit = true;
+                };
             };
         })
     ];
