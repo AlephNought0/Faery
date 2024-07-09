@@ -26,7 +26,19 @@ in
             dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
 
             package = pkgs.steam.override {
-                extraPkgs = pkgs: [ pkgs.libgdiplus ];
+                extraPkgs = pkgs: with pkgs; [
+                    xorg.libXcursor
+                    xorg.libXi
+                    xorg.libXinerama
+                    xorg.libXScrnSaver
+                    libgdiplus
+                    libpng
+                    libpulseaudio
+                    libvorbis
+                    stdenv.cc.cc.lib
+                    libkrb5
+                    keyutils
+                ];
             };
 
             extraCompatPackages = with pkgs; [

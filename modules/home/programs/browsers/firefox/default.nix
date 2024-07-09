@@ -23,8 +23,6 @@ in
                 "dom.webgpu.enabled" = true;
                 "gfx.webrender.compositor" = true;
                 "gfx.webrender.software" = true;
-                "layers.acceleration.force-enabled" = true;
-                "layers.gpu-process.enabled" = true;
             };
         };
     };
