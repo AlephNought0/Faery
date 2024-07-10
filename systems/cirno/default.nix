@@ -36,6 +36,8 @@
                 pipewire.enable = true;
                 asusd.enable = true;
             };
+
+            displaymanager.sddm.enable = true;
         };
 
         xdg = {
