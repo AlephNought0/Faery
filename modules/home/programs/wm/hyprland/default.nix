@@ -1,6 +1,6 @@
 { config, lib, inputs, pkgs, ... }:
 let
-    inherit (lib) mkOption mkEnableOption mkIf optionals;
+    inherit (lib) mkOption mkEnableOption mkIf optionals concatLists;
     inherit (lib.types) str;
     inherit (config.faery.system) username;
 
@@ -78,23 +78,25 @@ in
                         force_zero_scaling = true;
                     };
 
-                    env = [
-                        "XDG_SESSION_TYPE, wayland"
-                        "GDK_BACKEND, wayland"
-                        "SDL_VIDEODRIVER, wayland"
-                        "CLUTTER_BACKEND, wayland"
-                        "QT_QPA_PLATFORM, wayland;xcb"
+                    env = concatLists [
+                        [
+                            "XDG_SESSION_TYPE, wayland"
+                            "GDK_BACKEND, wayland"
+                            "SDL_VIDEODRIVER, wayland"
+                            "CLUTTER_BACKEND, wayland"
+                            "QT_QPA_PLATFORM, wayland;xcb"
 
-                        "HYPRCURSOR_THEME, "
+                            "HYPRCURSOR_THEME, "
 
-                        "GDK_SCALE, ${cfg.scaling}"
+                            "GDK_SCALE, ${cfg.scaling}"
 
-                        "XDG_CURRENT_DESKTOP, Hyprland"
-                        "XDG_SESSION_DESKTOP, Hyprland"
-                    ]
-                    ++ lib.optionals cfg.enableDebug [
-                        "HYPRLAND_LOG_WLR, 1"
-                        "HYPRLAND_TRACE, 1"
+                            "XDG_CURRENT_DESKTOP, Hyprland"
+                            "XDG_SESSION_DESKTOP, Hyprland"
+                        ]
+                        (optionals cfg.enableDebug [
+                            "HYPRLAND_LOG_WLR, 1"
+                            "HYPRLAND_TRACE, 1"
+                        ])
                     ];
 
                     layerrule = "noanim,^(selection)$";

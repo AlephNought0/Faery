@@ -1,6 +1,6 @@
 { config, lib, inputs, pkgs, ... }:
 let
-    inherit (lib) mkEnableOption mkIf;
+    inherit (lib) mkEnableOption mkIf concatLists;
     inherit (config.faery.system) username;
 
     cfg = config.faery.programs.vesktop;
@@ -15,7 +15,10 @@ in
         home-manager.users.${username} = {
             home.packages = with pkgs; [
                 (vesktop.overrideAttrs (old: {
-                    patches = (old.patches or []) ++ [./patchedvesktop.patch];
+                    patches = concatLists [
+                        (old.patches or [])
+                        [./patchedvesktop.patch]
+                    ];
                 }))
             ];
 

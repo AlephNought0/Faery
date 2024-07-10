@@ -1,6 +1,6 @@
 { config, lib, ... }:
 let
-    inherit (lib) mkOption;
+    inherit (lib) mkOption concatLists;
     inherit (lib.types) str listOf;
 
     cfg = config.faery.system;
@@ -34,7 +34,12 @@ in
 
         users.users."${cfg.username}" = {
             isNormalUser = true;
-            extraGroups = [ "wheel" ] ++ cfg.extraGroups;
+            extraGroups = concatLists [
+                [
+                    "wheel"
+                ]
+                cfg.extraGroups
+            ];
         };
 
         environment.sessionVariables = {

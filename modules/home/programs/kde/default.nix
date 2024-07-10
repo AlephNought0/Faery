@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-    inherit (lib) mkOption mkEnableOption mkIf;
+    inherit (lib) mkOption mkEnableOption mkIf concatLists;
     inherit (lib.types) package listOf;
     inherit (config.faery.system) username;
 
@@ -18,11 +18,14 @@ in
     };
 
     config = mkIf cfg.enable {
-        home-manager.users.${username}.home.packages = with pkgs; [ ## Will add more packages if I find out there are some apps that do not work.
-            kdePackages.qtwayland
-            kdePackages.qtsvg
-            kdePackages.kiconthemes
-        ] ++ cfg.packages;
+        home-manager.users.${username}.home.packages = concatLists [ ## Will add more packages if I find out there are some apps that do not work.
+            (with pkgs; [
+                kdePackages.qtwayland
+                kdePackages.qtsvg
+                kdePackages.kiconthemes
+            ])
+            cfg.packages
+        ];
 
         services.udisks2.enable = true;
     };
