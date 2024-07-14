@@ -81,8 +81,8 @@ in
                     env = concatLists [
                         [
                             "XDG_SESSION_TYPE, wayland"
-                            "GDK_BACKEND, wayland"
-                            "SDL_VIDEODRIVER, wayland"
+                            "GDK_BACKEND, wayland,x11"
+                            #"SDL_VIDEODRIVER, wayland"
                             "CLUTTER_BACKEND, wayland"
                             "QT_QPA_PLATFORM, wayland;xcb"
                             "HYPRCURSOR_THEME, "
@@ -154,9 +154,9 @@ in
                         preserve_split = true;
                     };
 
-                    master = {
+                    /*master = {
                         new_status = "master";
-                    };
+                    };*/
 
                     gestures = {
                         workspace_swipe = false;

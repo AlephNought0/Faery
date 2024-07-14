@@ -1,8 +1,8 @@
 diff --git a/src/main/index.ts b/src/main/index.ts
-index 2f8191c..f989961 100644
+index 2e0d6f7..70dabba 100644
 --- a/src/main/index.ts
 +++ b/src/main/index.ts
-@@ -33,13 +33,34 @@ function init() {
+@@ -35,7 +35,7 @@ function init() {
      if (hardwareAcceleration === false) {
          app.disableHardwareAcceleration();
      } else {
@@ -11,9 +11,10 @@ index 2f8191c..f989961 100644
      }
  
      if (disableSmoothScroll) {
-         app.commandLine.appendSwitch("disable-smooth-scrolling");
-     }
- 
+@@ -48,6 +48,26 @@ function init() {
+     app.commandLine.appendSwitch("disable-renderer-backgrounding");
+     app.commandLine.appendSwitch("disable-background-timer-throttling");
+     app.commandLine.appendSwitch("disable-backgrounding-occluded-windows");
 +    app.commandLine.appendSwitch("disable-renderer-backgrounding");
 +    app.commandLine.appendSwitch("disable-background-timer-throttling");
 +    app.commandLine.appendSwitch("disable-backgrounding-occluded-windows");
@@ -34,15 +35,15 @@ index 2f8191c..f989961 100644
 +    app.commandLine.appendSwitch("ozone-platform-hint=auto");
 +    app.commandLine.appendSwitch("enable-webrtc-pipewire-capturer");
 +    app.commandLine.appendSwitch("ozone-platform=wayland");
-+
-     // work around chrome 66 disabling autoplay by default
-     app.commandLine.appendSwitch("autoplay-policy", "no-user-gesture-required");
-     // WinRetrieveSuggestionsOnlyOnDemand: Work around electron 13 bug w/ async spellchecking on Windows.
+     if (process.platform === "win32") {
+         disabledFeatures.push("CalculateNativeWinOcclusion");
+     }
+     
 diff --git a/src/renderer/components/ScreenSharePicker.tsx b/src/renderer/components/ScreenSharePicker.tsx
-index 1c53b63..a58666b 100644
+index c7403b9..9b454e6 100644
 --- a/src/renderer/components/ScreenSharePicker.tsx
 +++ b/src/renderer/components/ScreenSharePicker.tsx
-@@ -87,9 +87,9 @@ addPatch({
+@@ -84,9 +84,9 @@ addPatch({
          const width = Math.round(height * (16 / 9));
  
          Object.assign(opts, {

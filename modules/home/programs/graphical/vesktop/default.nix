@@ -16,7 +16,7 @@ in
                 (vesktop.overrideAttrs (old: {
                     patches = concatLists [
                         (old.patches or [])
-                        #[./patchedvesktop.patch]
+                        [./patchedvesktop.patch]
                     ];
                 }))
             ];
