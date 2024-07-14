@@ -11,12 +11,13 @@ in
     };
 
     config = mkIf cfg.enable {
-        programs.gamescope = {
+        /*programs.gamescope = {
+            enable = true;
             package = inputs.chaotic.packages."${pkgs.system}".gamescope_git;
-        };
+        };*/
 
-        home-manager.users.${username}.home.packages = with pkgs; [
-            mangohud
+        environment.systemPackages = with pkgs; [
+            inputs.chaotic.packages."${pkgs.system}".gamescope_git
         ];
 
         programs.steam = {

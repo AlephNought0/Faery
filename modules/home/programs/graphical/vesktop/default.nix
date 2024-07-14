@@ -4,7 +4,6 @@ let
     inherit (config.faery.system) username;
 
     cfg = config.faery.programs.vesktop;
-    electron-31 = (import inputs.nixpkgs-forked {}).electron_31-bin;
 in
 {
     options.faery.programs.vesktop = {
@@ -17,7 +16,7 @@ in
                 (vesktop.overrideAttrs (old: {
                     patches = concatLists [
                         (old.patches or [])
-                        [./patchedvesktop.patch]
+                        #[./patchedvesktop.patch]
                     ];
                 }))
             ];

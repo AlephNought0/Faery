@@ -43,6 +43,7 @@ in
             home.packages = with pkgs; [
                 tela-icon-theme
                 libsForQt5.qtstyleplugin-kvantum
+                kdePackages.qt6ct
             ];
         };
 

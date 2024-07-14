@@ -19,7 +19,6 @@ in
                 "media.ffvpx.enabled" = false;
                 "media.av1.enabled" = false;
                 "gfx.webrender.all" = true;
-                "widget.wayland.fractional-scale.enabled" = true;
                 "dom.webgpu.enabled" = true;
                 "gfx.webrender.compositor" = true;
                 "gfx.webrender.software" = true;

@@ -23,6 +23,8 @@ in
                 kdePackages.qtwayland
                 kdePackages.qtsvg
                 kdePackages.kiconthemes
+                libsForQt5.ffmpegthumbs
+                nil
             ])
             cfg.packages
         ];

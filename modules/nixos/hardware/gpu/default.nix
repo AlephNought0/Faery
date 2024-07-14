@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 let
-    inherit (lib) mkOption mkEnableOption mkMerge mkIf;
+    inherit (lib) mkOption mkEnableOption mkMerge mkIf concatLists;
     inherit (lib.types) enum;
 
     cfg = config.faery.system.hardware.gpu;
@@ -39,8 +39,6 @@ in
                     libva
                     rocmPackages.clr
                     rocmPackages.clr.icd
-                    rocmPackages.rocminfo
-                    rocmPackages.rocm-runtime
                 ];
 
                 extraPackages32 = with pkgs; [

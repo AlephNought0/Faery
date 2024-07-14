@@ -21,6 +21,7 @@
                 gpu.type = "amd";
                 cpu.type = "amd";
                 battery.enable = true;
+                logitech.enable = true;
             };
 
             services = {
@@ -67,8 +68,8 @@
             kdeWithoutPlasma = {
                 enable = true;
                 packages = with pkgs; [
-                    libsForQt5.kate
-                    libsForQt5.dolphin 
+                    kdePackages.kate
+                    libsForQt5.dolphin
                 ];
             };
 

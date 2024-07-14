@@ -85,7 +85,6 @@ in
                             "SDL_VIDEODRIVER, wayland"
                             "CLUTTER_BACKEND, wayland"
                             "QT_QPA_PLATFORM, wayland;xcb"
-
                             "HYPRCURSOR_THEME, "
 
                             "GDK_SCALE, ${cfg.scaling}"
