@@ -50,9 +50,9 @@ index c7403b9..9b454e6 100644
 -            bitrateMin: 500000,
 -            bitrateMax: 8000000,
 -            bitrateTarget: 600000
-+            bitrateMin: 8000000,
-+            bitrateMax: 30000000,
-+            bitrateTarget: 16000000
++            bitrateMin: 10000000,
++            bitrateMax: 60000000,
++            bitrateTarget: 32000000
          });
          if (opts?.encode) {
              Object.assign(opts.encode, {
