@@ -43,7 +43,7 @@
 
         xdg = {
             enable = true;
-            default_browser = "firefox-nightly.desktop";
+            default_browser = "brave-browser.desktop";
             default_editor = "kate.desktop";
         };
 
@@ -55,9 +55,8 @@
 
         programs = {
             browsers = {
-                firefox = {
-                    enable = true;
-                };
+                firefox.enable = true;
+                brave.enable = true;
             };
 
             hyprland = {
