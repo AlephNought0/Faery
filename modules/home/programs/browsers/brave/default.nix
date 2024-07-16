@@ -1,6 +1,7 @@
 { config, lib, inputs, pkgs, ... }:
 let
     inherit (lib) mkEnableOption mkIf;
+    inherit (config.faery.system) username;
 
     cfg = config.faery.programs.browsers.brave;
 in
