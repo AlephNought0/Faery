@@ -16,6 +16,8 @@ in
             package = inputs.chaotic.packages."${pkgs.system}".gamescope_git;
         };*/
 
+        #programs.gamescope.capSysNice = true;
+
         environment.systemPackages = with pkgs; [
             inputs.chaotic.packages."${pkgs.system}".gamescope_git
         ];

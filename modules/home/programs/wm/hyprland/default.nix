@@ -125,8 +125,13 @@ in
 
                         blur = {
                             enabled = true;
-                            size = 3;
+                            size = 4;
                             passes = 1;
+                            new_optimizations = true;
+                            noise = 0.026;
+                            contrast = 1;
+                            vibrancy_darkness = 0.11;
+                            vibrancy = 0.22;
                         };
 
                         drop_shadow = true;

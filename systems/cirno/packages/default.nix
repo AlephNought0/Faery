@@ -17,7 +17,6 @@ in
     gimp
     keepassxc
     spotube
-    thunderbird
     easyeffects
     element-desktop
 
