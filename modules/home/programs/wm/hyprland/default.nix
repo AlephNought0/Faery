@@ -63,8 +63,9 @@ in
                     exec-once = [
                         "swww-daemon"
                         "~/Faery/systems/cirno/userStuff/Scripts/SWWW.sh"
-                        "firefox-nightly"
+                        "brave"
                         "systemctl --user start opentabletdriver.service"
+                        "hyprctl setcursor Posy_Cursor 69" #env variables simply do not work
                     ];
 
                     misc = {
@@ -85,7 +86,8 @@ in
                             #"SDL_VIDEODRIVER, wayland"
                             "CLUTTER_BACKEND, wayland"
                             "QT_QPA_PLATFORM, wayland;xcb"
-                            "HYPRCURSOR_THEME, "
+                            "HYPRCURSOR_THEME,Posy_Cursor"
+                            "HYPRCURSOR_SIZE,69"
 
                             "GDK_SCALE, ${cfg.scaling}"
 
