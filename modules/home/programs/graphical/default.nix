@@ -4,5 +4,6 @@
     ./steam
     ./opentablet
     ./corectrl
+    ./nvf
   ];
 }

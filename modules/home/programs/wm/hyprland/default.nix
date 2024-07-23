@@ -36,7 +36,7 @@ in
         home-manager.users.${username} = {
             home.packages = with pkgs; [
                 xwaylandvideobridge
-                kitty
+                foot
                 rofi-wayland
                 inputs.hyprcursor.packages."${pkgs.system}".hyprcursor
                 inputs.swww.packages."${pkgs.system}".swww
@@ -65,7 +65,7 @@ in
                         "~/Faery/systems/cirno/userStuff/Scripts/SWWW.sh"
                         "brave"
                         "systemctl --user start opentabletdriver.service"
-                        "hyprctl setcursor Posy_Cursor 69" #env variables simply do not work
+                        "hyprctl setcursor Posy_Cursor 40" #env variables simply do not work
                     ];
 
                     misc = {
@@ -87,7 +87,7 @@ in
                             "CLUTTER_BACKEND, wayland"
                             "QT_QPA_PLATFORM, wayland;xcb"
                             "HYPRCURSOR_THEME,Posy_Cursor"
-                            "HYPRCURSOR_SIZE,69"
+                            "HYPRCURSOR_SIZE,40"
 
                             "GDK_SCALE, ${cfg.scaling}"
 
@@ -170,7 +170,7 @@ in
                     };
 
                     bind = [
-                        "$mainMod, Q, exec, kitty"
+                        "$mainMod, Q, exec, foot"
                         "$mainMod, C, killactive,"
                         "$mainMod, M, exit,"
                         "$mainMod, E, exec, dolphin"

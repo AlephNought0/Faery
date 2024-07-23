@@ -72,6 +72,7 @@
                 ];
             };
 
+            nvf.enable = true;
             vesktop.enable = true;
             steam.enable = true;
             opentablet.enable = true;
