@@ -44,7 +44,8 @@
         xdg = {
             enable = true;
             default_browser = "brave-browser.desktop";
-            default_editor = "kate.desktop";
+            default_editor = "nvim.desktop";
+            default_terminal = "foot";
         };
 
         theme.qt = {
@@ -67,8 +68,7 @@
             kdeWithoutPlasma = {
                 enable = true;
                 packages = with pkgs; [
-                    kdePackages.kate
-                    libsForQt5.dolphin
+                  libsForQt5.dolphin
                 ];
             };
 

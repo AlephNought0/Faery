@@ -9,9 +9,8 @@ in
     qbittorrent
     obs-studio
     krita
-    vscodium-fhs
     vlc
-    libreoffice-qt
+    #libreoffice-qt
     qtcreator
     r2modman
     gimp
