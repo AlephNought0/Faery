@@ -1,4 +1,4 @@
-{ config, lib, inputs, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 let
     inherit (lib) mkEnableOption mkIf;
     inherit (config.faery.system) username;

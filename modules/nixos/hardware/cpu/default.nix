@@ -1,6 +1,6 @@
 { config, lib, ... }:
 let
-    inherit (lib) mkOption mkEnableOption mkMerge mkIf;
+    inherit (lib) mkOption mkMerge mkIf;
     inherit (lib.types) enum;
 
     cfg = config.faery.system.hardware.cpu;

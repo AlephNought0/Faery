@@ -6,7 +6,6 @@ let
 
     cfg = config.faery.home-manager;
 
-    is-linux = pkgs.stdenv.isLinux;
     is-darwin = pkgs.stdenv.isDarwin;
 
     home-directory =

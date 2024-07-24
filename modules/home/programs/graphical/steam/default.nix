@@ -1,7 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 let
     inherit (lib) mkEnableOption mkIf;
-    inherit (config.faery.system) username;
 
     cfg = config.faery.programs.steam;
 in
@@ -11,16 +10,12 @@ in
     };
 
     config = mkIf cfg.enable {
-        /*programs.gamescope = {
+        programs.gamescope = {
             enable = true;
             package = inputs.chaotic.packages."${pkgs.system}".gamescope_git;
-        };*/
+        };
 
         #programs.gamescope.capSysNice = true;
-
-        environment.systemPackages = with pkgs; [
-            inputs.chaotic.packages."${pkgs.system}".gamescope_git
-        ];
 
         programs.steam = {
             enable = true;
@@ -44,7 +39,7 @@ in
                 ];
             };
 
-            extraCompatPackages = with pkgs; [
+            extraCompatPackages = [
                 inputs.chaotic.packages."${pkgs.system}".proton-ge-custom
             ];
         };

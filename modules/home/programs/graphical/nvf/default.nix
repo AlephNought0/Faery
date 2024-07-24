@@ -1,32 +1,35 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 let
-    inherit (lib) mkEnableOption mkIf;
+    inherit (lib) mkEnableOption mkIf mkForce;
     inherit (config.faery.xdg) default_terminal;
+    inherit (config.faery.system) username;
     cfg = config.faery.programs.nvf;
     
-    modified-nvf = pkgs.neovim-unwrapped.overrideAttrs (oldAttrs: {
-      postInstall = oldAttrs.postInstall + ''
-        substituteInPlace $out/share/applications/nvim.desktop \
-          --replace "Exec=nvim %F" "Exec=${default_terminal} nvim %F" \
-          --replace "Terminal=true" "Terminal=false"
-        '';
-      });
 in
 {
     options.faery.programs.nvf = {
         enable = mkEnableOption "nvf module.";
     };
 
-    config = mkIf cfg.enable {
+    config = mkIf cfg.enable {        
+        home-manager.users.${username} = {
+          xdg.desktopEntries."nvim" = mkForce {
+            name = "Neovim";
+            type = "Application";
+            icon = "nvim";
+            exec = "${default_terminal} nvim %F";
+            mimeType = ["text/plain"];
+          };
+        };
+
         programs.nvf = {
             enable = true;
 
             settings.vim = {
-                package = modified-nvf;
                 viAlias = false;
                 vimAlias = false;
                 enableLuaLoader = true;
-                preventJunkFiles = true; #sex
+                preventJunkFiles = true;
         
                 theme  = {
                     enable = true;

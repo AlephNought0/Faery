@@ -1,7 +1,6 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, ... }:
 let
-    inherit (lib) mkOption mkEnableOption mkMerge mkIf;
-    inherit (lib.types) enum;
+    inherit (lib) mkEnableOption mkIf;
 
     cfg = config.faery.system.hardware.logitech;
 in

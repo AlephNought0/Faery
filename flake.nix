@@ -53,7 +53,6 @@
     };
 
   outputs = {
-    self,
     nixpkgs,
     ...
   } @ inputs: {

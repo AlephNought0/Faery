@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 let
-    inherit (lib) mkOption mkEnableOption mkMerge mkIf concatLists;
+    inherit (lib) mkOption mkMerge mkIf;
     inherit (lib.types) enum;
 
     cfg = config.faery.system.hardware.gpu;
