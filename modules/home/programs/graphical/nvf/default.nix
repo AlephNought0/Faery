@@ -47,16 +47,58 @@ in
                 };
 
                 maps = {
-                    normal = {
+                    /*normal = {
                         "<leader>t" = {
-                            action = "<CMD>Neotree toggle<CR>";
+                            action = "<CMD>NvimTreeToggle<CR>";
                             silent = true;
                         };
-                    };
+                    };*/
                 };
 
-                filetree.neo-tree.enable = true;
+                git = {
+                  enable = true;
+                  gitsigns.enable = true;
+                };
+
+                lsp = {
+                  enable = true;
+                  lspSignature.enable = true;
+                  lspconfig.enable = true;
+                };
+
+                lineNumberMode = "number";
+                autocomplete.enable = true;
+                
+                statusline.lualine = {
+                  enable = true;
+                  theme = "catppuccin";
+                };
+                
+                tabline.nvimBufferline = {
+                  enable = true;
+                  setupOpts = {
+                    highlights = {
+                      
+                    };
+
+                    options = {
+                      numbers = "ordinal";
+                      sort_by = "insert_at_end";
+                    };                    
+                  };
+                };
+
+                filetree.nvimTree = {
+                  enable = true;
+                  setupOpts = {
+                    git.enable = true;
+                    modified.enable = true;
+                    renderer.icons.show.file = true;
+                  };
+                };
+
                 treesitter.enable = true;
+                visuals.nvimWebDevicons.enable = true;
             };
         };
     };
