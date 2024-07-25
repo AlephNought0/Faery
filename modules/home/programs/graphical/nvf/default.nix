@@ -42,10 +42,6 @@ in {
 
       settings.vim = {
         package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-        extraPackages = with pkgs; [
-          kdePackages.full
-        ];
-
         viAlias = false;
         vimAlias = false;
         enableLuaLoader = true;
