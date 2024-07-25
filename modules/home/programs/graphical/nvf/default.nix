@@ -70,6 +70,11 @@ in {
           nix.enable = true;
           lua.enable = true;
           bash.enable = true;
+          html.enable = true;
+          ts.enable = true;
+          php.enable = true;
+          css.enable = true;
+          sql.enable = true;
         };
 
         git = {
