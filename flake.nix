@@ -1,63 +1,62 @@
 {
-    description = "The most bleeding edge NixOS flake";
+  description = "The most bleeding edge NixOS flake";
 
-    inputs = {
-        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-        home-manager = {
-            url = "github:nix-community/home-manager";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        nvf = {
-            url = "github:notashelf/nvf";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        hyprland = {
-            url = "git+https://github.com/hyprwm/Hyprland?submodules=1&rev=c31d9ef4172452f6f219f91d9b87a24d91f0cf3a";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        xdg-desktop-portal-hyprland = {
-            url = "github:hyprwm/xdg-desktop-portal-hyprland";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        hyprcursor = {
-            url = "github:hyprwm/hyprcursor";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        quickshell = {
-            url = "github:outfoxxed/quickshell";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        prismlauncher = {
-            url = "github:prismlauncher/prismlauncher";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        nix-gaming = {
-            url = "github:fufexan/nix-gaming";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        swww = {
-            url = "github:LGFae/swww";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-        chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-  outputs = {
-    nixpkgs,
-    ...
-  } @ inputs: {
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1&rev=c31d9ef4172452f6f219f91d9b87a24d91f0cf3a";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    xdg-desktop-portal-hyprland = {
+      url = "github:hyprwm/xdg-desktop-portal-hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprcursor = {
+      url = "github:hyprwm/hyprcursor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    prismlauncher = {
+      url = "github:prismlauncher/prismlauncher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    swww = {
+      url = "github:LGFae/swww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+  };
+
+  outputs = {nixpkgs, ...} @ inputs: {
     inherit (nixpkgs) lib;
 
-    nixosConfigurations = import ./systems { inherit inputs; };
+    nixosConfigurations = import ./systems {inherit inputs;};
   };
 }
