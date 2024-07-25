@@ -19,7 +19,6 @@ in {
     gimp
     keepassxc
     spotube
-    easyeffects
     element-desktop
 
     git

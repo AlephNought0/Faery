@@ -76,6 +76,7 @@
       steam.enable = true;
       opentablet.enable = true;
       corectrl.enable = true;
+      easyeffects.enable = true;
     };
   };
 }

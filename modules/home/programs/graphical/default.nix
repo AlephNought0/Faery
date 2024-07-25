@@ -5,5 +5,6 @@
     ./opentablet
     ./corectrl
     ./nvf
+    ./easyeffects
   ];
 }
