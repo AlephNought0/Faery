@@ -9,6 +9,18 @@
   inherit (config.faery.xdg) default_terminal;
   inherit (config.faery.system) username;
   cfg = config.faery.programs.nvf;
+
+  nvimScript = pkgs.writeShellScript "nvimServer.sh" ''
+    #!/bin/bash
+
+    SOCKET_PATH="/tmp/nvimsocket"
+
+    if nvim --server $SOCKET_PATH --remote-expr "1" > /dev/null 2>&1; then
+        nvim --server $SOCKET_PATH --remote "$1"
+    else
+        ${default_terminal} nvim --listen $SOCKET_PATH "$1"
+    fi
+  '';
 in {
   options.faery.programs.nvf = {
     enable = mkEnableOption "nvf module.";
@@ -20,7 +32,7 @@ in {
         name = "Neovim";
         type = "Application";
         icon = "nvim";
-        exec = "${default_terminal} nvim %F";
+        exec = "${nvimScript} %F";
         mimeType = ["text/plain"];
       };
     };
@@ -30,6 +42,10 @@ in {
 
       settings.vim = {
         package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+        extraPackages = with pkgs; [
+          kdePackages.full
+        ];
+
         viAlias = false;
         vimAlias = false;
         enableLuaLoader = true;
@@ -57,6 +73,7 @@ in {
           clang.enable = true;
           nix.enable = true;
           lua.enable = true;
+          bash.enable = true;
         };
 
         git = {

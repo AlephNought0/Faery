@@ -21,6 +21,7 @@ in {
     spotube
     easyeffects
     element-desktop
+    kdePackages.full
 
     git
     asusctl
