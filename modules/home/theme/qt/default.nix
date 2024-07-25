@@ -16,21 +16,19 @@ in {
     platformTheme = mkOption {
       type = str;
       description = "Platform theme for qt.";
-      default = "qt5ct";
     };
 
     style = mkOption {
       type = str;
       description = "Style for qt.";
-      default = "kvantum";
     };
   };
 
   config = mkIf cfg.enable {
     qt = {
       enable = true;
-      platformTheme = cfg.platformTheme;
-      style = cfg.style;
+      inherit (cfg) platformTheme;
+      inherit (cfg) style;
     };
 
     home-manager.users.${username} = {

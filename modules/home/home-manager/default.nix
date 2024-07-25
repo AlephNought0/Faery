@@ -23,7 +23,7 @@ in {
     enable = mkEnableOption "home manager.";
     enableDirenv = mkEnableOption "direnv.";
 
-    home = mkOption {
+    homeDirectory = mkOption {
       type = str;
       description = "Home directory";
       default = home-directory;
@@ -45,7 +45,7 @@ in {
         };
 
         home = {
-          homeDirectory = cfg.home;
+          inherit (cfg) homeDirectory;
           stateVersion = "24.11";
         };
       };

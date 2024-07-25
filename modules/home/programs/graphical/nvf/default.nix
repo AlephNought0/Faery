@@ -34,6 +34,12 @@ in {
         vimAlias = false;
         enableLuaLoader = true;
         preventJunkFiles = true;
+        autocomplete.enable = true;
+        lineNumberMode = "number";
+
+        extraLuaFiles = [
+          ./scripts/DapGuiAutoOpen.lua
+        ];
 
         theme = {
           enable = true;
@@ -46,9 +52,11 @@ in {
           enableLSP = true;
           enableTreesitter = true;
           enableFormat = true;
+          enableDAP = true;
 
           clang.enable = true;
           nix.enable = true;
+          lua.enable = true;
         };
 
         git = {
@@ -58,13 +66,39 @@ in {
 
         lsp = {
           enable = true;
-          #lspSignature.enable = true;
-          #lspconfig.enable = true;
+          lspSignature.enable = true;
+          lspconfig.enable = true;
           formatOnSave = true;
         };
 
-        lineNumberMode = "number";
-        autocomplete.enable = true;
+        terminal = {
+          toggleterm = {
+            enable = true;
+            lazygit.enable = true;
+          };
+        };
+
+        maps = {
+          normal = {
+            "<leader>r" = {
+              action = "<CMD>Neotree toggle<CR>";
+            };
+
+            "<leader>ct" = {
+              action = "<CMD>ToggleTerm<CR>";
+            };
+          };
+        };
+
+        debugger = {
+          nvim-dap = {
+            enable = true;
+            ui = {
+              enable = true;
+              autoStart = false; #No idea why it should close automatically as well.
+            };
+          };
+        };
 
         statusline.lualine = {
           enable = true;
@@ -74,20 +108,9 @@ in {
         tabline.nvimBufferline = {
           enable = true;
           setupOpts = {
-            highlights = {
-            };
-
             options = {
               numbers = "ordinal";
               sort_by = "insert_at_end";
-            };
-          };
-        };
-
-        maps = {
-          normal = {
-            "<leader>r" = {
-              action = "<CMD>Neotree toggle<CR>";
             };
           };
         };
@@ -102,7 +125,6 @@ in {
         treesitter = {
           enable = true;
           fold = true;
-          context.enable = true;
         };
 
         visuals = {

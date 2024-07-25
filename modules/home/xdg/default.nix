@@ -7,8 +7,7 @@
   inherit (lib) mkOption mkEnableOption mkIf;
   inherit (lib.types) str;
   inherit (config.faery.system) username;
-
-  homeDirectory = config.home-manager.users.${username}.home.homeDirectory;
+  inherit (config.home-manager.users.${username}.home) homeDirectory;
   cfg = config.faery.xdg;
 in {
   options.faery.xdg = {
