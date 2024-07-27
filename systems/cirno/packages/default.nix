@@ -21,11 +21,7 @@ in {
     spotube
     element-desktop
 
-    kdePackages.full
-    libgcc
-    cmake
-    cmake-format
-    gnumake
+    (pkgs.callPackage ../../../packages/lsp/qml_lsp/default.nix {})
 
     git
     asusctl

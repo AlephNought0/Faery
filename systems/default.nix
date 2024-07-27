@@ -10,6 +10,7 @@ in {
     modules = [
       ./cirno
       ../modules
+      ../packages
       inputs.home-manager.nixosModules.home-manager
       inputs.nix-gaming.nixosModules.pipewireLowLatency
       inputs.chaotic.nixosModules.default
@@ -27,6 +28,7 @@ in {
     modules = [
       ./ayumu
       ../modules
+      ../packages
       inputs.home-manager.nixosModules.home-manager
       inputs.nix-gaming.nixosModules.pipewireLowLatency
       inputs.chaotic.nixosModules.default
