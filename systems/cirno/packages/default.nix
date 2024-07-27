@@ -21,8 +21,6 @@ in {
     spotube
     element-desktop
 
-    (pkgs.callPackage ../../../packages/lsp/qml_lsp/default.nix {})
-
     git
     asusctl
     amdgpu_top

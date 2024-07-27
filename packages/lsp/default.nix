@@ -1,5 +1,0 @@
-{
-  imports = [
-    ./qml_lsp
-  ];
-}
