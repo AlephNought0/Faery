@@ -47,10 +47,20 @@ in {
         enableLuaLoader = true;
         preventJunkFiles = true;
         autocomplete.enable = true;
+        autopairs.enable = true;
         lineNumberMode = "number";
 
+        extraPlugins = with pkgs.vimPlugins; {
+          cmake-tools = {
+            package = cmake-tools-nvim;
+            setup = "require('cmake-tools').setup {}";
+          };
+        };
+
         extraLuaFiles = [
-          ./scripts/DapGuiAutoOpen.lua
+          ./scripts/dapGuiAutoOpen.lua
+          ./scripts/enableExrc.lua
+          ./scripts/qmlls.lua
         ];
 
         theme = {
@@ -102,8 +112,12 @@ in {
               action = "<CMD>Neotree toggle<CR>";
             };
 
-            "<leader>ct" = {
+            "<leader>tt" = {
               action = "<CMD>ToggleTerm<CR>";
+            };
+
+            "<leader>cb" = {
+              action = "<CMD>CMakeBuild<CR>";
             };
           };
         };
@@ -149,6 +163,8 @@ in {
           enable = true;
           nvimWebDevicons.enable = true;
         };
+
+        telescope.enable = true;
       };
     };
   };

@@ -21,6 +21,12 @@ in {
     spotube
     element-desktop
 
+    kdePackages.full
+    libgcc
+    cmake
+    cmake-format
+    gnumake
+
     git
     asusctl
     amdgpu_top
