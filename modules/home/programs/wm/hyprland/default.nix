@@ -68,7 +68,7 @@ in {
             "~/Faery/systems/cirno/userStuff/Scripts/SWWW.sh"
             "brave"
             "systemctl --user start opentabletdriver.service"
-            "hyprctl setcursor Posy_Cursor 40" #env variables simply do not work
+            "hyprctl setcursor Posy_Cursor 69" #env variables simply do not work
           ];
 
           misc = {

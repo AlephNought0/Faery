@@ -55,8 +55,10 @@
 
     programs = {
       browsers = {
-        firefox.enable = true;
-        brave.enable = true;
+        firefox = {
+          enable = true;
+          dGPU = true;
+        };
       };
 
       hyprland = {

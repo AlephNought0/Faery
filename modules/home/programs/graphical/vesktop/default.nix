@@ -154,6 +154,7 @@ in {
               KeepCurrentChannel.enabled = false;
               LastFMRichPresence.enabled = false;
               LoadingQuotes.enabled = false;
+              WatchTogetherAdblock.enabled = true;
               MemberCount.enabled = false;
               MessageClickActions.enabled = true;
               MessageLinkEmbeds.enabled = false;

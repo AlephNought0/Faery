@@ -13,7 +13,7 @@ in {
     obs-studio
     krita
     vlc
-    #libreoffice-qt
+    libreoffice-qt6-fresh
     qtcreator
     r2modman
     gimp

@@ -44,6 +44,7 @@ in {
         libsForQt5.kitemviews
         libsForQt5.kwidgetsaddons
         libsForQt5.kwindowsystem
+        ark
       ])
       cfg.packages
     ];
