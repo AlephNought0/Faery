@@ -687,6 +687,6 @@
       "output-gain": 0.0,
       "scope": 5500.0
     },
-    "plugins_order": ["equalizer#0", "exciter#0", "crystalizer#0"]
+    "plugins_order": ["equalizer#0", "exciter#0"]
   }
 }

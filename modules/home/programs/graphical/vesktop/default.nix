@@ -32,7 +32,7 @@ in {
           "vesktop/themes/Hehe.css".source = themeFile;
 
           "vesktop/settings.json".text = builtins.toJSON {
-            minimizeToTray = false;
+            minimizeToTray = true;
             discordBranch = "canary";
             firstLaunch = false;
             arRPC = "off";
@@ -51,7 +51,7 @@ in {
           };
 
           "vesktop/settings/settings.json".text = builtins.toJSON {
-            notifyAboutUpdates = false;
+            notifyAboutUpdates = true;
             autoUpdate = false;
             autoUpdateNotification = false;
             useQuickCss = true;

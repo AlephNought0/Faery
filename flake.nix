@@ -52,6 +52,8 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
   };
 
   outputs = {nixpkgs, ...} @ inputs: {

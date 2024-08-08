@@ -14,7 +14,6 @@ in {
     networks = mkOption {
       type = listOf str;
       description = "Zerotier networks";
-      default = [""];
     };
   };
 

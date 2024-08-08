@@ -26,8 +26,7 @@ in {
 
     programs.firefox = {
       enable = true;
-      package =
-        inputs.chaotic.packages."${pkgs.system}".firefox_nightly;
+      package = inputs.chaotic.packages."${pkgs.system}".firefox_nightly;
 
       preferences = {
         "media.ffmpeg.vaapi.enabled" = true;

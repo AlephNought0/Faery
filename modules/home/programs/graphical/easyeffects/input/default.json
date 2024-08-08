@@ -5,11 +5,11 @@
     "rnnoise#0": {
       "bypass": false,
       "enable-vad": true,
-      "input-gain": 9.0,
+      "input-gain": 0.0,
       "model-name": "",
-      "output-gain": 9.0,
+      "output-gain": 0.0,
       "release": 20.0,
-      "vad-thres": 75.0,
+      "vad-thres": 80.0,
       "wet": 0.0
     }
   }
