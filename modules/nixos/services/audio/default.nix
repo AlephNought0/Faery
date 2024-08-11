@@ -8,7 +8,7 @@
   cfg = config.faery.system.services.pipewire;
 in {
   options.faery.system.services.pipewire = {
-    enable = mkEnableOption "pipewire service."; #Forget about using PulseAudio lmfao
+    enable = mkEnableOption "pipewire service.";
   };
 
   config = mkIf cfg.enable {

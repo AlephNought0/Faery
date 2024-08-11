@@ -20,7 +20,7 @@
     };
 
     xdg-desktop-portal-hyprland = {
-      url = "github:hyprwm/xdg-desktop-portal-hyprland/bc7131ce671f13b21f74bef776641d310eafc7bc";
+      url = "github:hyprwm/xdg-desktop-portal-hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -52,6 +52,8 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
+    nur.url = "github:nix-community/NUR";
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
   };

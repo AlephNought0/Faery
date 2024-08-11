@@ -6,5 +6,6 @@
     ./corectrl
     ./nvf
     ./easyeffects
+    ./btop
   ];
 }

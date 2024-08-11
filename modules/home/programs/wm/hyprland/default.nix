@@ -39,7 +39,6 @@ in {
     home-manager.users.${username} = {
       home.packages = with pkgs; [
         xwaylandvideobridge
-        foot
         rofi-wayland
         inputs.hyprcursor.packages."${pkgs.system}".hyprcursor
         inputs.swww.packages."${pkgs.system}".swww
@@ -68,7 +67,6 @@ in {
             "~/Faery/systems/cirno/userStuff/Scripts/SWWW.sh"
             "env DRI_PRIME=1 firefox-nightly"
             "systemctl --user start opentabletdriver.service"
-            #"hyprctl setcursor rose-pine-hyprcursor 40" #env variables simply do not work
           ];
 
           misc = {
@@ -86,7 +84,7 @@ in {
             [
               "XDG_SESSION_TYPE, wayland"
               "GDK_BACKEND, wayland,x11"
-              #"SDL_VIDEODRIVER, wayland"
+              "SDL_VIDEODRIVER, wayland"
               "CLUTTER_BACKEND, wayland"
               "QT_QPA_PLATFORM, wayland;xcb"
               "HYPRCURSOR_THEME, rose-pine-hyprcursor"

@@ -4,5 +4,6 @@
     ./kde
     ./graphical
     ./browsers
+    ./terminals
   ];
 }

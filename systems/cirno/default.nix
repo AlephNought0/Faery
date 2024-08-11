@@ -73,12 +73,17 @@
         ];
       };
 
+      terminals = {
+        foot.enable = true;
+      };
+
       nvf.enable = true;
       vesktop.enable = true;
       steam.enable = true;
       opentablet.enable = true;
       corectrl.enable = true;
       easyeffects.enable = true;
+      btop.enable = true;
     };
   };
 }
