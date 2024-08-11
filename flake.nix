@@ -20,7 +20,7 @@
     };
 
     xdg-desktop-portal-hyprland = {
-      url = "github:hyprwm/xdg-desktop-portal-hyprland";
+      url = "github:hyprwm/xdg-desktop-portal-hyprland/bc7131ce671f13b21f74bef776641d310eafc7bc";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
