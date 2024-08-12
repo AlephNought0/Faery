@@ -88,7 +88,7 @@
 }
 
 .scrollableContainer_d0696b {
-  height: 45px !important;
+  min-height: 45px !important;
 }
 
 .note__7a4f4 textarea {
