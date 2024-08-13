@@ -1,0 +1,22 @@
+diff --git a/Kvantum/Layan/LayanDark.kvconfig b/Kvantum/Layan/LayanDark.kvconfig
+index f3f2d34..afca712 100644
+--- a/Kvantum/Layan/LayanDark.kvconfig
++++ b/Kvantum/Layan/LayanDark.kvconfig
+@@ -1,6 +1,4 @@
+ [%General]
+-author=Vince Liuice, based on KvAdapta by Tsu Jan
+-comment=An uncomplicated theme inspired by the Materia GTK theme
+ x11drag=all
+ alt_mnemonic=true
+ left_tabs=true
+@@ -78,8 +76,8 @@ tooltip_blur_radius=6
+ [GeneralColors]
+ window.color=#31313A
+ base.color=#34343B
+-alt.base.color=#31313A
+-button.color=#44454B
++alt.base.color=#31313A00
++button.color=#31313A
+ light.color=#44454B
+ mid.light.color=#44454B
+ dark.color=#25252d

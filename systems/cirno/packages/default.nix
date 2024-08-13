@@ -21,6 +21,7 @@ in {
     keepassxc
     spotube
     element-desktop
+    kdePackages.oxygen-icons
 
     git
     asusctl
