@@ -20,11 +20,15 @@ in {
     gimp
     keepassxc
     spotube
-    element-desktop
-    kdePackages.oxygen-icons
+    protontricks
 
     git
     asusctl
     amdgpu_top
   ];
+
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
 }

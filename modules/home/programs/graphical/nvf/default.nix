@@ -72,7 +72,7 @@ in {
         languages = {
           enableExtraDiagnostics = true;
           enableLSP = true;
-          enableTreesitter = true;
+          #enableTreesitter = true;
           enableFormat = true;
           enableDAP = true;
 

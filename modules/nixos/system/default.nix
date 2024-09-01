@@ -53,5 +53,7 @@ in {
 
     time.timeZone = "Europe/Bratislava";
     i18n.defaultLocale = "en_US.UTF-8";
+
+    services.upower.enable = true;
   };
 }
