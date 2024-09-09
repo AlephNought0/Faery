@@ -21,14 +21,10 @@ in {
     keepassxc
     spotube
     protontricks
+    matugen
 
     git
     asusctl
     amdgpu_top
   ];
-
-  services.mysql = {
-    enable = true;
-    package = pkgs.mariadb;
-  };
 }

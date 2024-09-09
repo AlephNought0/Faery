@@ -64,7 +64,6 @@ in {
 
           exec-once = [
             "swww-daemon"
-            "~/Faery/systems/cirno/userStuff/Scripts/SWWW.sh"
             "env DRI_PRIME=1 firefox-nightly"
             "systemctl --user start opentabletdriver.service"
           ];
@@ -101,7 +100,12 @@ in {
             ])
           ];
 
-          layerrule = "noanim,^(selection)$";
+          layerrule = [
+            "noanim,^(selection)$"
+            "blur, ohio"
+            "blurpopups, ohio"
+            "ignorezero, ohio"
+          ];
 
           input = {
             kb_layout = "us";
@@ -128,7 +132,7 @@ in {
 
             blur = {
               enabled = true;
-              size = 4;
+              size = 5;
               passes = 1;
               new_optimizations = true;
               noise = 0.026;
@@ -162,11 +166,9 @@ in {
             preserve_split = true;
           };
 
-          /*
-            master = {
-              new_status = "master";
+          master = {
+            new_status = "master";
           };
-          */
 
           gestures = {
             workspace_swipe = false;

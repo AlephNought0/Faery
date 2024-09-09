@@ -32,7 +32,8 @@ in {
         name = "Neovim";
         type = "Application";
         icon = "nvim";
-        exec = "${nvimScript} %F";
+        exec = "${nvimScript}";
+        terminal = false;
         mimeType = ["text/plain"];
       };
     };
@@ -72,7 +73,7 @@ in {
         languages = {
           enableExtraDiagnostics = true;
           enableLSP = true;
-          #enableTreesitter = true;
+          enableTreesitter = true;
           enableFormat = true;
           enableDAP = true;
 

@@ -4,5 +4,6 @@
     ./kernel
     ./hardware
     ./bootloader
+    ./desktopFiles
   ];
 }
