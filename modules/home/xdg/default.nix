@@ -30,10 +30,16 @@ in {
 
   config = mkIf cfg.enable {
     home-manager.users.${username} = {
-      home.packages = with pkgs; [
-        xdg-utils
-        shared-mime-info
-      ];
+      home = {
+        packages = with pkgs; [
+          xdg-utils
+          shared-mime-info
+        ];
+
+        sessionVariables = {
+          TERMINAL = cfg.default_terminal;
+        };
+      };
 
       xdg = {
         enable = true;

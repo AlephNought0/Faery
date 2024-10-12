@@ -43,6 +43,8 @@ in {
           libva
           rocmPackages.clr
           rocmPackages.clr.icd
+          rocmPackages.rocminfo
+          rocmPackages.rocm-runtime
         ];
 
         extraPackages32 = with pkgs; [
@@ -54,6 +56,8 @@ in {
         VDPAU_DRIVER = "radeonsi";
         LIBVA_DRIVER_NAME = "radeonsi";
         AMD_VULKAN_ICD = "RADV";
+        OCL_ICD_VENDORS = "${pkgs.rocmPackages.clr.icd}/etc/OpenCL/vendors";
+        VK_ICD_FILENAMES = "${pkgs.mesa_git.drivers}/share/vulkan/icd.d/radeon_icd.x86_64.json";
       };
 
       systemd.tmpfiles.rules = [

@@ -22,6 +22,9 @@ in {
     spotube
     protontricks
     matugen
+    jdk8
+    cmake
+    unigine-heaven
 
     git
     asusctl

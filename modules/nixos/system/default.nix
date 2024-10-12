@@ -39,6 +39,7 @@ in {
       extraGroups = concatLists [
         [
           "wheel"
+          "video"
         ]
         cfg.extraGroups
       ];
