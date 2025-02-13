@@ -1,20 +1,27 @@
 {
   config,
   pkgs,
+  lib,
   inputs,
   ...
 }: let
+  inherit (lib) concatLists;
   inherit (config.faery.system) username;
 in {
   home-manager.users."${username}".home.packages = with pkgs; [
-    inputs.prismlauncher.packages."${pkgs.system}".prismlauncher
-    inputs.quickshell.packages."${pkgs.system}".quickshell
+    (inputs.quickshell.packages."${pkgs.system}".quickshell.overrideAttrs (old: {
+      patches = concatLists [
+        (old.patches or [])
+        [./quickpatch.patch]
+      ];
+    }))
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    prismlauncher
     qbittorrent
     obs-studio
     krita
     vlc
-    libreoffice-qt6-fresh
+    libreoffice-qt6-still
     qtcreator
     r2modman
     gimp
@@ -22,9 +29,9 @@ in {
     spotube
     protontricks
     matugen
-    jdk8
-    cmake
-    unigine-heaven
+    jdk17
+    wl-gammarelay-rs
+    telegram-desktop
 
     git
     asusctl

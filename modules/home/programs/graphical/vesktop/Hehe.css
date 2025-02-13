@@ -79,36 +79,16 @@
   color: cyan;
 }
 
-.buttons_d0696b > button {
-  display: none;
+.channelAppLauncher_e6e74f {
+    display: none;
 }
 
-.innerButton_a06035 {
-  margin-right: 12px !important;
+.buttons__74017 > button {
+    display: none;
 }
 
-.scrollableContainer_d0696b {
+.scrollableContainer__74017 {
   min-height: 45px !important;
-}
-
-.channelAppLauncher_df39bd {
-  display: none;
-}
-
-.note__7a4f4 textarea {
-  padding: 10px 10px;
-}
-
-.name__4eb92 {
-  font-size: 16px;
-}
-
-.homeIcon-r0w4ny {
-  display: none;
-}
-
-.container_efde15 {
-  display: none;
 }
 
 .tutorialContainer-1pL9QS .wrapper-3kah-n .childWrapper-1j_1ub:before {

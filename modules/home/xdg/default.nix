@@ -38,6 +38,7 @@ in {
 
         sessionVariables = {
           TERMINAL = cfg.default_terminal;
+          EDITOR = cfg.default_editor;
         };
       };
 

@@ -28,6 +28,7 @@
           enable = true;
           networks = [
             "e3918db4835d47eb"
+            "6ab565387af26e69"
           ];
         };
 

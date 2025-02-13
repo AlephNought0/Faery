@@ -47,9 +47,14 @@ in {
         vimAlias = false;
         enableLuaLoader = true;
         preventJunkFiles = true;
-        autocomplete.enable = true;
-        autopairs.enable = true;
+        autocomplete.nvim-cmp.enable = true;
+        autopairs.nvim-autopairs.enable = true;
         lineNumberMode = "number";
+
+        options = {
+          shiftwidth = 4;
+          tabstop = 4;
+        };
 
         extraPlugins = with pkgs.vimPlugins; {
           cmake-tools = {
@@ -59,7 +64,7 @@ in {
         };
 
         extraLuaFiles = [
-          ./scripts/dapGuiAutoOpen.lua
+          #./scripts/dapGuiAutoOpen.lua
           ./scripts/enableExrc.lua
           ./scripts/qmlls.lua
         ];
@@ -120,6 +125,10 @@ in {
             "<leader>cb" = {
               action = "<CMD>CMakeBuild<CR>";
             };
+
+            "<leader>f" = {
+              action = "<CMD>lua vim.diagnostic.open_float()<CR>";
+            };
           };
         };
 
@@ -158,11 +167,6 @@ in {
         treesitter = {
           enable = true;
           fold = true;
-        };
-
-        visuals = {
-          enable = true;
-          nvimWebDevicons.enable = true;
         };
 
         telescope.enable = true;

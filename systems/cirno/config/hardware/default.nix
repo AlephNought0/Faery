@@ -17,5 +17,10 @@
     options = ["fmask=0022" "dmask=0022"];
   };
 
-  swapDevices = [];
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 20 * 1024; # 16GB
+    }
+  ];
 }

@@ -15,7 +15,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    nixpkgs.overlays = [inputs.nur.overlay];
+    nixpkgs.overlays = [inputs.nur.overlays.default];
 
     home-manager.users.${username} = {
       xdg.desktopEntries."firefox-nightly" = mkIf cfg.dGPU (mkForce {

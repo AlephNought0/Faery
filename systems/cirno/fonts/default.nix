@@ -4,7 +4,7 @@
     fontconfig.enable = true;
     packages = with pkgs; [
       jetbrains-mono
-      nerdfonts
+      nerd-fonts.jetbrains-mono
     ];
   };
 }

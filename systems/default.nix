@@ -15,7 +15,7 @@ in {
       inputs.nix-gaming.nixosModules.pipewireLowLatency
       inputs.chaotic.nixosModules.default
       inputs.nvf.nixosModules.default
-      inputs.nur.nixosModules.nur
+      inputs.nur.modules.nixos.default
 
       {nixpkgs.hostPlatform = "x86_64-linux";}
     ];

@@ -33,7 +33,7 @@ in {
     programs.hyprland = {
       enable = true;
       package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-      portalPackage = inputs.xdg-desktop-portal-hyprland.packages."${pkgs.system}".xdg-desktop-portal-hyprland;
+      portalPackage = inputs.hyprland.packages."${pkgs.system}".xdg-desktop-portal-hyprland;
     };
 
     home-manager.users.${username} = {
@@ -66,6 +66,7 @@ in {
             "swww-daemon"
             "env DRI_PRIME=1 firefox-nightly"
             "systemctl --user start opentabletdriver.service"
+            "wl-gammarelay-rs run"
           ];
 
           misc = {
@@ -83,7 +84,6 @@ in {
             [
               "XDG_SESSION_TYPE, wayland"
               "GDK_BACKEND, wayland,x11"
-              "SDL_VIDEODRIVER, wayland"
               "CLUTTER_BACKEND, wayland"
               "QT_QPA_PLATFORM, wayland;xcb"
               "HYPRCURSOR_THEME, rose-pine-hyprcursor"
@@ -141,10 +141,12 @@ in {
               vibrancy = 0.22;
             };
 
-            drop_shadow = true;
-            shadow_range = 4;
-            shadow_render_power = 3;
-            "col.shadow" = "rgba(1a1a1aee)";
+            shadow = {
+              enabled = true;
+              range = 4;
+              render_power = 3;
+              color = "rgba(1a1a1aee)";
+            };
           };
 
           animations = {
