@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkEnableOption mkIf;
 
-  cfg = config.faery.programs.sddm;
+  cfg = config.faery.programs.displaymanager.sddm;
 in {
   options.faery.programs.displaymanager.sddm = {
     #For now only SDDM, it is arguably the best one imo but I will add more Display Managers if requested.
