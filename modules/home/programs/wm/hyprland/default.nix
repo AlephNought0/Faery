@@ -55,6 +55,11 @@ in {
         systemd = {
           enable = true;
           variables = ["--all"];
+          extraCommands = [
+            "systemctl --user stop xdg-desktop-portal" #They seem to be conflicting which makes streaming not work
+            "systemctl --user start xdg-desktop-portal-hyprland"
+            "systemctl --user start opentabletdriver.service"
+          ];
         };
 
         settings = {
@@ -65,7 +70,6 @@ in {
           exec-once = [
             "swww-daemon"
             "env DRI_PRIME=1 firefox-nightly"
-            "systemctl --user start opentabletdriver.service"
             "wl-gammarelay-rs run"
           ];
 

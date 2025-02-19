@@ -37,8 +37,6 @@
         pipewire.enable = true;
         asusd.enable = true;
       };
-
-      displaymanager.sddm.enable = true;
     };
 
     xdg = {
@@ -77,6 +75,8 @@
       terminals = {
         foot.enable = true;
       };
+
+      displaymanager.sddm.enable = true;
 
       nvf.enable = true;
       vesktop.enable = true;

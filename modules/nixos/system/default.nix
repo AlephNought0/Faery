@@ -52,9 +52,10 @@ in {
       GDK_BACKEND = "wayland";
     };
 
-    time.timeZone = "Europe/Bratislava";
+    time.timeZone = "Europe/Bratislava"; #Doxxed!11!!
     i18n.defaultLocale = "en_US.UTF-8";
 
     services.upower.enable = true;
+    powerManagement.cpuFreqGovernor = "performance";
   };
 }
