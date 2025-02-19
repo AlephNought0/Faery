@@ -7,7 +7,7 @@
 
   cfg = config.faery.programs.sddm;
 in {
-  options.faery.system.displaymanager.sddm = {
+  options.faery.programs.displaymanager.sddm = {
     #For now only SDDM, it is arguably the best one imo but I will add more Display Managers if requested.
     enable = mkEnableOption "SDDM module.";
   };

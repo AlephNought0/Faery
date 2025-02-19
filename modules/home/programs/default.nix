@@ -5,6 +5,6 @@
     ./graphical
     ./browsers
     ./terminals
-    ./displaymanager
+    ./displaymanagers
   ];
 }

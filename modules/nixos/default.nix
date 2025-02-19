@@ -3,6 +3,5 @@
     ./system
     ./services
     ./hardware
-    ./displaymanagers
   ];
 }
