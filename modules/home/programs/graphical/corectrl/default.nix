@@ -12,9 +12,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    programs.corectrl = {
-      enable = true;
-      gpuOverclock.enable = true;
-    };
+    programs.corectrl.enable = true;
   };
 }

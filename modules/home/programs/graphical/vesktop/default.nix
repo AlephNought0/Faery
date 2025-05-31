@@ -18,13 +18,12 @@ in {
   config = mkIf cfg.enable {
     home-manager.users.${username} = {
       home.packages = with pkgs; [
-        ((vesktop.override {electron = pkgs.electron_33;}).overrideAttrs
-          (old: {
-            patches = concatLists [
-              (old.patches or [])
-              [./patchedvesktop.patch]
-            ];
-          }))
+        (vesktop.overrideAttrs (old: {
+          patches = concatLists [
+            (old.patches or [])
+            [./patchedvesktop.patch]
+          ];
+        }))
       ];
 
       xdg = {
@@ -115,7 +114,7 @@ in {
               };
               F8Break.enabled = false;
               FakeNitro = {
-                enabled = true;
+                enabled = false;
                 enableEmojiBypass = true;
                 enableStickerBypass = true;
                 enableStreamQualityBypass = true;

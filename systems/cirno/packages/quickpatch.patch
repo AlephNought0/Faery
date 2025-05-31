@@ -1,30 +1,8 @@
-diff --git a/src/launch/command.cpp b/src/launch/command.cpp
-index 8300103..3c0a7e4 100644
---- a/src/launch/command.cpp
-+++ b/src/launch/command.cpp
-@@ -149,7 +149,7 @@ int locateConfigFile(CommandState& cmd, QString& path) {
- 	} else {
- 		auto manifestPath = *cmd.config.manifest;
- 		if (manifestPath.isEmpty()) {
--			auto configDir = QDir(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
-+			auto configDir = QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + "/quickshell");
- 			auto path = configDir.filePath("manifest.conf");
- 			if (QFileInfo(path).isFile()) manifestPath = path;
- 		}
-@@ -185,7 +185,7 @@ int locateConfigFile(CommandState& cmd, QString& path) {
- 				return -1;
- 			}
- 		} else {
--			auto configDir = QDir(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
-+			auto configDir = QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + "/quickshell");
- 
- 			if (cmd.config.name->isEmpty()) {
- 				path = configDir.path();
 diff --git a/src/launch/main.cpp b/src/launch/main.cpp
-index 3a2b582..f8d8ab7 100644
+index 2bcbebd..10192d7 100644
 --- a/src/launch/main.cpp
 +++ b/src/launch/main.cpp
-@@ -98,6 +98,7 @@ void checkCrashRelaunch(char** argv, QCoreApplication* coreApplication) {
+@@ -100,6 +100,7 @@ void exitDaemon(int code) {
  
  int main(int argc, char** argv) {
  	QCoreApplication::setApplicationName("quickshell");

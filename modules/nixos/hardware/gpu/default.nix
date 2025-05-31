@@ -32,24 +32,27 @@ in {
       };
 
       # Vulkan and opengl stuff
-      hardware.graphics = {
-        enable = true;
-        enable32Bit = true;
+      hardware = {
+        amdgpu.overdrive.enable = true;
+        graphics = {
+          enable = true;
+          enable32Bit = true;
 
-        extraPackages = with pkgs; [
-          vaapiVdpau
-          libvdpau-va-gl
-          inputs.chaotic.packages."${pkgs.system}".libdrm_git
-          libva
-          rocmPackages.clr
-          rocmPackages.clr.icd
-          rocmPackages.rocminfo
-          rocmPackages.rocm-runtime
-        ];
+          extraPackages = with pkgs; [
+            vaapiVdpau
+            libvdpau-va-gl
+            inputs.chaotic.packages."${pkgs.system}".libdrm_git
+            libva
+            rocmPackages.clr
+            rocmPackages.clr.icd
+            rocmPackages.rocminfo
+            rocmPackages.rocm-runtime
+          ];
 
-        extraPackages32 = with pkgs; [
-          driversi686Linux.libvdpau-va-gl
-        ];
+          extraPackages32 = with pkgs; [
+            driversi686Linux.libvdpau-va-gl
+          ];
+        };
       };
 
       environment.variables = {

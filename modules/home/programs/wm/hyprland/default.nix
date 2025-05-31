@@ -23,6 +23,15 @@ in {
   };
 
   config = mkIf cfg.enable {
+    nix.settings = {
+      substituters = [
+        "https://hyprland.cachix.org"
+      ];
+      trusted-public-keys = [
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      ];
+    };
+
     xdg.portal = {
       enable = true;
       extraPortals = with pkgs; [
@@ -38,7 +47,7 @@ in {
 
     home-manager.users.${username} = {
       home.packages = with pkgs; [
-        xwaylandvideobridge
+        kdePackages.xwaylandvideobridge
         rofi-wayland
         inputs.hyprcursor.packages."${pkgs.system}".hyprcursor
         inputs.swww.packages."${pkgs.system}".swww
@@ -78,6 +87,7 @@ in {
             force_default_wallpaper = -1;
             vrr = 1;
             vfr = true;
+            enable_anr_dialog = false;
           };
 
           xwayland = {
@@ -92,6 +102,7 @@ in {
               "QT_QPA_PLATFORM, wayland;xcb"
               "HYPRCURSOR_THEME, rose-pine-hyprcursor"
               "HYPRCURSOR_SIZE,30"
+              "AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0"
 
               "GDK_SCALE, ${cfg.scaling}"
 

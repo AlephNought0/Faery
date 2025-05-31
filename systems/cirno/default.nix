@@ -19,7 +19,6 @@
       hardware = {
         gpu.type = "amd";
         cpu.type = "amd";
-        battery.enable = true;
         logitech.enable = true;
       };
 
@@ -36,6 +35,12 @@
         polkit.enable = true;
         pipewire.enable = true;
         asusd.enable = true;
+      };
+
+      performance = {
+        cpu_sched = true;
+        io_sched = true;
+        kernel = true;
       };
     };
 

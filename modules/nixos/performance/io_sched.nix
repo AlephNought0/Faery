@@ -9,7 +9,7 @@
 in {
   config = mkIf cfg.io_sched {
     services.udev.extraRules = ''
-      ACTION=="add|change", KERNEL=="[sv]d[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="bfq"
+      ACTION=="add|change", KERNEL=="nvme[0-9]n[0-9]", ATTR{queue/scheduler}="bfq"
     '';
   };
 }

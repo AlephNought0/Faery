@@ -77,7 +77,6 @@ in {
 
         languages = {
           enableExtraDiagnostics = true;
-          enableLSP = true;
           enableTreesitter = true;
           enableFormat = true;
           enableDAP = true;
@@ -122,7 +121,7 @@ in {
               action = "<CMD>ToggleTerm<CR>";
             };
 
-            "<leader>cb" = {
+            "<leader>cb" = lib.mkForce {
               action = "<CMD>CMakeBuild<CR>";
             };
 

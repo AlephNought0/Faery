@@ -32,6 +32,7 @@ in {
     jdk17
     wl-gammarelay-rs
     telegram-desktop
+    nix-output-monitor
 
     git
     asusctl

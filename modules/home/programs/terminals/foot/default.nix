@@ -23,7 +23,8 @@ in {
           };
 
           colors = {
-            alpha = 0.6;
+            alpha = 0.4;
+            background = "000000";
           };
         };
       };
