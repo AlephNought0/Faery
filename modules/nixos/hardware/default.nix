@@ -3,5 +3,6 @@
     ./gpu
     ./cpu
     ./mouse
+    ./bluetooth
   ];
 }

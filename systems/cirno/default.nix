@@ -20,6 +20,7 @@
         gpu.type = "amd";
         cpu.type = "amd";
         logitech.enable = true;
+        bluetooth.enable = true;
       };
 
       services = {
@@ -28,6 +29,7 @@
           networks = [
             "e3918db4835d47eb"
             "6ab565387af26e69"
+            "3efa5cb78a253dd2"
           ];
         };
 
@@ -38,7 +40,7 @@
       };
 
       performance = {
-        cpu_sched = true;
+        cpu_sched = false;
         io_sched = true;
         kernel = true;
       };
@@ -69,6 +71,8 @@
         enable = true;
         scaling = "1.6";
       };
+
+      niri.enable = true;
 
       kdeWithoutPlasma = {
         enable = true;

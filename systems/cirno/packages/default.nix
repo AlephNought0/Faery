@@ -8,6 +8,15 @@
   inherit (lib) concatLists;
   inherit (config.faery.system) username;
 in {
+  nixpkgs.overlays = [
+    (final: prev: {
+      jdk8 = prev.jdk8.overrideAttrs {
+        separateDebugInfo = false;
+        __structuredAttrs = false;
+      };
+    })
+  ];
+  #services.xserver.desktopManager.gnome.enable = true;
   home-manager.users."${username}".home.packages = with pkgs; [
     (inputs.quickshell.packages."${pkgs.system}".quickshell.overrideAttrs (old: {
       patches = concatLists [
@@ -24,12 +33,12 @@ in {
     libreoffice-qt6-still
     qtcreator
     r2modman
-    gimp
+    #gimp
     keepassxc
-    spotube
+    spotify
     protontricks
     matugen
-    jdk17
+    #jdk17
     wl-gammarelay-rs
     telegram-desktop
     nix-output-monitor

@@ -5,5 +5,6 @@
     ./hardware
     ./bootloader
     ./desktopFiles
+    ./jellyfin
   ];
 }

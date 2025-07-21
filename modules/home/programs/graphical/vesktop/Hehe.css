@@ -14,104 +14,108 @@
 @import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap);
 
 :root {
-    --Chat-Font-Used: "JetBrains Mono", bold;
-    --Chat-Font-Size: 30px;
-}
-
-:not([class="hljs"]):not(code) {
-    font-family: var(--Chat-Font-Used) !important;
-}
-
-.markup:not(code) {
-    font-size: var(--Chat-Font-Size) !important;
-}
-
-.markup__75297>a>span {
-    color: cyan;
-}
-
-.markup__75297>pre {
-    background-color: rgba(0, 0, 0, 0.55);
-}
-
-.embedTitle__623de>a {
-    color: cyan;
-}
-
-.base_c48ade {
-    grid-template-rows: none !important;
-}
-
-.bar_c38106 {
-    display: none;
-}
-
-.channelAppLauncher_e6e74f {
-    display: none !important;
-}
-
-.buttons__74017>button {
-    display: none;
+  --Chat-Font-Used: "JetBrains Mono", bold;
+  --Chat-Font-Size: 30px;
 }
 
 .visual-refresh {
-    margin-top: 0px !important;
+  margin-top: 0px;
+}
+
+:not([class="hljs"]):not(code) {
+  font-family: var(--Chat-Font-Used) !important;
+}
+
+.markup:not(code) {
+  font-size: var(--Chat-Font-Size) !important;
+}
+
+.markup__75297 > a > span {
+  color: cyan;
+}
+
+.markup__75297 > pre {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.embedTitle__623de > a {
+  color: cyan;
+}
+
+.base_c48ade {
+  grid-template-rows: none !important;
+}
+
+.bar_c38106 {
+  display: none;
+}
+
+.channelAppLauncher_e6e74f {
+  display: none !important;
+}
+
+.buttons__74017 > button {
+  display: none;
+}
+
+.visual-refresh {
+  margin-top: 0px !important;
 }
 
 :root {
-    --app-bg: url("");
-    --app-blur: 3px;
-    --app-margin: 0px;
-    --app-radius: 8px;
-    /*	-	*/
+  --app-bg: url("");
+  --app-blur: 3px;
+  --app-margin: 0px;
+  --app-radius: 8px;
+  /*	-	*/
 
-    --accent-hue: 180;
-    --accent-saturation: 100%;
-    --accent-lightness: 50%;
-    --accent-opacity: 1;
-    --accent-text-color: #000;
-    /*	-	*/
+  --accent-hue: 180;
+  --accent-saturation: 100%;
+  --accent-lightness: 50%;
+  --accent-opacity: 1;
+  --accent-text-color: #000;
+  /*	-	*/
 
-    --sidebar-color: rgba(0, 0, 0, 0.4);
-    --main-content-color: rgba(0, 0, 0, 0.4);
-    /*	-	*/
+  --sidebar-color: rgba(0, 0, 0, 0.4);
+  --main-content-color: rgba(0, 0, 0, 0.4);
+  /*	-	*/
 
-    --message-color: rgba(0, 0, 0, 0);
-    --message-radius: 8px;
-    --message-padding-top: 0px;
-    --message-padding-side: 8px;
-    /*	-	*/
+  --message-color: rgba(0, 0, 0, 0);
+  --message-radius: 8px;
+  --message-padding-top: 0px;
+  --message-padding-side: 8px;
+  /*	-	*/
 
-    --reply-hue: 350;
-    --reply-saturation: 100%;
-    --reply-lightness: 88%;
-    --reply-opacity: 1;
-    /*	-	*/
+  --reply-hue: 350;
+  --reply-saturation: 100%;
+  --reply-lightness: 88%;
+  --reply-opacity: 1;
+  /*	-	*/
 
-    --textarea-color: 255, 255, 255;
-    --textarea-alpha: 0.1;
-    --textarea-alpha-focus: 0.15;
-    --textarea-text-color: #fff;
-    --textarea-radius: 22px;
-    /*	-	*/
+  --textarea-color: 255, 255, 255;
+  --textarea-alpha: 0.1;
+  --textarea-alpha-focus: 0.15;
+  --textarea-text-color: #fff;
+  --textarea-radius: 22px;
+  /*	-	*/
 
-    --card-color: rgba(0, 0, 0, 0.4);
-    --card-color-hover: rgba(0, 0, 0, 0.5);
-    --card-color-select: rgba(0, 0, 0, 0.7);
-    /*	-	*/
+  --card-color: rgba(0, 0, 0, 0.4);
+  --card-color-hover: rgba(0, 0, 0, 0.5);
+  --card-color-select: rgba(0, 0, 0, 0.7);
+  /*	-	*/
 
-    --button-height: 32px;
-    --button-padding: 0 16px;
-    --button-action-color: #000;
-    --button-radius: 16px;
-    /*	-	*/
+  --button-height: 32px;
+  --button-padding: 0 16px;
+  --button-action-color: #000;
+  --button-radius: 16px;
+  /*	-	*/
 
-    --interactive-normal: #aaa;
-    --interactive-hover: #ddd;
-    --interactive-active: #fff;
-    --interactive-muted: #777;
-    /*	-	*/
+  --interactive-normal: #aaa;
+  --interactive-hover: #ddd;
+  --interactive-active: #fff;
+  --interactive-muted: #777;
+  /*	-	*/
 
-    --background-modifier-hover: rgba(255, 255, 255, 0.075);
-    --background-modifier-selected: rgba(255, 255, 255, 0.125);
+  --background-modifier-hover: rgba(255, 255, 255, 0.075);
+  --background-modifier-selected: rgba(255, 255, 255, 0.125);
 }
