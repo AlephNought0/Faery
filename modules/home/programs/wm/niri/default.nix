@@ -26,17 +26,17 @@ in {
       pkgs,
       ...
     }: {
-      home = {
-        packages = with pkgs; [
-          kdePackages.xwaylandvideobridge
-          rofi-wayland
-          inputs.swww.packages."${pkgs.system}".swww
-          wl-clipboard
-        ];
+      home.packages = with pkgs; [
+        kdePackages.xwaylandvideobridge
+        rofi-wayland
+        inputs.swww.packages."${pkgs.system}".swww
+        wl-clipboard
+        xwayland-satellite
+        xdg-desktop-portal-gtk
+      ];
 
-        file = {
-          ".config/niri/config.kdl".source = config.lib.file.mkOutOfStoreSymlink "/home/${username}/Faery/modules/home/programs/wm/niri/config.kdl";
-        };
+      xdg.configFile = {
+        "niri/config.kdl".source = config.lib.file.mkOutOfStoreSymlink "/home/${username}/Faery/modules/home/programs/wm/niri/config.kdl";
       };
     };
   };

@@ -20,7 +20,7 @@
     };
 
     niri = {
-      url = "github:YaLTeR/niri";
+      url = "github:YaLTeR/niri/e19e1f0f10fa4e294e62292608635877715232dd";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

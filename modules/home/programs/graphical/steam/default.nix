@@ -5,12 +5,19 @@
   inputs,
   ...
 }: let
-  inherit (lib) mkEnableOption mkIf;
+  inherit (lib) mkEnableOption mkOption mkIf mkForce;
+  inherit (lib.types) float;
+  inherit (config.faery.system) username;
 
   cfg = config.faery.programs.steam;
 in {
   options.faery.programs.steam = {
     enable = mkEnableOption "steam module.";
+    scaling = mkOption {
+      type = float;
+      description = "Individual scaling for steam";
+      default = 1.0;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -20,6 +27,17 @@ in {
     };
 
     #programs.gamescope.capSysNice = true;
+
+    home-manager.users.${username} = mkIf (cfg.scaling != 1.0) {
+      xdg.desktopEntries."steam" = mkForce {
+        name = "Steam";
+        type = "Application";
+        icon = "steam";
+        exec = "steam -forcedesktopscaling ${toString cfg.scaling}";
+        terminal = false;
+        mimeType = ["text/plain"];
+      };
+    };
 
     programs.steam = {
       enable = true;

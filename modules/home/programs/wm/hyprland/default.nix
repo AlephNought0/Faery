@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (lib) mkOption mkEnableOption mkIf optionals concatLists;
-  inherit (lib.types) str;
+  inherit (lib.types) float;
   inherit (config.faery.system) username;
 
   cfg = config.faery.programs.hyprland;
@@ -16,9 +16,9 @@ in {
     enableDebug = mkEnableOption "hyprland debug mode.";
 
     scaling = mkOption {
-      type = str;
+      type = float;
       description = "Monitor scaling for hyprland";
-      default = 1;
+      default = 1.0;
     };
   };
 
@@ -74,7 +74,7 @@ in {
         settings = {
           "$mainMod" = "SUPER";
 
-          monitor = ",preferred,auto,${cfg.scaling}";
+          monitor = ",preferred,auto,${toString cfg.scaling}";
 
           exec-once = [
             "swww-daemon"
@@ -104,7 +104,7 @@ in {
               "HYPRCURSOR_SIZE,30"
               "AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0"
 
-              "GDK_SCALE, ${cfg.scaling}"
+              "GDK_SCALE, ${toString cfg.scaling}"
 
               "XDG_CURRENT_DESKTOP, Hyprland"
               "XDG_SESSION_DESKTOP, Hyprland"

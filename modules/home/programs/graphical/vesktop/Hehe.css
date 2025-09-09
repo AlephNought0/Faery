@@ -54,7 +54,7 @@
   display: none !important;
 }
 
-.buttons__74017 > button {
+.buttons__74017 > div:nth-of-type(2) {
   display: none;
 }
 

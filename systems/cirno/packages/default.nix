@@ -1,30 +1,12 @@
 {
   config,
   pkgs,
-  lib,
-  inputs,
   ...
 }: let
-  inherit (lib) concatLists;
+  #inherit (lib) concatLists;
   inherit (config.faery.system) username;
 in {
-  nixpkgs.overlays = [
-    (final: prev: {
-      jdk8 = prev.jdk8.overrideAttrs {
-        separateDebugInfo = false;
-        __structuredAttrs = false;
-      };
-    })
-  ];
-  #services.xserver.desktopManager.gnome.enable = true;
   home-manager.users."${username}".home.packages = with pkgs; [
-    (inputs.quickshell.packages."${pkgs.system}".quickshell.overrideAttrs (old: {
-      patches = concatLists [
-        (old.patches or [])
-        [./quickpatch.patch]
-      ];
-    }))
-    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     prismlauncher
     qbittorrent
     obs-studio
@@ -33,15 +15,17 @@ in {
     libreoffice-qt6-still
     qtcreator
     r2modman
-    #gimp
+    gimp
     keepassxc
     spotify
     protontricks
     matugen
     #jdk17
+    jdk8
     wl-gammarelay-rs
     telegram-desktop
     nix-output-monitor
+    reaper
 
     git
     asusctl

@@ -14,7 +14,7 @@
     system = {
       username = "Aperius";
       hostname = "Cirno";
-      extraGroups = ["corectrl"];
+      extraGroups = ["corectrl" "libvirtd"];
 
       hardware = {
         gpu.type = "amd";
@@ -40,7 +40,7 @@
       };
 
       performance = {
-        cpu_sched = false;
+        cpu_sched = true;
         io_sched = true;
         kernel = true;
       };
@@ -55,8 +55,14 @@
 
     theme.qt = {
       enable = true;
+      nordic = true;
+      iconTheme = "Tela-black";
+      appTheme = "Nordic-Darker";
       platformTheme = "qt5ct";
       style = "kvantum";
+      packages = with pkgs; [
+        tela-icon-theme
+      ];
     };
 
     programs = {
@@ -67,17 +73,10 @@
         };
       };
 
-      hyprland = {
-        enable = true;
-        scaling = "1.6";
-      };
-
-      niri.enable = true;
-
       kdeWithoutPlasma = {
         enable = true;
         packages = with pkgs; [
-          libsForQt5.dolphin
+          kdePackages.dolphin
         ];
       };
 
@@ -85,11 +84,20 @@
         foot.enable = true;
       };
 
-      displaymanager.sddm.enable = true;
+      steam = {
+        enable = true;
+        scaling = 1.5;
+      };
 
+      shells = {
+        zsh.enable = true;
+      };
+
+      qemu.enable = true;
+      niri.enable = true;
+      displaymanager.sddm.enable = true;
       nvf.enable = true;
       vesktop.enable = true;
-      steam.enable = true;
       opentablet.enable = true;
       corectrl.enable = true;
       easyeffects.enable = true;

@@ -18,13 +18,12 @@ in {
     systemd = {
       user.services.polkit-kde-agent = {
         enable = true;
-        description = "libsForQt5.polkit-kde-agent";
         wantedBy = ["default.target"];
         wants = ["default.target"];
         after = ["default.target"];
         serviceConfig = {
           Type = "simple";
-          ExecStart = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
+          ExecStart = "${pkgs.kdePackages.polkit-kde-agent-1}/libexec/polkit-kde-authentication-agent-1";
           Restart = "on-failure";
           RestartSec = 1;
           TimeoutStopSec = 10;

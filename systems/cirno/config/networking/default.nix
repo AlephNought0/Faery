@@ -18,6 +18,10 @@
           to = 8010;
         }
       ];
+
+      trustedInterfaces = [
+        "virbr0"
+      ];
     };
   };
 }

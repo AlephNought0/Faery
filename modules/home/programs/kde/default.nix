@@ -24,30 +24,32 @@ in {
     home-manager.users.${username}.home.packages = concatLists [
       ## Will add more packages if I find out there are some apps that do not work.
       (with pkgs; [
-        libsForQt5.ffmpegthumbs #kdePackages are buggy, use libsForQt5 instead
-        libsForQt5.qtwayland
-        libsForQt5.qtsvg
-        libsForQt5.kiconthemes
-        libsForQt5.kdf
-        libsForQt5.kio-extras
-        libsForQt5.kio-admin
-        libsForQt5.plasma-integration
-        libsForQt5.kdegraphics-thumbnailers
-        libsForQt5.kservice
-        libsForQt5.kfind
-        libsForQt5.kdbusaddons
-        libsForQt5.kfilemetadata
-        libsForQt5.kconfig
-        libsForQt5.kcoreaddons
-        libsForQt5.kguiaddons
-        libsForQt5.ki18n
-        libsForQt5.kitemviews
-        libsForQt5.kwidgetsaddons
-        libsForQt5.kwindowsystem
-        libsForQt5.ark
+        kdePackages.ffmpegthumbs
+        kdePackages.qtwayland
+        kdePackages.qtsvg
+        kdePackages.kiconthemes
+        kdePackages.kdf
+        kdePackages.kio-extras
+        kdePackages.kio-admin
+        kdePackages.plasma-integration
+        kdePackages.kdegraphics-thumbnailers
+        kdePackages.kservice
+        kdePackages.kfind
+        kdePackages.kdbusaddons
+        kdePackages.kfilemetadata
+        kdePackages.kconfig
+        kdePackages.kcoreaddons
+        kdePackages.kguiaddons
+        kdePackages.ki18n
+        kdePackages.kitemviews
+        kdePackages.kwidgetsaddons
+        kdePackages.kwindowsystem
+        kdePackages.ark
       ])
       cfg.packages
     ];
+
+    environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
     services.udisks2.enable = true;
   };

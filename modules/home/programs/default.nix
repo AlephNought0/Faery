@@ -6,5 +6,6 @@
     ./browsers
     ./terminals
     ./displaymanagers
+    ./shells
   ];
 }

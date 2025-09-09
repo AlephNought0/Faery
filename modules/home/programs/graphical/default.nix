@@ -7,5 +7,6 @@
     ./nvf
     ./easyeffects
     ./btop
+    ./qemu
   ];
 }

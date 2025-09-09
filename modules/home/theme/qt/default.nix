@@ -1,29 +1,29 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }: let
-  inherit (lib) mkOption mkEnableOption concatLists mkIf;
-  inherit (lib.types) str enum;
-  inherit (config.faery.system) username;
+  inherit (lib) mkOption mkEnableOption mkIf;
+  inherit (lib.types) str enum package listOf;
 
   cfg = config.faery.theme.qt;
 in {
+  imports = [
+    ./themes
+    ./qt6ct
+    ./kvantum.nix
+    ./packages.nix
+  ];
+
   options.faery.theme.qt = {
     enable = mkEnableOption "qt module.";
     customPalette = mkEnableOption "usage of custom palette.";
+    nordic = mkEnableOption "patched nordic theme.";
 
     standardDialogs = mkOption {
       type = enum ["default" "gtk3" "kde" "xdgdesktopportal"];
       default = "default";
       description = "Standard dialogs.";
-    };
-
-    platformTheme = mkOption {
-      type = str;
-      default = "qt5ct";
-      description = "Platform theme for qt.";
     };
 
     style = mkOption {
@@ -32,51 +32,40 @@ in {
       description = "Style for qt.";
     };
 
+    platformTheme = mkOption {
+      type = str;
+      default = "qt5ct";
+      description = "Platform theme for qt applications.";
+    };
+
+    appTheme = mkOption {
+      type = str;
+      description = "Theme that qt6 applications will use.";
+    };
+
     iconTheme = mkOption {
       type = str;
-      description = "An icon theme for folders in file managers.";
+      description = "An icon theme for qt6 applications.";
     };
 
     colorScheme = mkOption {
-      type = str;
-      default = "simple";
-      description = "A color scheme for qt5 applications.";
+      type = enum ["default" "style-colors" "airy" "darker" "dusk" "ia_ora" "sand" "simple" "waves"];
+      default = "default";
+      description = "A color scheme for qt6 applications.";
+    };
+
+    packages = mkOption {
+      type = listOf package;
+      default = [];
+      description = "Themes that you would like to install.";
     };
   };
 
   config = mkIf cfg.enable {
     qt = {
       enable = true;
-      inherit (cfg) platformTheme;
       inherit (cfg) style;
+      inherit (cfg) platformTheme;
     };
-
-    home-manager.users.${username} = {
-      home.packages = with pkgs; [
-        tela-icon-theme
-        libsForQt5.qtstyleplugin-kvantum
-        kdePackages.qt6ct
-      ];
-
-      xdg.configFile = {
-        "Kvantum/kvantum.kvconfig".text = mkIf (cfg.style == "kvantum") ''
-          [General]
-          theme=LayanDark
-        '';
-
-        "Kvantum/LayanDark".source = mkIf (cfg.style == "kvantum") "${pkgs.layan-kde}/share/Kvantum/Layan";
-      };
-    };
-
-    nixpkgs.overlays = [
-      (self: super: {
-        layan-kde = super.layan-kde.overrideAttrs (old: {
-          patches = concatLists [
-            (old.patches or [])
-            [./layan.patch]
-          ];
-        });
-      })
-    ];
   };
 }

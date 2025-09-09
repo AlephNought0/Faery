@@ -40,7 +40,7 @@ in {
               keepassxc-browser
               return-youtube-dislikes
               translate-web-pages
-              enhancer-for-youtube
+              #enhancer-for-youtube
               user-agent-string-switcher
             ];
 

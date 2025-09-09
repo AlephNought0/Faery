@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: let
   inherit (lib) mkIf;
@@ -10,7 +11,8 @@ in {
   config = mkIf cfg.cpu_sched {
     services.scx = {
       enable = true;
-      scheduler = "scx_lavd";
+      package = pkgs.scx_git.full;
+      scheduler = "scx_rustland";
     };
   };
 }
