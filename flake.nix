@@ -19,18 +19,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:YaLTeR/niri/e19e1f0f10fa4e294e62292608635877715232dd";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     hyprcursor = {
       url = "github:hyprwm/hyprcursor";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    quickshell = {
-      url = "github:outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

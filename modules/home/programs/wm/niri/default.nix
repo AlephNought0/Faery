@@ -1,7 +1,6 @@
 {
   inputs,
   config,
-  pkgs,
   lib,
   ...
 }: let
@@ -15,10 +14,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    programs.niri = {
-      enable = true;
-      package = inputs.niri.packages."${pkgs.system}".niri;
-    };
+    programs.niri.enable = true;
 
     home-manager.users.${username} = {
       # There must be a better way to do this...
