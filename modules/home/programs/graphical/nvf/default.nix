@@ -56,18 +56,6 @@ in {
           tabstop = 2;
         };
 
-        extraPlugins = with pkgs.vimPlugins; {
-          cmake-tools = {
-            package = cmake-tools-nvim;
-            setup = "require('cmake-tools').setup {}";
-          };
-        };
-
-        extraLuaFiles = [
-          ./scripts/enableExrc.lua
-          ./scripts/qmlls.lua
-        ];
-
         theme = {
           enable = true;
           name = "catppuccin";
@@ -86,6 +74,7 @@ in {
           bash.enable = true;
           html.enable = true;
           ts.enable = true;
+          astro.enable = true;
           php.enable = true;
           css.enable = true;
           sql.enable = true;
@@ -135,7 +124,7 @@ in {
             enable = true;
             ui = {
               enable = true;
-              autoStart = false; #No idea why it should close automatically as well.
+              autoStart = false; # No idea why it should close automatically as well.
             };
           };
         };
