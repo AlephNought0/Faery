@@ -8,5 +8,6 @@
     ./displaymanagers
     ./shells
     ./docker
+    ./git
   ];
 }
