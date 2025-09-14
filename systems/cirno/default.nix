@@ -14,7 +14,6 @@
     system = {
       username = "Aperius";
       hostname = "Cirno";
-      extraGroups = ["corectrl" "libvirtd"];
 
       hardware = {
         gpu.type = "amd";
@@ -103,6 +102,7 @@
       corectrl.enable = true;
       easyeffects.enable = true;
       btop.enable = true;
+      docker.enable = true;
     };
   };
 }

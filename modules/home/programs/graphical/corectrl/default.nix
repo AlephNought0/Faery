@@ -4,6 +4,7 @@
   ...
 }: let
   inherit (lib) mkEnableOption mkIf;
+  inherit (config.faery.system) username;
 
   cfg = config.faery.programs.corectrl;
 in {
@@ -13,5 +14,6 @@ in {
 
   config = mkIf cfg.enable {
     programs.corectrl.enable = true;
+    users.users.${username}.extraGroups = ["corectrl"];
   };
 }

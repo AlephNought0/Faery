@@ -24,6 +24,7 @@ in {
     };
 
     programs.virt-manager.enable = true;
+    users.users.${username}.extraGroups = ["libvirtd"];
     users.groups.libvirtd.members = ["${username}"];
     systemd.tmpfiles.rules = ["L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware"];
   };

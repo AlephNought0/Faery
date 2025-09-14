@@ -7,5 +7,6 @@
     ./terminals
     ./displaymanagers
     ./shells
+    ./docker
   ];
 }

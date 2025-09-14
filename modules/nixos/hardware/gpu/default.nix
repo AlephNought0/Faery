@@ -12,7 +12,7 @@
 in {
   options.faery.system.hardware.gpu = {
     type = mkOption {
-      type = enum ["amd" "nvidia"]; #Will later add intel
+      type = enum ["amd" "nvidia"]; # Will later add intel
       description = "Which type of GPU you use.";
     };
   };
@@ -60,7 +60,7 @@ in {
         LIBVA_DRIVER_NAME = "radeonsi";
         AMD_VULKAN_ICD = "RADV";
         OCL_ICD_VENDORS = "${pkgs.rocmPackages.clr.icd}/etc/OpenCL/vendors";
-        VK_ICD_FILENAMES = "${pkgs.mesa_git.drivers}/share/vulkan/icd.d/radeon_icd.x86_64.json";
+        VK_ICD_FILENAMES = "${pkgs.mesa_git}/share/vulkan/icd.d/radeon_icd.x86_64.json";
       };
 
       systemd.tmpfiles.rules = [

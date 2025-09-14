@@ -31,7 +31,7 @@ in {
   config = mkIf cfg.enable {
     environment.sessionVariables = {
       TERMINAL = cfg.default_terminal;
-      EDITOR = builtins.replaceStrings [".desktop"] [""] cfg.default_editor; #Maybe there is a better way to do this.
+      EDITOR = builtins.replaceStrings [".desktop"] [""] cfg.default_editor; # Maybe there is a better way to do this.
     };
 
     home-manager.users.${username} = {

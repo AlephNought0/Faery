@@ -64,7 +64,6 @@ in {
         };
 
         extraLuaFiles = [
-          #./scripts/dapGuiAutoOpen.lua
           ./scripts/enableExrc.lua
           ./scripts/qmlls.lua
         ];
@@ -160,6 +159,18 @@ in {
           enable = true;
           setupOpts = {
             git_status_async = true;
+            filesystem = {
+              filtered_items = {
+                visible = false;
+                hide_dotfiles = false;
+                hide_by_name = [
+                  "package-lock.json"
+                  ".changeset"
+                  ".prettierrc.json"
+                ];
+                never_show = [".git"];
+              };
+            };
           };
         };
 

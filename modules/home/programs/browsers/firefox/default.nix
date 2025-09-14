@@ -41,6 +41,7 @@ in {
               return-youtube-dislikes
               translate-web-pages
               user-agent-string-switcher
+              simple-tab-groups
             ];
 
             settings = {
@@ -71,6 +72,12 @@ in {
               "browser.toolbars.bookmarks.visibility" = true;
 
               "browser.theme.content-theme" = 0;
+
+              # Enables custom stylesheets (css)
+              "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+
+              # Enables CSD
+              "browser.tabs.drawInTitlebar" = true;
             };
           };
         };
