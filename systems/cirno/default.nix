@@ -36,6 +36,7 @@
         polkit.enable = true;
         pipewire.enable = true;
         asusd.enable = true;
+        syncthing.enable = true;
       };
 
       performance = {
@@ -103,6 +104,7 @@
       easyeffects.enable = true;
       btop.enable = true;
       docker.enable = true;
+      git.enable = true;
     };
   };
 }

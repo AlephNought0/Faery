@@ -27,7 +27,6 @@ in {
     nix-output-monitor
     reaper
 
-    git
     asusctl
     amdgpu_top
   ];

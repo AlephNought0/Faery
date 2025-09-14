@@ -5,5 +5,6 @@
     ./authenticationagent
     ./audio
     ./asusd
+    ./syncthing
   ];
 }
