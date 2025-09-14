@@ -11,7 +11,7 @@
   cfg = config.faery.programs.nvf;
 
   nvimScript = pkgs.writeShellScript "nvimServer.sh" ''
-    #!/bin/bash
+    #!/usr/bin/env bash
 
     SOCKET_PATH="/tmp/nvimsocket"
 
@@ -109,7 +109,7 @@ in {
               action = "<CMD>ToggleTerm<CR>";
             };
 
-            "<leader>cb" = lib.mkForce {
+            "<leader>cb" = mkForce {
               action = "<CMD>CMakeBuild<CR>";
             };
 
