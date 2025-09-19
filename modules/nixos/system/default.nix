@@ -50,9 +50,10 @@ in {
       XDG_SESSION_TYPE = "wayland";
       CLUTTER_BACKEND = "wayland";
       GDK_BACKEND = "wayland";
+      DIRENV_WARN_TIMEOUT = "0s"; # Something tells me I need to rewrite my flake.
     };
 
-    time.timeZone = "Europe/Bratislava"; #Doxxed!11!!
+    time.timeZone = "Europe/Bratislava"; # Doxxed!11!!
     i18n.defaultLocale = "en_US.UTF-8";
 
     services.upower.enable = true;
