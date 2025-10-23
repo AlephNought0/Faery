@@ -15,12 +15,13 @@ in {
       theme=${cfg.appTheme}
     '';
 
+      # I genuinely have no idea how any random ColorScheme besides qt6ct fixes the current issue of improper colors while qt6ct is still being used.
     "kdeglobals".text = ''
       [Icons]
       Theme=${cfg.iconTheme}
 
       [UiSettings]
-      ColorScheme=qt6ct
+      ColorScheme=BreezeDark
     '';
   };
 }
