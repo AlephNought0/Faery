@@ -336,9 +336,9 @@ window-rule {
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    match app-id=r#"vesktop$"#
 
     block-out-from "screen-capture"
 
@@ -373,6 +373,8 @@ binds {
     Mod+E hotkey-overlay-title="Open dolphin file manager" { spawn "dolphin"; }
 
     Mod+Space hotkey-overlay-title="Open rofi" { spawn "rofi" "-show" "drun"; }
+
+    F11 { spawn "sh" "-c" "./run.sh"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.

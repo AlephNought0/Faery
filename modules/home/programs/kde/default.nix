@@ -21,8 +21,24 @@ in {
   };
 
   config = mkIf cfg.enable {
+    nixpkgs.overlays = [
+      (self: super: {
+        kdePackages =
+          super.kdePackages
+          // {
+            dolphin = super.kdePackages.dolphin.overrideAttrs (oldAttrs: {
+              patches =
+                (oldAttrs.patches or [])
+                ++ [
+                  ./meow.patch
+                ];
+            });
+          };
+      })
+    ];
+
     home-manager.users.${username}.home.packages = concatLists [
-      ## Will add more packages if I find out there are some apps that do not work.
+      # Will add more packages if I find out there are some apps that do not work.
       (with pkgs; [
         kdePackages.ffmpegthumbs
         kdePackages.qtwayland

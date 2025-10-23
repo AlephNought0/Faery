@@ -61,6 +61,7 @@
       appTheme = "Nordic-Darker";
       platformTheme = "qt5ct";
       style = "kvantum";
+      colorScheme = "darker";
       packages = with pkgs; [
         tela-icon-theme
       ];

@@ -65,6 +65,8 @@ in {
             "application/x-extension-xht" = cfg.default_browser;
             "x-scheme-handler/about" = cfg.default_browser;
             "x-scheme-handler/unknown" = cfg.default_browser;
+
+            "x-scheme-handler/roblox-player" = "org.vinegarhq.Sober.desktop";
           };
         };
 

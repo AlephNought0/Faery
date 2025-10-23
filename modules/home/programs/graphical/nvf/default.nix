@@ -89,7 +89,6 @@ in {
           enable = true;
           lspSignature.enable = true;
           lspconfig.enable = true;
-          formatOnSave = true;
         };
 
         terminal = {

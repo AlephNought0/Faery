@@ -2,7 +2,8 @@
   description = "The most bleeding edge NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/ab0f3607a6c7486ea22229b92ed2d355f1482ee0";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -26,11 +27,6 @@
 
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    swww = {
-      url = "github:LGFae/swww";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

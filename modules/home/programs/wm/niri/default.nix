@@ -1,5 +1,5 @@
 {
-  inputs,
+  pkgs,
   config,
   lib,
   ...
@@ -16,6 +16,13 @@ in {
   config = mkIf cfg.enable {
     programs.niri.enable = true;
 
+    xdg.portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+      ];
+    };
+
     home-manager.users.${username} = {
       # There must be a better way to do this...
       config,
@@ -24,11 +31,11 @@ in {
     }: {
       home.packages = with pkgs; [
         kdePackages.xwaylandvideobridge
-        rofi-wayland
-        inputs.swww.packages."${pkgs.system}".swww
+        rofi
+        swww
         wl-clipboard
         xwayland-satellite
-        xdg-desktop-portal-gtk
+        wl-screenrec
       ];
 
       xdg.configFile = {

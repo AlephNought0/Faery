@@ -16,11 +16,12 @@ in {
     home-manager.users.${username} = {
       programs.git = {
         enable = true;
-        userName = "AlephNought0";
-        userEmail = "aleph@nought.dev";
-
         # Learned from https://jeppesen.io/git-commit-sign-nix-home-manager-ssh/
-        extraConfig = {
+        settings = {
+          user = {
+            email = "aleph@nought.dev";
+            name = "AlephNought0";
+          };
           # Sign all commits using ssh key
           commit.gpgsign = true;
           gpg.format = "ssh";

@@ -49,7 +49,7 @@ in {
       NIXOS_OZONE_WL = "1";
       XDG_SESSION_TYPE = "wayland";
       CLUTTER_BACKEND = "wayland";
-      GDK_BACKEND = "wayland";
+      GDK_BACKEND = "wayland,x11";
       DIRENV_WARN_TIMEOUT = "0s"; # Something tells me I need to rewrite my flake.
     };
 

@@ -22,7 +22,7 @@ in {
     xdg.configFile = {
       "qt6ct/qt6ct.conf".text = ''
         [Appearance]
-        color_scheme_path=/nix/store/zdkcq5ybgb7cyvm4nibfxb4c040943m3-qt6ct-0.10/share/qt6ct/colors/${cfg.colorScheme}.conf
+        color_scheme_path=${pkgs.kdePackages.qt6ct}/share/qt6ct/colors/${cfg.colorScheme}.conf
         custom_palette=true
         icon_theme=${cfg.iconTheme}
         standard_dialogs=${cfg.standardDialogs}

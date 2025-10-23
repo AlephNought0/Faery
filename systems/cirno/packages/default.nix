@@ -3,9 +3,11 @@
   pkgs,
   ...
 }: let
-  #inherit (lib) concatLists;
   inherit (config.faery.system) username;
 in {
+  services.flatpak.enable = true; # I am rewriting the entire flake so I don't care about this for now.
+  services.mullvad-vpn.enable = true;
+
   home-manager.users."${username}".home.packages = with pkgs; [
     prismlauncher
     qbittorrent
@@ -29,5 +31,7 @@ in {
 
     asusctl
     amdgpu_top
+
+    mullvad-vpn
   ];
 }
