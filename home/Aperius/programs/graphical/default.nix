@@ -3,7 +3,7 @@
     ./browsers
     ./easyeffects
     ./mullvad
-    #./opentablet
+    ./opentablet
     ./steam
     ./vesktop
     ./wms

@@ -65,6 +65,7 @@
       wms.niri.enable = true;
       displayManagers.sddm.enable = true;
 
+      mullvad.enable = true;
       vesktop.enable = true;
       steam.enable = true;
       opentablet.enable = true;
@@ -76,7 +77,6 @@
     };
 
     user.useHomeManager = true;
-
     terminal.shell.zsh = true;
     virtualization.qemu.enable = true;
     kdeWithoutPlasma.enable = true;

@@ -19,7 +19,6 @@
       reaper
       asusctl
       amdgpu_top
-      mullvad-vpn
       tela-icon-theme
       kdePackages.dolphin
     ];

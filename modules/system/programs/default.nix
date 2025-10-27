@@ -1,5 +1,6 @@
 {
   imports = [
+    # TODO: organize better
     ./opentablet
     ./easyeffects
     ./steam
@@ -7,5 +8,6 @@
     ./niri
     ./nvf
     ./sddm
+    ./mullvad
   ];
 }
