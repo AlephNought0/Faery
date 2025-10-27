@@ -1,0 +1,7 @@
+{
+  imports = [
+    ./graphical
+    ./terminal
+    ./tui
+  ];
+}

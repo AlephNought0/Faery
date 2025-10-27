@@ -46,6 +46,6 @@
   outputs = {nixpkgs, ...} @ inputs: {
     inherit (nixpkgs) lib;
 
-    nixosConfigurations = import ./systems {inherit inputs;};
+    nixosConfigurations = import ./hosts {inherit inputs;};
   };
 }

@@ -1,0 +1,13 @@
+diff --git a/src/kitemviews/kitemlistview.cpp b/src/kitemviews/kitemlistview.cpp
+index a82daaa19..92b157df6 100644
+--- a/src/kitemviews/kitemlistview.cpp
++++ b/src/kitemviews/kitemlistview.cpp
+@@ -2353,7 +2353,7 @@ void KItemListView::updateAlternateBackgroundForWidget(KItemListWidget *widget)
+             }
+         }
+     }
+-    widget->setAlternateBackground(enabled);
++    widget->setAlternateBackground(false);
+ }
+ 
+ bool KItemListView::useAlternateBackgrounds() const

@@ -1,7 +1,6 @@
 {
   imports = [
-    ./hardware
     ./system
-    ./options
+    ./hardware
   ];
 }
