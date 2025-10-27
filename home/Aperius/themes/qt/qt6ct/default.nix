@@ -9,7 +9,7 @@
   cfg = osConfig.faery.theme.qt;
 in {
   config = mkIf (cfg.platformTheme
-    == "qt5ct") {
+    == "qtct") {
     home.packages = with pkgs;
       lib.optional (cfg.style == "kvantum") kdePackages.qtstyleplugin-kvantum
       ++ [kdePackages.qt6ct];
