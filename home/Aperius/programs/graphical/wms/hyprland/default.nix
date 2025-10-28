@@ -21,9 +21,16 @@ in {
 
     xdg.portal = {
       enable = true;
-      configPackages = with pkgs; [
-        kdePackages.xdg-desktop-portal-kde
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gnome
+        xdg-desktop-portal-gtk
       ];
+
+      config = {
+        common = {
+          default = ["gnome" "gtk"];
+        };
+      };
     };
 
     home.packages = with pkgs; [

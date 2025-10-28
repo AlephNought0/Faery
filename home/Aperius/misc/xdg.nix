@@ -2,11 +2,14 @@
   osConfig,
   config,
   pkgs,
+  lib,
   ...
 }: let
+  inherit (lib) mkIf;
+
   cfg = osConfig.faery.xdg;
 in {
-  config = {
+  config = mkIf cfg.enable {
     home.packages = with pkgs; [
       xdg-utils
       shared-mime-info

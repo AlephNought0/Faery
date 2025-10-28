@@ -12,10 +12,21 @@ in {
     xdg.portal = {
       enable = true;
       extraPortals = with pkgs; [
-        kdePackages.xdg-desktop-portal-kde
+        xdg-desktop-portal-gnome
+        xdg-desktop-portal-gtk
       ];
-      configPackages = with pkgs; [
-        kdePackages.xdg-desktop-portal-kde
+
+      config = {
+        common = {
+          default = ["gnome" "gtk"];
+        };
+      };
+    };
+
+    # Can ANYTHING from GNOME work properly without tinkering?
+    systemd.user.services.xdg-desktop-portal-gnome = {
+      serviceConfig.Environment = [
+        "GDK_BACKEND=wayland"
       ];
     };
   };
