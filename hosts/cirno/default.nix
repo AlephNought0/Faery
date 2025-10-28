@@ -1,6 +1,5 @@
 {
   imports = [
-    ./services
     ./fonts.nix
     ./hardware-config.nix
     ./kernel.nix
@@ -8,6 +7,7 @@
     ./users.nix
     ./bootloader.nix
     ./misc.nix
+    ./services.nix
   ];
 
   faery = {

@@ -9,7 +9,7 @@
       ];
     };
 
-    services.jellyfin = {
+    jellyfin = {
       enable = true;
       openFirewall = true;
     };
