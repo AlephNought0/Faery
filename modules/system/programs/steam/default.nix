@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  inputs,
   ...
 }: let
   inherit (lib) mkIf;
@@ -13,8 +12,8 @@ in {
     programs = {
       gamescope = {
         enable = true;
-        capSysNice = true;
-        package = inputs.chaotic.packages."${pkgs.system}".gamescope_git;
+        #capSysNice = true;
+        package = pkgs.gamescope_git;
       };
 
       steam = {

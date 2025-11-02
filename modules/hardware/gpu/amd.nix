@@ -22,7 +22,7 @@ in {
       enable = true;
       extraPackages = with pkgs; [
         # One day I will try to separate nyx packages from normal ones.
-        vaapiVdpau
+        libva-vdpau-driver
         libvdpau-va-gl
         libdrm_git
         libva

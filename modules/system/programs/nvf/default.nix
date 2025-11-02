@@ -40,6 +40,7 @@ in {
           enableDAP = true;
 
           clang.enable = true;
+          zig.enable = true;
           nix.enable = true;
           lua.enable = true;
           bash.enable = true;
