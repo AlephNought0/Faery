@@ -18,13 +18,27 @@
     udisks2.enable = true;
   };
 
+  security.polkit = {
+    enable = true; # Maybe not the best place to put in.
+
+    extraConfig = ''
+      polkit.addRule(function(action, subject) {
+          if ((action.id == "org.freedesktop.udisks2.filesystem-mount-system" ||
+               action.id == "org.freedesktop.udisks2.filesystem-mount") &&
+          subject.isInGroup("storage")) {
+              return polkit.Result.YES;
+          }
+      });
+    '';
+  };
+
   systemd = {
     user.services = {
-      polkit-kde-agent = {
+      plasma-polkit-agent = {
         enable = true;
-        wantedBy = ["default.target"];
-        wants = ["default.target"];
-        after = ["default.target"];
+        wantedBy = ["graphical-session.target"];
+        wants = ["graphical-session.target"];
+        after = ["graphical-session.target"];
         serviceConfig = {
           Type = "simple";
           ExecStart = "${pkgs.kdePackages.polkit-kde-agent-1}/libexec/polkit-kde-authentication-agent-1";

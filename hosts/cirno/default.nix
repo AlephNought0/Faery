@@ -40,8 +40,6 @@
 
     services = {
       syncthing.enable = true;
-      flatpak.enable = true;
-      polkit.enable = true;
     };
 
     xdg = {
