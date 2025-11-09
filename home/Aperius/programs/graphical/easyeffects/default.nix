@@ -1,6 +1,7 @@
 {
   osConfig,
   lib,
+  pkgs,
   ...
 }: let
   inherit (lib) mkIf;
@@ -11,6 +12,30 @@
 in {
   config = mkIf cfg.enable {
     services.easyeffects.enable = true;
+
+    # Fixes easyeffects hanging during shutdown. I already made a pull request on the home-manager repository.
+    systemd.user.services.easyeffects = lib.mkForce {
+      Unit = {
+        Description = "Easyeffects daemon";
+        Before = ["pipewire.service" "pipewire-pulse.service" "dbus.service"];
+        Wants = ["pipewire.service" "pipewire-pulse.service" "dbus.service"];
+        Requires = ["dbus.service"];
+      };
+
+      Service = {
+        ExecStart = "${pkgs.easyeffects}/bin/easyeffects --gapplication-service";
+        ExecStop = "${pkgs.easyeffects}/bin/easyeffects --quit";
+        Type = "dbus";
+        BusName = "com.github.wwmm.easyeffects";
+        KillMode = "mixed";
+        Restart = "on-failure";
+        RestartSec = 5;
+      };
+
+      Install = {
+        WantedBy = ["graphical-session.target"];
+      };
+    };
 
     xdg = {
       configFile = {

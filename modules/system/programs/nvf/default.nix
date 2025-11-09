@@ -4,10 +4,12 @@
   inputs,
   pkgs,
   ...
-}: let
+}:
+let
   inherit (lib) mkIf mkForce;
   cfg = config.faery.programs.tui.nvf;
-in {
+in
+{
   config = mkIf cfg.enable {
     programs.nvf = {
       enable = true;
@@ -129,7 +131,7 @@ in {
                   ".changeset"
                   ".prettierrc.json"
                 ];
-                never_show = [".git"];
+                never_show = [ ".git" ];
               };
             };
           };

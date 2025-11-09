@@ -24,7 +24,6 @@
         cpu_sched = true;
         io_sched = true;
         kernel = true;
-        systemd = true;
       };
     };
 
