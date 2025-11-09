@@ -270,7 +270,7 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "swww-daemon"
-spawn-at-startup "env" "DRI_PRIME=1" "firefox-nightly"
+spawn-at-startup "floorp"
 spawn-at-startup "wl-gammarelay-rs run"
 
 hotkey-overlay {

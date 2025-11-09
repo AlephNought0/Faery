@@ -59,7 +59,7 @@
       };
 
       browsers = {
-        firefox.enable = false;
+        firefox.enable = true;
         floorp.enable = true;
       };
 
