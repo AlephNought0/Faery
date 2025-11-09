@@ -32,7 +32,6 @@ in {
       kdePackages.kwidgetsaddons
       kdePackages.kwindowsystem
       kdePackages.ark
-      kdePackages.kpipewire
       unrar # Not really a kde package but it makes ark able to extrat rar files so might as well put it here.
     ];
 
