@@ -10,10 +10,6 @@ in {
   config = mkIf cfg.enable {
     services.syncthing = {
       enable = true;
-      #openDefaultPorts = true;
-      #user = "Aperius";
-      #dataDir = "/home/Aperius/Documents";
-      #configDir = "/home/Aperius/Documents/.config/syncthing";
 
       settings = {
         devices = {

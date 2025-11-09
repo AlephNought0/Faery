@@ -20,6 +20,11 @@ in {
         type = str;
         description = "Default terminal.";
       };
+
+      default_fileManager = mkOption {
+        type = str;
+        description = "Default file manager.";
+      };
     };
 
     kdeWithoutPlasma.enable = mkEnableOption "usage of KDE apps without Plasma desktop environment.";

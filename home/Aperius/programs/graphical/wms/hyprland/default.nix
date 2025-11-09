@@ -21,22 +21,27 @@ in {
 
     xdg.portal = {
       enable = true;
+      xdgOpenUsePortal = true;
+
       extraPortals = with pkgs; [
-        xdg-desktop-portal-gnome
-        xdg-desktop-portal-gtk
+        kdePackages.xdg-desktop-portal-kde
+        xdg-desktop-portal-wlr
       ];
 
       config = {
         common = {
-          default = ["gnome" "gtk"];
+          default = ["kde" "wlr"];
+          "org.freedesktop.impl.portal.ScreenCast" = ["wlr"];
+          "org.freedesktop.impl.portal.Screenshot" = ["wlr"];
+          "org.freedesktop.impl.portal.FileChooser" = ["kde"];
         };
       };
     };
 
     home.packages = with pkgs; [
-      rofi-wayland
+      rofi
       inputs.hyprcursor.packages."${pkgs.system}".hyprcursor
-      inputs.swww.packages."${pkgs.system}".swww
+      swww
       grim
       wl-clipboard
       slurp
@@ -50,11 +55,6 @@ in {
       systemd = {
         enable = true;
         variables = ["--all"];
-        extraCommands = [
-          "systemctl --user stop xdg-desktop-portal" #They seem to be conflicting which makes streaming not work
-          "systemctl --user start xdg-desktop-portal-hyprland"
-          "systemctl --user start opentabletdriver.service"
-        ];
       };
 
       settings = {

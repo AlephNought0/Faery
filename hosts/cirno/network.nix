@@ -6,8 +6,19 @@
     firewall = {
       enable = true;
 
-      allowedTCPPorts = [80 443 9993 25565 5900]; #25565 is port for minecraft server
-      allowedUDPPorts = [34197]; #34197 is port for factorio server
+      allowedTCPPorts = [
+        80
+        443
+        9993 # Zerotier
+        25565 # Minecraft
+        22000 # Syncthing
+      ];
+
+      allowedUDPPorts = [
+        34197 # Factorio
+        21027 # Syncthing
+      ];
+
       allowedUDPPortRanges = [
         {
           from = 4000;

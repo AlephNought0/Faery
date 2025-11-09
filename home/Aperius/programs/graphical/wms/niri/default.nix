@@ -13,14 +13,19 @@ in {
     xdg = {
       portal = {
         enable = true;
+        xdgOpenUsePortal = true;
+
         extraPortals = with pkgs; [
-          xdg-desktop-portal-gnome
-          xdg-desktop-portal-gtk
+          kdePackages.xdg-desktop-portal-kde
+          xdg-desktop-portal-wlr
         ];
 
         config = {
           common = {
-            default = ["gnome" "gtk"];
+            default = ["kde" "wlr"];
+            "org.freedesktop.impl.portal.ScreenCast" = ["wlr"];
+            "org.freedesktop.impl.portal.Screenshot" = ["wlr"];
+            "org.freedesktop.impl.portal.FileChooser" = ["kde"];
           };
         };
       };

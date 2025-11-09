@@ -16,7 +16,8 @@ in {
         isDefault = true;
 
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          ublock-origin
+          #ublock-origin
+          adnauseam # Let's troll them
           darkreader
           keepassxc-browser
           return-youtube-dislikes
