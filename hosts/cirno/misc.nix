@@ -13,6 +13,7 @@
     CLUTTER_BACKEND = "wayland";
     GDK_BACKEND = "wayland,x11";
     DIRENV_WARN_TIMEOUT = "0s";
+    GTK_USE_PORTAL = 1; # I wonder if I can also make apps just not install the gtk file selector altogether.
   };
 
   time.timeZone = "Europe/Berlin"; # Doxxed!11!!
