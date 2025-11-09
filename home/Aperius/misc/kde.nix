@@ -32,7 +32,7 @@ in {
       kdePackages.kwidgetsaddons
       kdePackages.kwindowsystem
       kdePackages.ark
-      unrar # Not really a kde package but it makes ark able to extrat rar files so might as well put it here.
+      unrar # Not really a kde package but it makes ark able to extract rar files so might as well put it here.
     ];
 
     #environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
