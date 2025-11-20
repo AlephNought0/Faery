@@ -18,10 +18,6 @@
   --Chat-Font-Size: 30px;
 }
 
-.visual-refresh {
-  margin-top: 0px;
-}
-
 :not([class="hljs"]):not(code) {
   font-family: var(--Chat-Font-Used) !important;
 }
@@ -42,7 +38,7 @@
   color: cyan;
 }
 
-.base_c48ade {
+.base__5e434 {
   grid-template-rows: none !important;
 }
 
@@ -54,7 +50,7 @@
   display: none !important;
 }
 
-.buttons__74017 > div:nth-of-type(2) {
+.buttons__74017 > div:nth-of-type(6) {
   display: none;
 }
 
