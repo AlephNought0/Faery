@@ -43,7 +43,7 @@
 
     xdg = {
       enable = true;
-      default_browser = "floorp.desktop";
+      default_browser = "firefox-nightly.desktop";
       default_editor = "nvim.desktop";
       default_fileManager = "dolphin.desktop";
       default_terminal = "foot";
@@ -57,7 +57,7 @@
 
       browsers = {
         firefox.enable = true;
-        floorp.enable = true;
+        floorp.enable = false;
       };
 
       wms.niri.enable = true;

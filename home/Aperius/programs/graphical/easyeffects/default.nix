@@ -12,7 +12,8 @@ in {
   config = mkIf cfg.enable {
     services.easyeffects.enable = true;
 
-    xdg = {
+    /*
+      xdg = {
       configFile = {
         # If they do not load automatically then just set them manually and you should be done.
         # Also, turning off voice reduction on discord is recommended if you use these settings.
@@ -22,5 +23,6 @@ in {
         "easyeffects/output/default.json".text = outputContent;
       };
     };
+    */
   };
 }
