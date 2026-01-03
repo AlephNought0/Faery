@@ -38,19 +38,15 @@
   color: cyan;
 }
 
-.base__5e434 {
+._5e434347c823b592-base {
   grid-template-rows: none !important;
 }
 
-.bar_c38106 {
+.c38106a3f0c3ca76-bar {
   display: none;
 }
 
-.channelAppLauncher_e6e74f {
-  display: none !important;
-}
-
-.buttons__74017 > div:nth-of-type(6) {
+._740174f3d6a2c8fe-buttons > div:nth-of-type(6) {
   display: none;
 }
 
