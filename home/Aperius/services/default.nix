@@ -2,5 +2,6 @@
   imports = [
     ./syncthing
     ./test
+    ./clipman
   ];
 }

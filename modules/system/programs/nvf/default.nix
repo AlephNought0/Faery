@@ -4,18 +4,16 @@
   inputs,
   pkgs,
   ...
-}:
-let
+}: let
   inherit (lib) mkIf mkForce;
   cfg = config.faery.programs.tui.nvf;
-in
-{
+in {
   config = mkIf cfg.enable {
     programs.nvf = {
       enable = true;
 
       settings.vim = {
-        package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+        package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
         viAlias = false;
         vimAlias = false;
         enableLuaLoader = true;
@@ -51,7 +49,7 @@ in
           astro.enable = true;
           php.enable = true;
           css.enable = true;
-          sql.enable = true;
+          #sql.enable = true;
         };
 
         git = {
@@ -93,16 +91,6 @@ in
           };
         };
 
-        debugger = {
-          nvim-dap = {
-            enable = true;
-            ui = {
-              enable = true;
-              autoStart = false; # No idea why it should close automatically as well.
-            };
-          };
-        };
-
         statusline.lualine = {
           enable = true;
           theme = "catppuccin";
@@ -131,7 +119,7 @@ in
                   ".changeset"
                   ".prettierrc.json"
                 ];
-                never_show = [ ".git" ];
+                never_show = [".git"];
               };
             };
           };

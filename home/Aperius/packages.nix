@@ -12,7 +12,6 @@
       gimp
       keepassxc
       spotify
-      protontricks
       matugen
       jdk8
       telegram-desktop
@@ -21,6 +20,7 @@
       amdgpu_top
       tela-icon-theme
       kdePackages.dolphin
+      oversteer
     ];
   };
 }

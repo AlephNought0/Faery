@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   config = {
@@ -9,6 +10,7 @@
       enableCompletion = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
+      dotDir = "${config.xdg.configHome}/zsh";
 
       history = {
         share = true;
@@ -27,7 +29,7 @@
       };
 
       initContent = lib.mkOrder 500 ''
-        source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
+        source ${config.programs.zsh.dotDir}/plugins/powerlevel10k/powerlevel10k.zsh-theme
         source ~/.p10k.zsh
 
         if [[ -r "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then

@@ -7,13 +7,28 @@
   inherit (lib) mkIf;
 
   cfg = config.faery.programs.steam;
+
+  proton-ge-9 = pkgs.proton-ge-bin.overrideAttrs (oldAttrs: rec {
+    version = "GE-Proton9-2";
+
+    src = pkgs.fetchzip {
+      url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/${version}/${version}.tar.gz";
+      hash = "sha256-NqBzKonCYH+hNpVZzDhrVf+r2i6EwLG/IFBXjE2mC7s=";
+    };
+
+    preFixup = ''
+      substituteInPlace "$steamcompattool/compatibilitytool.vdf" \
+        --replace-fail "${version}" "${version}"
+    '';
+
+    #passthru = oldAttrs.passthru or {};
+  });
 in {
   config = mkIf cfg.enable {
     programs = {
       gamescope = {
         enable = true;
         #capSysNice = true;
-        package = pkgs.gamescope_git;
       };
 
       steam = {
@@ -21,6 +36,7 @@ in {
         gamescopeSession.enable = true;
         remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
         dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+        protontricks.enable = true;
 
         package = pkgs.steam.override {
           extraPkgs = pkgs:
@@ -40,7 +56,8 @@ in {
         };
 
         extraCompatPackages = [
-          pkgs.proton-ge-custom
+          pkgs.proton-ge-bin
+          proton-ge-9
         ];
       };
     };

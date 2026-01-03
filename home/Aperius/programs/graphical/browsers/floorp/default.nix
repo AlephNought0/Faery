@@ -11,7 +11,7 @@ in {
     enable = true;
 
     profiles = {
-      "faery-floorp" = {
+      "faery" = {
         id = 0;
         isDefault = true;
 
