@@ -37,10 +37,9 @@
     };
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
     nur.url = "github:nix-community/NUR";
-
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
   };
 
   outputs = {nixpkgs, ...} @ inputs: {

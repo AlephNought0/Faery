@@ -6,5 +6,6 @@
     ./steam
     ./vesktop
     ./wms
+    ./quickshell
   ];
 }

@@ -25,5 +25,6 @@ in {
     opentablet.enable = mkEnableOption "opentablet module.";
     mullvad.enable = mkEnableOption "mullvad module.";
     easyeffects.enable = mkEnableOption "easyeffects module.";
+    quickshell.enable = mkEnableOption "quickshell module.";
   };
 }

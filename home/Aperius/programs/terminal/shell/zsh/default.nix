@@ -4,7 +4,16 @@
   config,
   osConfig,
   ...
-}: {
+}: let
+  inherit (lib) mkIf mkMerge;
+
+  nhUsed = config.programs.nh.enable;
+
+  updateString = mkMerge [
+    (mkIf nhUsed "nh os switch . -H ${osConfig.networking.hostName}")
+    (mkIf (!nhUsed) "sudo nixos-rebuild switch --upgrade --flake ~/Faery#${osConfig.networking.hostName}")
+  ];
+in {
   config = {
     programs.zsh = {
       enable = true;
@@ -25,7 +34,7 @@
 
       shellAliases = {
         ll = "ls -l";
-        update = "sudo nixos-rebuild switch --upgrade --flake ~/Faery#${osConfig.networking.hostName}";
+        update = updateString;
         flake = "nix flake update --flake ~/Faery";
       };
 

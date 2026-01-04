@@ -11,5 +11,9 @@ in {
       enable = true;
       osFlake = "/home/Aperius/Faery";
     };
+
+    home.sessionVariables = {
+      NH_NOM = "true";
+    };
   };
 }

@@ -7,6 +7,17 @@
   cfg = osConfig.faery.services.dunst;
 in {
   config = mkIf cfg.enable {
-    services.dunst.enable = true;
+    services.dunst = {
+      enable = true;
+      settings = {
+        global = {
+          fullscreen = "delay";
+        };
+
+        urgency_critical = {
+          fullscreen = "show";
+        };
+      };
+    };
   };
 }

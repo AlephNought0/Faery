@@ -1,5 +1,7 @@
 {
   imports = [
     ./dolphin
+    ./cachyos
+    ./quickshell
   ];
 }
