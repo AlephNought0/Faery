@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  osConfig,
   ...
 }: {
   config = {
@@ -24,7 +25,7 @@
 
       shellAliases = {
         ll = "ls -l";
-        update = "sudo nixos-rebuild switch --upgrade --flake ~/Faery#Cirno";
+        update = "sudo nixos-rebuild switch --upgrade --flake ~/Faery#${osConfig.networking.hostName}";
         flake = "nix flake update --flake ~/Faery";
       };
 

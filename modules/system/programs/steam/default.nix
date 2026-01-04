@@ -41,10 +41,6 @@ in {
         package = pkgs.steam.override {
           extraPkgs = pkgs:
             with pkgs; [
-              xorg.libXcursor
-              xorg.libXi
-              xorg.libXinerama
-              xorg.libXScrnSaver
               libgdiplus
               libpng
               libpulseaudio
@@ -52,6 +48,15 @@ in {
               stdenv.cc.cc.lib
               libkrb5
               keyutils
+            ];
+          extraLibraries = pkgs:
+            with pkgs; [
+              xorg.libX11
+              xorg.libXcursor
+              xorg.libXi
+              xorg.libXinerama
+              xorg.libXScrnSaver
+              pkgsi686Linux.xorg.libX11
             ];
         };
 

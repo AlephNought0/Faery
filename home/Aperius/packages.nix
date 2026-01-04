@@ -21,6 +21,7 @@
       tela-icon-theme
       kdePackages.dolphin
       oversteer
+      libnotify
     ];
   };
 }
