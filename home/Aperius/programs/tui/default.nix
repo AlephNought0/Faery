@@ -2,5 +2,6 @@
   imports = [
     ./btop
     ./nvf
+    ./nh
   ];
 }

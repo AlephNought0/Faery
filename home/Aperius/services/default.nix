@@ -3,5 +3,6 @@
     ./syncthing
     ./test
     ./clipman
+    ./dunst
   ];
 }

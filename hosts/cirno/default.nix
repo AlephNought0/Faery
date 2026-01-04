@@ -41,6 +41,7 @@
     services = {
       syncthing.enable = true;
       clipman.enable = true;
+      dunst.enable = true;
     };
 
     xdg = {
@@ -55,6 +56,7 @@
       tui = {
         nvf.enable = true;
         btop.enable = true;
+        nh.enable = true;
       };
 
       browsers = {
