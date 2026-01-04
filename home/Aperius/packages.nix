@@ -22,6 +22,7 @@
       kdePackages.dolphin
       oversteer
       libnotify
+      wl-gammarelay-rs
     ];
   };
 }
