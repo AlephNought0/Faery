@@ -16,6 +16,9 @@ in {
       exec = "env DRI_PRIME=1 firefox-nightly %U";
     });
 
+    # Fuck you
+    systemd.user.services.speech-dispatcher = lib.mkForce {};
+
     programs.firefox = {
       enable = true;
       package = inputs.firefox-nightly.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin;
@@ -69,6 +72,11 @@ in {
 
             # Enables CSD
             "browser.tabs.drawInTitlebar" = true;
+
+            # Fuck you
+            "media.webspeech.synth.enabled" = false;
+            "media.webspeech.enabled" = false;
+            "reader.parse-on-load.enabled" = false;
           };
         };
       };
