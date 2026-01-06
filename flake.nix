@@ -40,11 +40,18 @@
     nur.url = "github:nix-community/NUR";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {nixpkgs, ...} @ inputs: {
-    inherit (nixpkgs) lib;
+  outputs = inputs:
+    inputs.flake-parts.lib.mkFlake {inherit inputs;} {
+      imports = [
+        ./parts
+        ./hosts
+      ];
 
-    nixosConfigurations = import ./hosts {inherit inputs;};
-  };
+      systems = [
+        "x86_64-linux"
+      ];
+    };
 }

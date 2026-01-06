@@ -1,49 +1,51 @@
-{inputs, ...}: let
-  inherit (inputs) self;
-  inherit (self) lib;
+{inputs, ...}: {
+  flake.nixosConfigurations = let
+    inherit (inputs) self;
+    inherit (inputs.self) lib;
 
-  nur = inputs.nur.modules.nixos.default;
-  nvf = inputs.nvf.nixosModules.default;
-  pwLowLatency = inputs.nix-gaming.nixosModules.pipewireLowLatency;
-  hm = inputs.home-manager.nixosModules.home-manager;
-in {
-  Cirno = lib.nixosSystem {
-    specialArgs = {
-      inherit lib inputs self;
+    nur = inputs.nur.modules.nixos.default;
+    nvf = inputs.nvf.nixosModules.default;
+    pwLowLatency = inputs.nix-gaming.nixosModules.pipewireLowLatency;
+    hm = inputs.home-manager.nixosModules.home-manager;
+  in {
+    Cirno = lib.nixosSystem {
+      specialArgs = {
+        inherit lib inputs self;
+      };
+
+      modules = [
+        ./cirno
+        ../modules
+        ../home
+        ../overlays
+
+        hm
+        nur
+        nvf
+        pwLowLatency
+
+        {nixpkgs.hostPlatform = "x86_64-linux";}
+      ];
     };
 
-    modules = [
-      ./cirno
-      ../modules
-      ../home
-      ../overlays
+    Ayumu = lib.nixosSystem {
+      specialArgs = {
+        inherit lib inputs self;
+      };
 
-      hm
-      nur
-      nvf
-      pwLowLatency
+      modules = [
+        ./ayumu
+        ../modules
+        ../home
+        ../overlays
 
-      {nixpkgs.hostPlatform = "x86_64-linux";}
-    ];
-  };
+        hm
+        nur
+        nvf
+        pwLowLatency
 
-  Ayumu = lib.nixosSystem {
-    specialArgs = {
-      inherit lib inputs self;
+        {nixpkgs.hostPlatform = "x86_64-linux";}
+      ];
     };
-
-    modules = [
-      ./ayumu
-      ../modules
-      ../home
-      ../overlays
-
-      hm
-      nur
-      nvf
-      pwLowLatency
-
-      {nixpkgs.hostPlatform = "x86_64-linux";}
-    ];
   };
 }
