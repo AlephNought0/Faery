@@ -8,7 +8,6 @@
     ./bootloader.nix
     ./misc.nix
     ./services.nix
-    ./udev.nix
   ];
 
   faery = {

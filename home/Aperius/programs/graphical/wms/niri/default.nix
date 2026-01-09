@@ -38,7 +38,6 @@ in {
     home.packages = with pkgs; [
       rofi
       swww
-      #wl-clipboard
       xwayland-satellite
       wl-screenrec
     ];

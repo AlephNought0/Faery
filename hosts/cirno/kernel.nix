@@ -1,10 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
-  inherit (inputs.self) lib;
-
+{pkgs, ...}: let
   kernelPackage = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
 in {
   boot = {
@@ -14,7 +8,6 @@ in {
     };
     kernelPackages = kernelPackage;
     kernelModules = [];
-    blacklistedKernelModules = ["hid-thrustmaster"];
-    extraModulePackages = lib.customKernelPackages kernelPackage ["hid-tmff2"];
+    blacklistedKernelModules = [];
   };
 }
