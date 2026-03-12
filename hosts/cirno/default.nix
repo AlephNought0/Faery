@@ -8,6 +8,7 @@
     ./bootloader.nix
     ./misc.nix
     ./services.nix
+    ./packages.nix
   ];
 
   faery = {

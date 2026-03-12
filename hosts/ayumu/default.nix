@@ -9,6 +9,7 @@
     ./misc.nix
     ./services.nix
     ./udev.nix
+    ./packages.nix
   ];
 
   faery = {
