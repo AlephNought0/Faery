@@ -47,6 +47,7 @@ in {
       AMD_VULKAN_ICD = "RADV";
       OCL_ICD_VENDORS = "${pkgs.rocmPackages.clr.icd}/etc/OpenCL/vendors";
       VK_ICD_FILENAMES = "${pkgs.mesa}/share/vulkan/icd.d/radeon_icd.x86_64.json";
+      LIBVA_DRM_DEVICE = "/dev/dri/renderD128";
     };
 
     systemd.tmpfiles.rules = [

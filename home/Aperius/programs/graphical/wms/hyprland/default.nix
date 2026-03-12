@@ -82,12 +82,6 @@ in {
 
         env = concatLists [
           [
-            "XDG_SESSION_TYPE, wayland"
-            "GDK_BACKEND, wayland,x11"
-            "CLUTTER_BACKEND, wayland"
-            "QT_QPA_PLATFORM, wayland;xcb"
-            "HYPRCURSOR_THEME, rose-pine-hyprcursor"
-            "HYPRCURSOR_SIZE,30"
             "AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0"
 
             "GDK_SCALE, ${toString cfg.scaling}"

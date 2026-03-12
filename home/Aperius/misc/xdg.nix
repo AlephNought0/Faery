@@ -41,6 +41,7 @@ in {
           "inode/directory" = cfg.default_fileManager;
 
           "x-scheme-handler/roblox-player" = "org.vinegarhq.Sober.desktop";
+          "x-scheme-handler/acmanager" = "ContentManager.desktop";
         };
       };
 

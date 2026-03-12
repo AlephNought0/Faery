@@ -17,7 +17,6 @@
       cpu = "amd";
 
       audio.pipewire.enable = true;
-      mouse.logitech-wireless.enable = true;
     };
 
     system = {
@@ -60,7 +59,10 @@
       };
 
       browsers = {
-        firefox.enable = true;
+        firefox = {
+          enable = true;
+          dGPU = true;
+        };
         floorp.enable = true;
       };
 
@@ -73,6 +75,8 @@
       opentablet.enable = true;
       easyeffects.enable = true;
       quickshell.enable = true;
+      corectrl.enable = true;
+      openrgb.enable = true;
     };
 
     overlays = {

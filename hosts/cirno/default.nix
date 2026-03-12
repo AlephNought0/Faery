@@ -11,21 +11,7 @@
   ];
 
   faery = {
-    hardware = {
-      gpu = "amd";
-      cpu = "amd";
-
-      audio.pipewire.enable = true;
-      mouse.logitech-wireless.enable = true;
-    };
-
-    system = {
-      performance = {
-        cpu_sched = true;
-        io_sched = true;
-        kernel = true;
-      };
-    };
+    hardware.audio.pipewire.enable = true;
 
     theme.qt = {
       enable = true;
@@ -37,11 +23,7 @@
       colorScheme = "darker";
     };
 
-    services = {
-      syncthing.enable = true;
-      clipman.enable = true;
-      dunst.enable = true;
-    };
+    services.syncthing.enable = true;
 
     xdg = {
       enable = true;
@@ -76,13 +58,11 @@
 
     overlays = {
       dolphin.no-alternate = true;
-      cachyos-kernel = true;
       quickshell = true;
     };
 
     user.useHomeManager = true;
     terminal.shell.zsh = true;
-    virtualization.qemu.enable = true;
     kdeWithoutPlasma.enable = true;
   };
 }

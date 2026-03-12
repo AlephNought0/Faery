@@ -6,23 +6,29 @@
       obs-studio
       krita
       vlc
-      libreoffice-qt6-still
+      onlyoffice-desktopeditors
       qtcreator
       r2modman
       gimp
       keepassxc
       spotify
       matugen
-      jdk8
       telegram-desktop
       reaper
-      asusctl
       amdgpu_top
       tela-icon-theme
       kdePackages.dolphin
       oversteer
       libnotify
-      wl-gammarelay-rs
+      equibop
+      winetricks
+      wineWow64Packages.yabridge
+      zulu25
+      moonlight-qt
+      element-desktop
+      wootility
+      sunshine
+      bottles
     ];
   };
 }

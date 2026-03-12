@@ -12,10 +12,20 @@
       name = "Vinegar";
       genericName = "Sigma Ohio Launcher";
       comment = "Run Roblox Studio on Linux";
-      exec = "gamescope -w 2560 -h 1440 -r 165 --force-grab-cursor --mouse-sensitivity 3 --backend sdl -- flatpak run --file-forwarding org.vinegarhq.Vinegar";
+      exec = "gamescope -W 2560 -H 1440 -r 180 -f --backend sdl --expose-wayland --force-grab-cursor -- flatpak run --file-forwarding org.vinegarhq.Vinegar";
       icon = "org.vinegarhq.vinegar";
       terminal = false;
       type = "Application";
+    };
+
+    "ContentManager" = {
+      name = "Content Manager";
+      exec = "steam -applaunch 244210 %U";
+      terminal = false;
+      type = "Application";
+      mimeType = ["x-scheme-handler/acmanager"];
+      icon = "steam_icon_244210";
+      categories = ["Game"];
     };
   };
 }

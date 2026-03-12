@@ -11,8 +11,11 @@
         "wheel"
         "audio"
         "video"
+        "render"
+        "input"
         "libvirtd"
         "storage"
+        "corectrl"
       ];
     };
   };

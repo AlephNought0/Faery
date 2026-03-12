@@ -7,6 +7,13 @@
 }: let
   inherit (lib) mkIf mkForce;
   cfg = osConfig.faery.programs.browsers.firefox;
+
+  firefox-nordic-theme = pkgs.fetchFromGitHub {
+    owner = "EliverLara";
+    repo = "firefox-nordic-theme";
+    rev = "master";
+    hash = "sha256-2xP9tHCmOM35fxFMbABUhHHnefv2sSCwhnYpjbHM/V0=";
+  };
 in {
   config = mkIf cfg.enable {
     xdg.desktopEntries."firefox-nightly" = mkIf cfg.dGPU (mkForce {
@@ -19,6 +26,11 @@ in {
     # Fuck you
     systemd.user.services.speech-dispatcher = lib.mkForce {};
 
+    home.file.".mozilla/firefox/faery/chrome/firefox-nordic-theme" = {
+      source = firefox-nordic-theme;
+      recursive = true;
+    };
+
     programs.firefox = {
       enable = true;
       package = inputs.firefox-nightly.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin;
@@ -27,6 +39,24 @@ in {
         "faery" = {
           id = 0;
           isDefault = true;
+
+          userChrome = ''
+            @import "firefox-nordic-theme/userChrome.css";
+
+            #TabsToolbar {
+              order: 1 !important;
+            }
+
+            #PersonalToolbar {
+              order: 10 !important;
+            }
+
+            /* Fix extension icons missing */
+            .webextension-browser-action,
+            .unified-extensions-item-action-button {
+              list-style-image: var(--webextension-toolbar-image, inherit) !important;
+            }
+          '';
 
           extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
             ublock-origin

@@ -49,7 +49,8 @@ in {
           astro.enable = true;
           php.enable = true;
           css.enable = true;
-          #sql.enable = true;
+          sql.enable = true;
+          qml.enable = true;
         };
 
         git = {

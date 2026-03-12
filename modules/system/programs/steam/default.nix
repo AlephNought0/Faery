@@ -20,8 +20,6 @@
       substituteInPlace "$steamcompattool/compatibilitytool.vdf" \
         --replace-fail "${version}" "${version}"
     '';
-
-    #passthru = oldAttrs.passthru or {};
   });
 in {
   config = mkIf cfg.enable {
@@ -51,12 +49,12 @@ in {
             ];
           extraLibraries = pkgs:
             with pkgs; [
-              xorg.libX11
-              xorg.libXcursor
-              xorg.libXi
-              xorg.libXinerama
-              xorg.libXScrnSaver
-              pkgsi686Linux.xorg.libX11
+              libX11
+              libXcursor
+              libXi
+              libXinerama
+              libXScrnSaver
+              pkgsi686Linux.libX11
             ];
         };
 

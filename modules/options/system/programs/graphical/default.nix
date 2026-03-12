@@ -26,5 +26,7 @@ in {
     mullvad.enable = mkEnableOption "mullvad module.";
     easyeffects.enable = mkEnableOption "easyeffects module.";
     quickshell.enable = mkEnableOption "quickshell module.";
+    corectrl.enable = mkEnableOption "corectrl module.";
+    openrgb.enable = mkEnableOption "openrgb module.";
   };
 }

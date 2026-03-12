@@ -9,5 +9,7 @@
     ./nvf
     ./sddm
     ./mullvad
+    ./corectrl
+    ./openrgb
   ];
 }

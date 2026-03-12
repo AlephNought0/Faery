@@ -11,12 +11,14 @@
         443
         9993 # Zerotier
         25565 # Minecraft
-        22000 # Syncthing
+        22000 # # Syncthing
+        9770
       ];
 
       allowedUDPPorts = [
         34197 # Factorio
         21027 # Syncthing
+        9770
       ];
 
       allowedUDPPortRanges = [

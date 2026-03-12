@@ -40,6 +40,9 @@ in {
       swww
       xwayland-satellite
       wl-screenrec
+      wl-gammarelay-rs
+      wl-clipboard
+      xclip
     ];
   };
 }

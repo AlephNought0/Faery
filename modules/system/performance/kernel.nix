@@ -10,10 +10,10 @@ in {
   config = mkIf cfg.kernel {
     boot = {
       kernelParams = [
-        #Disable tickless kernel to improve performance
+        # Disable tickless kernel to improve performance
         "nohz=off"
 
-        #Force TSC instead of HPET
+        # Force TSC instead of HPET
         "hpet=disable"
         "clocksource=tsc"
         "tsc=reliable"

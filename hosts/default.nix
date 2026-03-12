@@ -1,6 +1,5 @@
 {inputs, ...}: {
   flake.nixosConfigurations = let
-    inherit (inputs) self;
     inherit (inputs.self) lib;
 
     nur = inputs.nur.modules.nixos.default;
@@ -8,34 +7,21 @@
     pwLowLatency = inputs.nix-gaming.nixosModules.pipewireLowLatency;
     hm = inputs.home-manager.nixosModules.home-manager;
   in {
-    Cirno = lib.nixosSystem {
-      specialArgs = {
-        inherit lib inputs self;
-      };
-
+    Cirno = lib.mkMacSystem "Cirno" {
+      stateVersion = "26.05"; # Only change when installing a new system or reinstalling.
       modules = [
-        ./cirno
-        ../modules
         ../home
-        ../overlays
 
-        hm
-        nur
         nvf
         pwLowLatency
-
-        {nixpkgs.hostPlatform = "x86_64-linux";}
+        hm
       ];
     };
 
-    Ayumu = lib.nixosSystem {
-      specialArgs = {
-        inherit lib inputs self;
-      };
-
+    Ayumu = lib.mkSystem "Ayumu" {
+      stateVersion = "25.05";
+      hostPlatform = "x86_64-linux";
       modules = [
-        ./ayumu
-        ../modules
         ../home
         ../overlays
 
@@ -43,8 +29,6 @@
         nur
         nvf
         pwLowLatency
-
-        {nixpkgs.hostPlatform = "x86_64-linux";}
       ];
     };
   };

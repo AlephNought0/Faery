@@ -14,22 +14,36 @@
       openFirewall = true;
     };
 
+    /*
+      sunshine = {
+      enable = true;
+      autoStart = true;
+      capSysAdmin = true;
+      openFirewall = true;
+    };
+    */
+
+    gnome.gnome-keyring.enable = false;
+
     flatpak.enable = true;
     udisks2.enable = true;
   };
 
-  security.polkit = {
-    enable = true; # Maybe not the best place to put in.
+  security = {
+    pam.services.login.enableGnomeKeyring = false;
+    polkit = {
+      enable = true; # Maybe not the best place to put in.
 
-    extraConfig = ''
-      polkit.addRule(function(action, subject) {
-          if ((action.id == "org.freedesktop.udisks2.filesystem-mount-system" ||
-               action.id == "org.freedesktop.udisks2.filesystem-mount") &&
-          subject.isInGroup("storage")) {
-              return polkit.Result.YES;
-          }
-      });
-    '';
+      extraConfig = ''
+        polkit.addRule(function(action, subject) {
+            if ((action.id == "org.freedesktop.udisks2.filesystem-mount-system" ||
+                 action.id == "org.freedesktop.udisks2.filesystem-mount") &&
+            subject.isInGroup("storage")) {
+                return polkit.Result.YES;
+            }
+        });
+      '';
+    };
   };
 
   systemd = {

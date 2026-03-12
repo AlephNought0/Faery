@@ -1,4 +1,4 @@
-{
+{osConfig, ...}: {
   imports = [
     ./programs
     ./misc
@@ -11,7 +11,7 @@
     home = {
       username = "Aperius";
       homeDirectory = "/home/Aperius";
-      stateVersion = "25.05";
+      stateVersion = osConfig.system.stateVersion;
     };
 
     systemd.user.startServices = "sd-switch";
