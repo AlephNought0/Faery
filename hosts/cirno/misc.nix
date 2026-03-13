@@ -1,4 +1,4 @@
-_: {
+{lib, ...}: {
   # TODO: Figure out how to organize all of that.
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -16,4 +16,5 @@ _: {
   i18n.defaultLocale = "en_US.UTF-8";
 
   hardware.asahi.peripheralFirmwareDirectory = /boot/asahi;
+  hardware.graphics.enable32Bit = lib.mkForce false;
 }
