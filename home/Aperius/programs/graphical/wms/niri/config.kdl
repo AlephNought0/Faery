@@ -76,7 +76,7 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-output "DP-4" {
+/-output "DP-4" {
     // Uncomment this line to disable this output.
     // off
 
@@ -306,6 +306,7 @@ animations {
 
 debug {
     deactivate-unfocused-windows
+    render-drm-device "/dev/dri/renderD128"
 }
 
 // Window rules let you adjust behavior for individual windows.

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aperius</key>
+	<dict>
+		<key>AuthenticationAuthority</key>
+		<array>
+			<string>;ShadowHash;HASHLIST:&lt;SALTED-SHA512-PBKDF2,SRP-RFC5054-4096-SHA512-PBKDF2&gt;</string>
+			<string>;SecureToken;</string>
+			<string>;Kerberosv5;;aperius@LKDC:SHA1.96F68DA0A1E4815BA372AACE378E39478B3B3528;LKDC:SHA1.96F68DA0A1E4815BA372AACE378E39478B3B3528;</string>
+		</array>
+		<key>GeneratedUID</key>
+		<string>8752E530-1B33-4224-BFFB-52E26D072B30</string>
+		<key>RealName</key>
+		<string>aperius</string>
+	</dict>
+</dict>
+</plist>

@@ -3,16 +3,16 @@
     prismlauncher
     qbittorrent
     vlc
-    onlyoffice-desktopeditors
+    #onlyoffice-desktopeditors
     qtcreator
     gimp
     keepassxc
-    spotify
+    #spotify
     matugen
     tela-icon-theme
     kdePackages.dolphin
-    winetricks
-    wineWow64Packages.yabridge
+    #winetricks
+    #wineWow64Packages.yabridge
     zulu25
     element-desktop
   ];

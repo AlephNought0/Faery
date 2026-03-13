@@ -1,4 +1,4 @@
-{lib, ...}: {
+{lib, pkgs, ...}: {
   # TODO: Figure out how to organize all of that.
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -10,11 +10,19 @@
     GDK_BACKEND = "wayland,x11";
     DIRENV_WARN_TIMEOUT = "0s";
     GTK_USE_PORTAL = 1; # I wonder if I can also make apps just not install the gtk file selector altogether.
+    #WLR_DRM_DEVICES = "/dev/dri/card2";
   };
 
   time.timeZone = "Europe/Berlin"; # Doxxed!11!!
   i18n.defaultLocale = "en_US.UTF-8";
 
-  hardware.asahi.peripheralFirmwareDirectory = /boot/asahi;
   hardware.graphics.enable32Bit = lib.mkForce false;
+hardware.apple.touchBar = {
+  enable = true;
+  package = pkgs.tiny-dfr;
+};
+hardware.asahi = {
+enable = true;
+peripheralFirmwareDirectory = ../../asahi;
+};
 }

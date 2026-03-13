@@ -51,7 +51,7 @@
 
       mullvad.enable = true;
       vesktop.enable = true;
-      steam.enable = true;
+      #steam.enable = true;
       opentablet.enable = true;
       easyeffects.enable = true;
       quickshell.enable = true;
