@@ -14,4 +14,6 @@ _: {
 
   time.timeZone = "Europe/Berlin"; # Doxxed!11!!
   i18n.defaultLocale = "en_US.UTF-8";
+
+  hardware.asahi.peripheralFirmwareDirectory = /boot/asahi;
 }
