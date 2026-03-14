@@ -8,7 +8,7 @@
           font = "JetBrainsMono NerdFont:size=12";
         };
 
-        colors = {
+        colors-dark = {
           alpha = 0.4;
           background = "000000";
         };

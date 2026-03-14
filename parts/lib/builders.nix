@@ -43,7 +43,6 @@
             nixpkgs.hostPlatform = "aarch64-linux";
             system.stateVersion = stateVersion;
             networking.hostName = name;
-            networking.hostId = "abcdef12";
           }
         ]
         ++ modules;

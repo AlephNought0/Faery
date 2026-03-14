@@ -10,7 +10,7 @@
   nhUsed = config.programs.nh.enable;
 
   updateString = mkMerge [
-    (mkIf nhUsed "nh os switch . -H ${osConfig.networking.hostName}")
+    (mkIf nhUsed "nh os switch ~/Faery -H ${osConfig.networking.hostName}")
     (mkIf (!nhUsed) "sudo nixos-rebuild switch --upgrade --flake ~/Faery#${osConfig.networking.hostName}")
   ];
 in {
