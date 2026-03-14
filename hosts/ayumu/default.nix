@@ -39,7 +39,7 @@
     };
 
     services = {
-      #syncthing.enable = true;
+      syncthing.enable = true;
       clipman.enable = true;
       dunst.enable = true;
     };

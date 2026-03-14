@@ -1,7 +1,6 @@
 {
   pkgs,
   osConfig,
-  config,
   lib,
   ...
 }: let
@@ -28,10 +27,6 @@ in {
             "org.freedesktop.impl.portal.FileChooser" = ["kde"];
           };
         };
-      };
-
-      configFile = {
-        "niri/config.kdl".source = config.lib.file.mkOutOfStoreSymlink "/home/Aperius/Faery/home/Aperius/programs/graphical/wms/niri/config.kdl";
       };
     };
 
