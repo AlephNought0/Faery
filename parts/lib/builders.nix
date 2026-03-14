@@ -37,6 +37,7 @@
         [
           (rootDir + "/hosts/${lib.toLower name}")
           (rootDir + "/modules")
+          (rootDir + "/modules/mac")
           inputs.nixos-apple-silicon.nixosModules.apple-silicon-support
           {
             nixpkgs.hostPlatform = "aarch64-linux";

@@ -24,7 +24,7 @@
       colorScheme = "darker";
     };
 
-    services.syncthing.enable = true;
+    #services.syncthing.enable = true;
 
     xdg = {
       enable = true;
