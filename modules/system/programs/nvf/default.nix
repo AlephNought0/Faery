@@ -50,7 +50,11 @@ in {
           php.enable = true;
           css.enable = true;
           sql.enable = true;
-          qml.enable = true;
+
+          qml = {
+            enable = true;
+            format.enable = false;
+          };
         };
 
         git = {
@@ -128,7 +132,6 @@ in {
 
         treesitter = {
           enable = true;
-          fold = true;
         };
 
         telescope.enable = true;

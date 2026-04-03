@@ -42,12 +42,14 @@ in {
 
           "x-scheme-handler/roblox-player" = "org.vinegarhq.Sober.desktop";
           "x-scheme-handler/acmanager" = "ContentManager.desktop";
+          "x-scheme-handler/spotify" = "spotify.desktop";
         };
       };
 
       userDirs = {
         enable = true;
         createDirectories = true;
+        setSessionVariables = true;
 
         download = "${config.home.homeDirectory}/Downloads";
         desktop = "${config.home.homeDirectory}/Desktop";

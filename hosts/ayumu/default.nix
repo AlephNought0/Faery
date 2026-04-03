@@ -83,7 +83,6 @@
     overlays = {
       dolphin.no-alternate = true;
       cachyos-kernel = true;
-      quickshell = true;
     };
 
     user.useHomeManager = true;

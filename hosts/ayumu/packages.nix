@@ -26,7 +26,6 @@
     moonlight-qt
     element-desktop
     wootility
-    sunshine
     bottles
   ];
 }

@@ -57,11 +57,7 @@
       quickshell.enable = true;
     };
 
-    overlays = {
-      dolphin.no-alternate = true;
-      quickshell = true;
-    };
-
+    overlays.dolphin.no-alternate = true;
     user.useHomeManager = true;
     terminal.shell.zsh = true;
     kdeWithoutPlasma.enable = true;

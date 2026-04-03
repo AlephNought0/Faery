@@ -1,4 +1,4 @@
-_: {
+{
   # TODO: Figure out how to organize all of that.
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];

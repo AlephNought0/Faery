@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  systemd.user.services.sunshine.environment = {
+    LIBVA_DRM_DEVICE = "/dev/dri/renderD128";
+  };
+
   services = {
     zerotierone = {
       enable = true;
@@ -14,14 +18,12 @@
       openFirewall = true;
     };
 
-    /*
-      sunshine = {
+    sunshine = {
       enable = true;
       autoStart = true;
       capSysAdmin = true;
       openFirewall = true;
     };
-    */
 
     gnome.gnome-keyring.enable = false;
 
