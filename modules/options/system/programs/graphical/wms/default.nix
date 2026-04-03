@@ -15,5 +15,6 @@ in {
     };
 
     niri.enable = mkEnableOption "niri module.";
+    mango.enable = mkEnableOption "mangowm module.";
   };
 }

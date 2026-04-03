@@ -67,7 +67,11 @@
         floorp.enable = true;
       };
 
-      wms.niri.enable = true;
+      wms = {
+        mango.enable = true;
+        niri.enable = true;
+      };
+
       displayManagers.sddm.enable = true;
 
       mullvad.enable = true;

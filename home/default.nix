@@ -2,6 +2,7 @@
   self,
   config,
   lib,
+  inputs,
   ...
 }: let
   inherit (self) inputs;
@@ -25,6 +26,7 @@ in {
     };
 
     sharedModules = [
+      inputs.mangowm.hmModules.mango
       {
         nix.package = mkForce config.nix.package;
         programs.home-manager.enable = true;

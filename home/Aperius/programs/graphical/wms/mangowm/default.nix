@@ -6,7 +6,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = osConfig.faery.programs.wms.niri;
+  cfg = osConfig.faery.programs.wms.mango;
 in {
   config = mkIf cfg.enable {
     xdg = {
@@ -38,5 +38,9 @@ in {
       wl-gammarelay-rs
       wl-clipboard
     ];
+
+    wayland.windowManager.mango = {
+      enable = true;
+    };
   };
 }
