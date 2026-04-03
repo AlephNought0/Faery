@@ -32,7 +32,7 @@ in {
 
     home.packages = with pkgs; [
       rofi
-      swww
+      awww
       xwayland-satellite
       wl-screenrec
       wl-gammarelay-rs

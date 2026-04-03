@@ -41,7 +41,7 @@ in {
     home.packages = with pkgs; [
       rofi
       inputs.hyprcursor.packages."${pkgs.system}".hyprcursor
-      swww
+      awww
       grim
       wl-clipboard
       slurp

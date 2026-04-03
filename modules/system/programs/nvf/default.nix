@@ -50,12 +50,6 @@ in {
           php.enable = true;
           css.enable = true;
           sql.enable = true;
-
-          qml = {
-            enable = true;
-            format.enable = false;
-            lsp.enable = false;
-          };
         };
 
         git = {
