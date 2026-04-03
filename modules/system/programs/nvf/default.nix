@@ -54,6 +54,7 @@ in {
           qml = {
             enable = true;
             format.enable = false;
+            lsp.enable = false;
           };
         };
 
