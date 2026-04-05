@@ -2,6 +2,5 @@
   imports = [
     ./hyprland
     ./niri
-    ./mangowm
   ];
 }

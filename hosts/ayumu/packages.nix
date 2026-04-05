@@ -26,6 +26,6 @@
     moonlight-qt
     element-desktop
     wootility
-    bottles
+    graphicsmagick
   ];
 }
