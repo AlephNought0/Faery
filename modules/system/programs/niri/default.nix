@@ -24,11 +24,11 @@ in {
             src = niriSrc;
             hash = "sha256-soJYT6TavlyqtVqMD70QYDZ+8swn6TVXsFHadJxaxWo=";
           };
-          postPatch =
-            builtins.replaceStrings
-            ["resources/niri.service"]
-            ["resources/niri.service || true"]
-            old.postPatch;
+          postPatch = ''
+            patchShebangs resources/niri-session
+            substituteInPlace resources/niri.service \
+              --replace-fail 'niri --session' "$out/bin/niri --session"
+          '';
         });
     };
   };
