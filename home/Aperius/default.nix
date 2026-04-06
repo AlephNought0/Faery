@@ -4,7 +4,6 @@
     ./misc
     ./themes
     ./services
-    ./packages.nix
   ];
 
   config = {
@@ -12,6 +11,7 @@
       username = "Aperius";
       homeDirectory = "/home/Aperius";
       stateVersion = osConfig.system.stateVersion;
+      packages = osConfig.faery.user.packages;
     };
 
     systemd.user.startServices = "sd-switch";

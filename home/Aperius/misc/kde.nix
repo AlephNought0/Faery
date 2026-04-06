@@ -35,8 +35,6 @@ in {
       unrar # Not really a kde package but it makes ark able to extract rar files so might as well put it here.
     ];
 
-    #environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
-
     xdg.configFile."menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   };
 }
