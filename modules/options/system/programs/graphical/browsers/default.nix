@@ -8,5 +8,6 @@ in {
     };
 
     floorp.enable = mkEnableOption "floorp.";
+    zen.enable = mkEnableOption "zen.";
   };
 }

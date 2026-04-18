@@ -7,5 +7,6 @@
     ./vesktop
     ./wms
     ./quickshell
+    #./equibop
   ];
 }

@@ -46,7 +46,7 @@
 
     xdg = {
       enable = true;
-      default_browser = "firefox-nightly.desktop";
+      default_browser = "zen-beta.desktop";
       default_editor = "nvim.desktop";
       default_fileManager = "dolphin.desktop";
       default_terminal = "foot";
@@ -64,7 +64,9 @@
           enable = true;
           dGPU = true;
         };
+
         floorp.enable = true;
+        zen.enable = true;
       };
 
       wms.niri.enable = true;

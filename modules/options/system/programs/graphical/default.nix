@@ -22,6 +22,7 @@ in {
     };
 
     vesktop.enable = mkEnableOption "vesktop client.";
+    equibop.enable = mkEnableOption "equibop client.";
     opentablet.enable = mkEnableOption "opentablet module.";
     mullvad.enable = mkEnableOption "mullvad module.";
     easyeffects.enable = mkEnableOption "easyeffects module.";
