@@ -27,5 +27,6 @@
     element-desktop
     wootility
     graphicsmagick
+    blender
   ];
 }

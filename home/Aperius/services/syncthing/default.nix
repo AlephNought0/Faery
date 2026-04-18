@@ -15,13 +15,14 @@ in {
         devices = {
           "17promax" = {id = "HINI3YI-TM5RPFW-3477ROZ-BOFBCYR-FWJRPTB-LBRH5WZ-AGBGQ2W-PMRSFQT";};
           "m2pro" = {id = "B7V4Z4F-PSUD64G-UYLJKT6-YFXF7QW-XU3FCGF-ZZHU6VI-EA3XEEW-ZUYIUQX";};
+          "m2pro (macos)" = {id = "C7CNWQ4-ZZR3L4U-7FEAHRX-AJ5VWLB-ZKUF7HJ-OTKQCJ7-OJVR2DJ-Y55ZMAF";};
           "computah" = {id = "AMJ37TC-OCW5NB5-UVBXRUQ-ARHHI2X-XIDHNJ6-HJOFLEZ-RUOT4V3-E4V47AF";};
         };
 
         folders = {
           "Keepass" = {
             path = "/home/Aperius/Keepass";
-            devices = ["17promax" "m2pro" "computah"];
+            devices = ["17promax" "m2pro" "computah" "m2pro (macos)"];
           };
         };
       };

@@ -25,6 +25,7 @@ in {
     };
 
     sharedModules = [
+      inputs.zen-browser.homeModules.beta
       {
         nix.package = mkForce config.nix.package;
         programs.home-manager.enable = true;
