@@ -15,5 +15,6 @@
     #wineWow64Packages.yabridge
     zulu25
     element-desktop
+    equibop
   ];
 }
