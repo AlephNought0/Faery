@@ -6,6 +6,7 @@
     nvf = inputs.nvf.nixosModules.default;
     pwLowLatency = inputs.nix-gaming.nixosModules.pipewireLowLatency;
     hm = inputs.home-manager.nixosModules.home-manager;
+    omnisearch = inputs.omnisearch.nixosModules.default;
   in {
     # My Macbook M2 Pro laptop with 16 inch display. Used as a device for travelling or work outside my home.
     Cirno = lib.mkMacSystem "Cirno" {
@@ -33,6 +34,7 @@
         nur
         nvf
         pwLowLatency
+        omnisearch
       ];
     };
   };

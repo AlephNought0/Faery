@@ -42,6 +42,7 @@
       syncthing.enable = true;
       clipman.enable = true;
       dunst.enable = true;
+      omnisearch.enable = true;
     };
 
     xdg = {

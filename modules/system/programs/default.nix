@@ -11,5 +11,6 @@
     ./mullvad
     ./corectrl
     ./openrgb
+    ./omnisearch
   ];
 }
