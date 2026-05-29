@@ -34,6 +34,7 @@ in {
     programs.firefox = {
       enable = true;
       package = inputs.firefox-nightly.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin;
+      configPath = ".mozilla/firefox";
 
       profiles = {
         "faery" = {

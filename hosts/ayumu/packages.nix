@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   faery.user.packages = with pkgs; [
     prismlauncher
     qbittorrent
@@ -28,5 +32,17 @@
     wootility
     graphicsmagick
     blender
+    eden
+    #burpsuite
+    inputs.burpsuite-pro.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+
+    package = pkgs.appimage-run.override {
+      extraPkgs = pkgs: [pkgs.icu];
+    };
+  };
 }
