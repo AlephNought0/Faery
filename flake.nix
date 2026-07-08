@@ -56,7 +56,7 @@
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nixos-apple-silicon.url = "github:nix-community/nixos-apple-silicon";
+    nixos-apple-silicon.url = "github:nix-community/nixos-apple-silicon/2fbdf62451bcd9fc83ca99c56a6e379df8c47c8d";
   };
 
   outputs = inputs:
