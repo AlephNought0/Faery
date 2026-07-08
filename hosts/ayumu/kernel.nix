@@ -9,7 +9,7 @@
 in {
   boot = {
     initrd = {
-      kernelModules = ["ch341"];
+      kernelModules = [];
       availableKernelModules = ["nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod"];
     };
     kernelPackages = kernelPackage;

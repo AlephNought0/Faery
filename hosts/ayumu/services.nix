@@ -8,8 +8,7 @@
       enable = true;
       joinNetworks = [
         "e3918db4835d47eb"
-        "6ab565387af26e69"
-        "3efa5cb78a253dd2"
+        "6ab565387acc2d0b"
       ];
     };
 

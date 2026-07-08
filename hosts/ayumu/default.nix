@@ -42,6 +42,7 @@
       syncthing.enable = true;
       clipman.enable = true;
       dunst.enable = true;
+      omnisearch.enable = true;
     };
 
     xdg = {
@@ -59,16 +60,7 @@
         nh.enable = true;
       };
 
-      browsers = {
-        firefox = {
-          enable = true;
-          dGPU = true;
-        };
-
-        floorp.enable = true;
-        zen.enable = true;
-      };
-
+      browsers.zen.enable = true;
       wms.niri.enable = true;
       displayManagers.sddm.enable = true;
       mullvad.enable = true;

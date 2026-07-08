@@ -45,8 +45,8 @@ in {
           lua.enable = true;
           bash.enable = true;
           html.enable = true;
-          ts.enable = true;
-          astro.enable = true;
+          typescript.enable = true;
+          #astro.enable = true;
           php.enable = true;
           css.enable = true;
           sql.enable = true;

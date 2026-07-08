@@ -9,7 +9,6 @@
       allowedTCPPorts = [
         80
         443
-        9993 # Zerotier
         25565 # Minecraft
         22000 # # Syncthing
         9770
@@ -19,6 +18,8 @@
         34197 # Factorio
         21027 # Syncthing
         9770
+        9993 # Zerotier
+        24454 # Simple Voice Chat audio
       ];
 
       allowedUDPPortRanges = [
