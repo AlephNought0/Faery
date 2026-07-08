@@ -17,4 +17,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   programs.ssh.startAgent = true;
+
+  programs.ydotool.enable = true;
 }

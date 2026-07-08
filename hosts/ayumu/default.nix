@@ -60,16 +60,7 @@
         nh.enable = true;
       };
 
-      browsers = {
-        firefox = {
-          enable = true;
-          dGPU = true;
-        };
-
-        floorp.enable = true;
-        zen.enable = true;
-      };
-
+      browsers.zen.enable = true;
       wms.niri.enable = true;
       displayManagers.sddm.enable = true;
       mullvad.enable = true;

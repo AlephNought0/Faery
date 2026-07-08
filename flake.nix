@@ -46,11 +46,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    omnisearch = {
-      url = "git+https://git.bwaaa.monster/omnisearch";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     burpsuite-pro = {
       url = "gitlab:_VX3r/burpsuite-pro-flake";
       inputs.nixpkgs.follows = "nixpkgs";

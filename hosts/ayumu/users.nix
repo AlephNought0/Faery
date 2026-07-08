@@ -16,6 +16,7 @@
         "libvirtd"
         "storage"
         "corectrl"
+        "ydotool"
       ];
     };
   };

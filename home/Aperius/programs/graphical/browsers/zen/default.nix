@@ -13,44 +13,6 @@ in {
 
       profiles = {
         default = {
-          search = {
-            force = true;
-            default = "omnisearch";
-
-            engines = {
-              omnisearch = {
-                name = "omnisearch";
-                urls = [
-                  {
-                    template = "http://localhost:8087/search";
-                    params = [
-                      {
-                        name = "q";
-                        value = "{searchTerms}";
-                      }
-                    ];
-                  }
-                ];
-                definedAliases = ["@om"];
-              };
-
-              imageSearch = {
-                urls = [
-                  {
-                    template = "https://search.brave.com/images";
-                    params = [
-                      {
-                        name = "q";
-                        value = "{searchTerms}";
-                      }
-                    ];
-                  }
-                ];
-                definedAliases = ["@img"];
-              };
-            };
-          };
-
           settings = {
             "geo.provider.network.url" = "";
             "geo.provider.network.logging.enabled" = false;

@@ -25,7 +25,7 @@
     libnotify
     equibop
     winetricks
-    wineWow64Packages.yabridge
+    wine64Packages.staging
     zulu25
     moonlight-qt
     element-desktop
@@ -35,6 +35,10 @@
     eden
     #burpsuite
     inputs.burpsuite-pro.packages.${pkgs.stdenv.hostPlatform.system}.default
+    python313Packages.pip
+    python3
+    ollama
+    litellm
   ];
 
   programs.appimage = {
