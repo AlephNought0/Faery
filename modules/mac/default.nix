@@ -16,7 +16,10 @@
 
     asahi = {
       enable = true;
-      peripheralFirmwareDirectory = ./firmware;
+      peripheralFirmwareDirectory = builtins.fetchGit {
+        url = "git@github.com:AlephNought0/macbook-asahi-firmware.git";
+        rev = "2b1215567ddc014bf416e9fcde786b2bc8de7a5b";
+      };
     };
   };
 }
