@@ -2,7 +2,7 @@
   description = "The most bleeding edge NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/c06b4ae3d6599a672a6210b7021d699c351eebda";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nixpkgs-2505.url = "github:NixOS/nixpkgs/nixos-25.05";
 
