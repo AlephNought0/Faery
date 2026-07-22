@@ -35,10 +35,8 @@
     eden
     #burpsuite
     inputs.burpsuite-pro.packages.${pkgs.stdenv.hostPlatform.system}.default
-    python313Packages.pip
-    python3
-    ollama
-    litellm
+    nodejs_26
+    claude-code
   ];
 
   programs.appimage = {
@@ -49,4 +47,8 @@
       extraPkgs = pkgs: [pkgs.icu];
     };
   };
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-40.10.5"
+  ];
 }

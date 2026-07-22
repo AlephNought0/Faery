@@ -2,7 +2,7 @@
   description = "The most bleeding edge NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/c06b4ae3d6599a672a6210b7021d699c351eebda";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nixpkgs-2505.url = "github:NixOS/nixpkgs/nixos-25.05";
 
@@ -56,7 +56,7 @@
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nixos-apple-silicon.url = "github:nix-community/nixos-apple-silicon/2fbdf62451bcd9fc83ca99c56a6e379df8c47c8d";
+    nixos-apple-silicon.url = "github:nix-community/nixos-apple-silicon";
   };
 
   outputs = inputs:
