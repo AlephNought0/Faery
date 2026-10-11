@@ -29,6 +29,11 @@
     flatpak.enable = true;
     udisks2.enable = true;
     input-remapper.enable = true;
+
+    openssh = {
+      enable = true;
+      settings.PermitRootLogin = "no";
+    };
   };
 
   security = {

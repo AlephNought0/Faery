@@ -3,7 +3,6 @@
     zerotierone = {
       enable = true;
       joinNetworks = [
-        "e3918db4835d47eb"
         "6ab565387af26e69"
         "3efa5cb78a253dd2"
       ];
@@ -16,6 +15,11 @@
 
     flatpak.enable = true;
     udisks2.enable = true;
+
+    openssh = {
+      enable = true;
+      settings.PermitRootLogin = "no";
+    };
   };
 
   security.polkit = {
