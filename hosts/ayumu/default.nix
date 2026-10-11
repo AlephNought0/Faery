@@ -64,7 +64,6 @@
       wms.niri.enable = true;
       displayManagers.sddm.enable = true;
       mullvad.enable = true;
-      vesktop.enable = true;
       steam.enable = true;
       opentablet.enable = true;
       easyeffects.enable = true;

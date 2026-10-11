@@ -39,12 +39,15 @@
     claude-code
   ];
 
-  programs.appimage = {
-    enable = true;
-    binfmt = true;
+  programs = {
+    nix-ld.enable = true;
+    appimage = {
+      enable = true;
+      binfmt = true;
 
-    package = pkgs.appimage-run.override {
-      extraPkgs = pkgs: [pkgs.icu];
+      package = pkgs.appimage-run.override {
+        extraPkgs = pkgs: [pkgs.icu];
+      };
     };
   };
 

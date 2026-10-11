@@ -28,6 +28,7 @@
 
     flatpak.enable = true;
     udisks2.enable = true;
+    input-remapper.enable = true;
   };
 
   security = {

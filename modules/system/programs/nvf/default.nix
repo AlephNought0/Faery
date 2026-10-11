@@ -40,6 +40,7 @@ in {
           enableDAP = true;
 
           clang.enable = true;
+          csharp.enable = true;
           zig.enable = true;
           nix.enable = true;
           lua.enable = true;
@@ -62,6 +63,12 @@ in {
           lspSignature.enable = true;
           lspconfig.enable = true;
           formatOnSave = true;
+
+          servers = {
+            csharp_ls.cmd_env = {
+              PATH = lib.generators.mkLuaInline ''"${pkgs.dotnet-sdk_10}/bin:" .. vim.env.PATH'';
+            };
+          };
         };
 
         terminal = {
@@ -91,7 +98,7 @@ in {
           };
         };
 
-        statusline.lualine = {
+        statusline.lualine.setupOpts.options = {
           enable = true;
           theme = "catppuccin";
         };
