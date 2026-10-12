@@ -60,6 +60,7 @@
     overlays.dolphin.no-alternate = true;
     user.useHomeManager = true;
     terminal.shell.zsh = true;
+    virtualization.qemu.enable = true;
     kdeWithoutPlasma.enable = true;
   };
 }

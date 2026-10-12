@@ -7,7 +7,7 @@
     qtcreator
     gimp
     keepassxc
-    #spotify
+    psst
     matugen
     tela-icon-theme
     kdePackages.dolphin
