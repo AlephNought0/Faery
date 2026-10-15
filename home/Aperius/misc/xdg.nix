@@ -25,6 +25,7 @@ in {
         defaultApplications = {
           "text/plain" = cfg.default_editor;
           "application/x-zerosize" = cfg.default_editor;
+          "application/x-shellscript" = cfg.default_editor;
           "text/uri-list" = cfg.default_browser;
           "x-scheme-handler/http" = cfg.default_browser;
           "x-scheme-handler/https" = cfg.default_browser;
@@ -36,6 +37,7 @@ in {
           "application/xhtml+xml" = cfg.default_browser;
           "application/x-extension-xhtml" = cfg.default_browser;
           "application/x-extension-xht" = cfg.default_browser;
+          "application/pdf" = cfg.default_browser;
           "x-scheme-handler/about" = cfg.default_browser;
           "x-scheme-handler/unknown" = cfg.default_browser;
           "inode/directory" = cfg.default_fileManager;
