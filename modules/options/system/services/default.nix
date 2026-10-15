@@ -6,5 +6,6 @@ in {
     clipman.enable = mkEnableOption "clipman service.";
     dunst.enable = mkEnableOption "dunst service.";
     omnisearch.enable = mkEnableOption "omnisearch service.";
+    ssh-agent.enable = mkEnableOption "ssh-agent service.";
   };
 }

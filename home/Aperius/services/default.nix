@@ -3,5 +3,6 @@
     ./syncthing
     ./clipman
     ./dunst
+    ./ssh-agent
   ];
 }

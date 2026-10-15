@@ -43,6 +43,7 @@
       clipman.enable = true;
       dunst.enable = true;
       omnisearch.enable = true;
+      ssh-agent.enable = true;
     };
 
     xdg = {
