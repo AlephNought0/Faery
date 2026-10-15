@@ -24,7 +24,10 @@
       colorScheme = "darker";
     };
 
-    services.syncthing.enable = true;
+    services = {
+      syncthing.enable = true;
+      ssh-agent.enable = true;
+    };
 
     xdg = {
       enable = true;
