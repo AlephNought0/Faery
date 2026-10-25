@@ -15,11 +15,9 @@ in {
       inputs.nix-cachyos-kernel.overlays.pinned
     ];
 
-    /*
-      nix.settings = {
-      substituters = ["https://attic.xuyh0120.win/lantian"];
-      trusted-public-keys = ["lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="];
+    nix.settings = {
+      nix.settings.substituters = ["https://cache.lantian.pub/lantian"];
+      nix.settings.trusted-public-keys = ["lantian:WVGO7vsRMSEN+h7Lp7kv6SAmrkEXgUGbbXm7jMDjBuQ="];
     };
-    */
   };
 }

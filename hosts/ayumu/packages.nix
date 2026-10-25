@@ -37,6 +37,7 @@
     inputs.burpsuite-pro.packages.${pkgs.stdenv.hostPlatform.system}.default
     nodejs_26
     claude-code
+    ckan
   ];
 
   programs = {
