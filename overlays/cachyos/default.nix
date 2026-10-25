@@ -16,8 +16,8 @@ in {
     ];
 
     nix.settings = {
-      nix.settings.substituters = ["https://cache.lantian.pub/lantian"];
-      nix.settings.trusted-public-keys = ["lantian:WVGO7vsRMSEN+h7Lp7kv6SAmrkEXgUGbbXm7jMDjBuQ="];
+      substituters = ["https://cache.lantian.pub/lantian"];
+      trusted-public-keys = ["lantian:WVGO7vsRMSEN+h7Lp7kv6SAmrkEXgUGbbXm7jMDjBuQ="];
     };
   };
 }
