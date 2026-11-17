@@ -8,9 +8,12 @@
   cfg = config.faery.system.performance;
 in {
   config = mkIf cfg.cpu_sched {
-    services.scx = {
+    services.scx-loader = {
       enable = true;
-      scheduler = "scx_rustland";
+      config = {
+        default_sched = "scx_rusty";
+        default_mode = "LowLatency";
+      };
     };
   };
 }
