@@ -15,7 +15,7 @@ in {
     kernelPackages = kernelPackage;
     kernelModules = ["v4l2loopback"];
     kernelParams = ["amdgpu.runpm=0"];
-    blacklistedKernelModules = ["hid-thrustmaster"];
+    blacklistedKernelModules = ["hid-thrustmaster" "ipheth"];
     extraModulePackages = lib.customKernelPackages kernelPackage ["hid-tmff2" "v4l2loopback"];
     extraModprobeConfig = ''
       options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1

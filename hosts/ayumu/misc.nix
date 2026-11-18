@@ -13,7 +13,7 @@
     GTK_USE_PORTAL = 1; # I wonder if I can also make apps just not install the gtk file selector altogether.
   };
 
-  time.timeZone = "Europe/Berlin"; # Doxxed!11!!
+  time.timeZone = "Europe/London"; # Doxxed!11!!
   i18n.defaultLocale = "en_US.UTF-8";
 
   programs.ydotool.enable = true;

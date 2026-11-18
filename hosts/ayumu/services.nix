@@ -29,6 +29,7 @@
     flatpak.enable = true;
     udisks2.enable = true;
     input-remapper.enable = true;
+    usbmuxd.enable = true;
 
     openssh = {
       enable = true;
