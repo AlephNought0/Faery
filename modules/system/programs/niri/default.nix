@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   inherit (lib) mkIf;
@@ -9,6 +10,7 @@ in {
   config = mkIf cfg.enable {
     programs.niri = {
       enable = true;
+      package = pkgs.niri_git;
     };
   };
 }

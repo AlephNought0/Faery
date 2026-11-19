@@ -5,7 +5,7 @@
 }: let
   inherit (inputs.self) lib;
 
-  kernelPackage = pkgs.cachyosKernels.linuxPackages-cachyos-latest-zen4;
+  kernelPackage = pkgs.linuxPackages_cachyos-lto-znver4;
 in {
   boot = {
     initrd = {

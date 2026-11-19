@@ -8,7 +8,7 @@
 
   cfg = config.faery.programs.steam;
 
-  proton-ge-9 = pkgs.proton-ge-bin.overrideAttrs (oldAttrs: rec {
+  proton-ge-9 = pkgs.proton-ge-bin_edge.overrideAttrs (oldAttrs: rec {
     version = "GE-Proton9-2";
 
     src = pkgs.fetchzip {
@@ -26,6 +26,7 @@ in {
     programs = {
       gamescope = {
         enable = true;
+        package = pkgs.gamescope_git;
         #capSysNice = true;
       };
 
@@ -59,7 +60,7 @@ in {
         };
 
         extraCompatPackages = [
-          pkgs.proton-ge-bin
+          pkgs.proton-ge-bin_edge
           proton-ge-9
         ];
       };

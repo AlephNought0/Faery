@@ -16,6 +16,7 @@
     hardware = {
       gpu = "amd";
       cpu = "amd";
+      mesa-git = true;
 
       audio.pipewire.enable = true;
     };
@@ -73,11 +74,7 @@
       openrgb.enable = true;
     };
 
-    overlays = {
-      dolphin.no-alternate = true;
-      cachyos-kernel = true;
-    };
-
+    overlays.dolphin.no-alternate = true;
     user.useHomeManager = true;
     terminal.shell.zsh = true;
     virtualization.qemu.enable = true;

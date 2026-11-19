@@ -2,7 +2,6 @@
   osConfig,
   lib,
   pkgs,
-  inputs,
   ...
 }: let
   inherit (lib) mkIf mkForce;
@@ -33,7 +32,7 @@ in {
 
     programs.firefox = {
       enable = true;
-      package = inputs.firefox-nightly.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin;
+      package = pkgs.firefox_nightly;
       configPath = ".mozilla/firefox";
 
       profiles = {

@@ -9,6 +9,7 @@
     CLUTTER_BACKEND = "wayland";
     GDK_BACKEND = "wayland,x11";
     QT_QPA_PLATFORM = "wayland";
+    SDL_VIDEO_DRIVER = "wayland";
     DIRENV_WARN_TIMEOUT = "0s";
     GTK_USE_PORTAL = 1; # I wonder if I can also make apps just not install the gtk file selector altogether.
   };
