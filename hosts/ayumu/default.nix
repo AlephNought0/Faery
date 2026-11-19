@@ -29,14 +29,9 @@
       };
     };
 
-    theme.qt = {
-      enable = true;
-      nordic = true;
-      iconTheme = "Tela-black";
-      appTheme = "Nordic-Darker";
-      platformTheme = "qtct";
-      style = "kvantum";
-      colorScheme = "darker";
+    theme = {
+      qt.enable = true;
+      catppuccin.enable = true;
     };
 
     services = {

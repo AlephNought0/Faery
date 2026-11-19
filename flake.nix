@@ -41,17 +41,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    burpsuite-pro = {
-      url = "gitlab:_VX3r/burpsuite-pro-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nur.url = "github:nix-community/NUR";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixos-apple-silicon.url = "github:nix-community/nixos-apple-silicon";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = inputs:

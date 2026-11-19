@@ -33,25 +33,22 @@
         "type": "github"
       }
     },
-    "burpsuite-pro": {
+    "catppuccin": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "treefmt-nix": "treefmt-nix"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1794701316,
-        "narHash": "sha256-/hoVZXNWMERieaokbLXlGR1agY0loKeZLl+IYV/d/OU=",
-        "owner": "_VX3r",
-        "repo": "burpsuite-pro-flake",
-        "rev": "32806b2a94fda443a89c41317fff4010533aaf8a",
-        "type": "gitlab"
+        "lastModified": 1794788055,
+        "narHash": "sha256-ne61lharrApQ3QVpm6sjd6k5AgD0xandc69h4QbopIY=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "aa70e775fdb4e998314dd64fb4cf66aeaa87f6dd",
+        "type": "github"
       },
       "original": {
-        "owner": "_VX3r",
-        "repo": "burpsuite-pro-flake",
-        "type": "gitlab"
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
       }
     },
     "chaotic": {
@@ -829,18 +826,15 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1790149054,
-        "narHash": "sha256-FfjXg6mAzKQBCY+7V9keGWOXG4DV2Eym/qA987lFl8A=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "8825bebf6324e0579d012936eff73379af284b6d",
-        "type": "github"
+        "lastModified": 1794495034,
+        "narHash": "sha256-QG/HY0t5t3sfT2ozW/Ikis5Klqf0X4nfTuLvFaBpNno=",
+        "rev": "2074cc672349f14240fb7ea90d509e0b643e9dd4",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1118975.2074cc672349/nixexprs.tar.zst"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "type": "tarball",
+        "url": "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst"
       }
     },
     "nixpkgs-2505": {
@@ -1083,7 +1077,7 @@
     },
     "root": {
       "inputs": {
-        "burpsuite-pro": "burpsuite-pro",
+        "catppuccin": "catppuccin",
         "chaotic": "chaotic",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager_2",
@@ -1179,24 +1173,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "treefmt-nix": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1791885023,
-        "narHash": "sha256-C3alQ2MEt0zVrUSho5NUDo3jmhbff72++bfwoqT9Omo=",
-        "owner": "numtide",
-        "repo": "treefmt-nix",
-        "rev": "0d6d739a833ba9a9c93034862e4a7b061a062a1c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "treefmt-nix",
         "type": "github"
       }
     },

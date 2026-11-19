@@ -13,7 +13,7 @@ in {
     };
 
     home.sessionVariables = {
-      NH_NOM = "true";
+      NH_ROM = "true";
     };
   };
 }

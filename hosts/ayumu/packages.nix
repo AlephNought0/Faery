@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   faery.user.packages = with pkgs; [
     prismlauncher
     qbittorrent
@@ -33,8 +29,6 @@
     graphicsmagick
     blender
     eden
-    #burpsuite
-    inputs.burpsuite-pro.packages.${pkgs.stdenv.hostPlatform.system}.default
     nodejs_26
     claude-code
     ckan
