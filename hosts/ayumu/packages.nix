@@ -32,6 +32,7 @@
     nodejs_26
     claude-code
     ckan
+    qview
 
     ((equibop.override {electron_43 = electron_45;}).overrideAttrs (finalAttrs: prev: {
       version = "3.3.4";

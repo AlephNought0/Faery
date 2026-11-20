@@ -9,7 +9,7 @@
         };
 
         colors-dark = {
-          alpha = 0.4;
+          alpha = 0.7;
           background = "000000";
         };
       };
